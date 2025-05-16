@@ -6,7 +6,7 @@ import TimezoneSelect, { type ITimezone } from "react-timezone-select";
 
 export default function SchedulingForm({ setScheduleDate }: any) {
   const [date, setDate] = useState<Date | null>(null);
-  const [time, setTime] = useState<Date | null>(null);
+  const [time, setTime] = useState<any>(null);
   const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   );
@@ -79,7 +79,7 @@ export default function SchedulingForm({ setScheduleDate }: any) {
                   <input
                     type="time"
                     className=" px-3 py-2 rounded text-sm w-[345px] focus:ring-0 focus:border-none focus:outline-0 text-[#E51C22] bg-[#C5C5C573]"
-                    onChange={(e) => setTime(new Date(e.target.value))}
+                    onChange={(e) => setTime(e.target.value)}
                   />
                 </div>
               </div>

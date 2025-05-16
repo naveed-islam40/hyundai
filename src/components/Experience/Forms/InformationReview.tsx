@@ -115,10 +115,7 @@ export default function InformationReview({
                 </div>
                 <div>
                   <p className="text-xs text-center">TIME</p>
-                  <p className="font-bold">
-                    {new Date(scheduleDate?.time).toLocaleTimeString() ||
-                      "2:00pm"}
-                  </p>
+                  <p className="font-bold">{scheduleDate?.time || "2:00pm"}</p>
                 </div>
               </div>
             </div>
