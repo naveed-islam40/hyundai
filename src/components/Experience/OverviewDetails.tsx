@@ -8,6 +8,8 @@ import PaintServicesMatrixForm from "./Forms/PaintServicesMatrixForm";
 import { useEffect, useState } from "react";
 import DealerForm from "./Forms/DealerForm";
 import { panelDetails } from "@/static/PanelPrices";
+import RepairEstimate from "../RepairEstimate";
+import InformationReviewMobile from "./Forms/InformationReviewMobile";
 
 export default function OverviewDetails() {
   const [cutomerInfo, setCustomerInfo] = useState<any>({});
@@ -70,27 +72,42 @@ export default function OverviewDetails() {
           <SchedulingForm
             setScheduleDate={setScheduleDate}
             scheduleDate={scheduleDate}
+            name={`${cutomerInfo.firstName || "SMITH_JANE"} ${
+              cutomerInfo.lastName || ""
+            }`}
           />
         );
       case "4":
         return (
-          <InformationReview
-            PaintServiceInfo={PaintServiceInfo}
-            customerInfo={cutomerInfo}
-            scheduleDate={scheduleDate}
-          />
+          <div>
+            <div className="hidden sm:block">
+              <InformationReview
+                PaintServiceInfo={PaintServiceInfo}
+                customerInfo={cutomerInfo}
+                scheduleDate={scheduleDate}
+              />
+            </div>
+            <div className="block sm:hidden">
+              <InformationReviewMobile
+                PaintServiceInfo={PaintServiceInfo}
+                customerInfo={cutomerInfo}
+                scheduleDate={scheduleDate}
+              />
+            </div>
+          </div>
         );
       case "5":
         return <ConfirmationPage />;
     }
   };
 
-  console.log("scheduleDate", scheduleDate);
-
   return (
-    <div className="flex min-h-screen bg-gray-100 px-6">
-      <div className="flex-1 p-4 py-10">{renderForm()}</div>
-      <div className="w-80 my-10 text-white">
+    <div className="flex min-h-screen items-stretch bg-gray-100 sm:px-6 md:w-[100%] 2xl:w-[80%] mx-auto max-base-sm:flex-col">
+      <div className="block base-sm:hidden">
+        <RepairEstimate selectedPanels={selectedPanels} />
+      </div>
+      <div className="flex-1 sm:p-4 py-10">{renderForm()}</div>
+      <div className="w-80 p-6 h-full text-white hidden base-sm:block">
         <RightSidebar selectedPanels={selectedPanels} />
       </div>
     </div>

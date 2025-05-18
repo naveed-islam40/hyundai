@@ -8,11 +8,13 @@ export default function InformationReview({
 }: any) {
   console.log("PaintServiceInfo", PaintServiceInfo);
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="min-h-screen max-h-screen overflow-y-auto bg-gray-50 flex items-center justify-center sm:p-4">
       <div className="w-full">
         <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-          <h1 className="text-lg font-bold">INFORMATION REVIEW</h1>
-          <p className="text-xs text-white italic">
+          <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+            INFORMATION REVIEW
+          </h1>
+          <p className="text-xs text-white italic hidden base-sm:block">
             *All fields required to process request
           </p>
         </div>
@@ -46,7 +48,7 @@ export default function InformationReview({
             <h3 className="text-red-600 font-bold text-sm mb-2">
               Customer Information
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 base-lg:grid-cols-3 gap-4">
               <div className="flex items-center gap-2 font-bold">
                 <p className="text-sm">Customer Name:</p>
                 <p>
@@ -71,37 +73,36 @@ export default function InformationReview({
             <div className="border-b border-gray-200 mt-4"></div>
           </div>
           {/* Vehicle Information */};
-          <div className="mb-6 flex border-b pb-5">
+          <div className="mb-6 flex border-b pb-5 flex-col base-lg:flex-row">
             <div className="flex-1">
               <h3 className="text-red-600 font-bold text-sm mb-2">
                 Vehicle Information
               </h3>
-              <div className="grid grid-cols-1 gap-4">
-                <div className="grid grid-cols-2 gap-4 flex-2">
-                  <div className="flex items-center font-bold gap-2">
-                    <p className="text-sm font-bold">CRSA:</p>
-                    <p>{PaintServiceInfo?.crsa || "CA Dir San Ramon"}</p>
-                  </div>
-                  <div className="flex items-center font-bold gap-2">
-                    <p className="text-sm font-bold">Year:</p>
-                    <p>{PaintServiceInfo?.year || 2017}</p>
-                  </div>
-                  <div className="flex items-center font-bold gap-2">
-                    <p className="text-sm font-bold">Make:</p>
-                    <p>{PaintServiceInfo?.make || "Hyundai"}</p>
-                  </div>
-                  <div className="flex items-center font-bold gap-2">
-                    <p className="text-sm font-bold">Model:</p>
-                    <p>{PaintServiceInfo?.model || "Sonata"}</p>
-                  </div>
-                  <div className="col-span-2 flex items-center gap-2 font-bold">
-                    <p className="text-sm font-bold">VIN:</p>
-                    <p>{PaintServiceInfo?.vin || "5NPE34ZJXNH140004"}</p>
-                  </div>
+
+              <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4 px-2">
+                <div className="flex items-center gap-2 font-bold">
+                  <p className="text-sm font-bold">CRSA:</p>
+                  <p>{PaintServiceInfo?.crsa || "CA Dir San Ramon"}</p>
+                </div>
+                <div className="flex items-center gap-2 font-bold">
+                  <p className="text-sm font-bold">Year:</p>
+                  <p>{PaintServiceInfo?.year || 2017}</p>
+                </div>
+                <div className="flex items-center gap-2 font-bold">
+                  <p className="text-sm font-bold">Make:</p>
+                  <p>{PaintServiceInfo?.make || "Hyundai"}</p>
+                </div>
+                <div className="flex items-center gap-2 font-bold">
+                  <p className="text-sm font-bold">Model:</p>
+                  <p>{PaintServiceInfo?.model || "Sonata"}</p>
+                </div>
+                <div className="base-lg:col-span-2 flex items-center gap-2 font-bold">
+                  <p className="text-sm font-bold">VIN:</p>
+                  <p>{PaintServiceInfo?.vin || "5NPE34ZJXNH140004"}</p>
                 </div>
               </div>
             </div>
-            <div className="bg-[#E51C22] text-white p-4 rounded w-[289px] flex flex-col justify-between ml-auto">
+            <div className="bg-[#E51C22] text-white p-4 rounded w-[289px] flex flex-col justify-between mt-10 base-lg:mt-0">
               <h4 className="font-bold text-base text-center">
                 SCHEDULED DATE
               </h4>

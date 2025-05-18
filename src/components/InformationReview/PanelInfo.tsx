@@ -20,7 +20,7 @@ const PanelInfo = ({ selectedPanels }: any) => {
   }, []);
 
   return (
-    <div className="mb-6">
+    <div className="mb-6 px-3">
       <h3 className="text-red-600 font-bold text-sm mb-2">
         Body Repair Status
       </h3>
@@ -54,11 +54,11 @@ const PanelInfo = ({ selectedPanels }: any) => {
           }
 
           return (
-            <div key={panelName} className="mb-4">
+            <div key={panelName} className="mb-4 px-3">
               {/* Panel Title and Base Cost */}
               <div className="flex justify-between items-center mb-1">
                 <p className="font-bold">{panelName}</p>
-                <div className="flex-1 mx-4 border-b-3 border-dotted border-black"></div>
+                <div className="flex-1 mx-4 border-none  sm:border-b-3 sm:border-dotted border-black"></div>
                 <p className="font-bold">${baseCost.toFixed(2)}</p>
               </div>
 
@@ -66,7 +66,7 @@ const PanelInfo = ({ selectedPanels }: any) => {
               <div className="ml-6">
                 <div className="flex justify-between items-center mb-1">
                   <p>{matchedService.name}</p>
-                  <div className="flex-1 mx-4 border-b-3 border-dotted border-black"></div>
+                  <div className="flex-1 mx-4 border-none sm:border-b-3 sm:border-dotted border-black"></div>
                   <p>${matchedService.cost.toFixed(2)}</p>
                 </div>
 
@@ -74,7 +74,7 @@ const PanelInfo = ({ selectedPanels }: any) => {
                 {triCoatService && (
                   <div className="flex justify-between items-center mb-1">
                     <p>{triCoatService.name}</p>
-                    <div className="flex-1 mx-4 border-b-3 border-dotted border-black"></div>
+                    <div className="flex-1 mx-4 border-none sm:border-b-3 sm:border-dotted border-black"></div>
                     <p>${triCoatService.cost.toFixed(2)}</p>
                   </div>
                 )}

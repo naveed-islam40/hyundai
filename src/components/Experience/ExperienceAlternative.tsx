@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function ExperienceAlternative() {
@@ -7,7 +6,7 @@ export default function ExperienceAlternative() {
     navigate(path, { replace: true });
   };
   return (
-    <div className="bg-[url('/img/login.png')] bg-cover bg-center h-[80%] flex justify-center items-center relative">
+    <div className="md:w-full 2xl:w-[80%] mx-auto bg-[url('/img/login.png')] bg-cover bg-center h-screen flex justify-center items-center relative">
       <div className="absolute inset-0 bg-black/60 z-0 h-[100%]" />
       <div className="w-full max-w-3xl p-6 text-white text-center relative z-10">
         <div className="mb-8">
@@ -17,17 +16,17 @@ export default function ExperienceAlternative() {
 
         <div className="flex flex-col md:flex-row justify-between gap-20">
           <div className="w-full md:w-1/2 flex flex-col items-start">
-            <Button
-              className="bg-[#E51C22] hover:bg-[#E51C22] hover:text-white text-white py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold cursor-pointer"
+            <button
+              className="bg-[#E51C22] hover:bg-[#E51C22] hover:text-white text-white py-2 h-auto w-full md:w-[345px] mb-4 uppercase flex flex-col text-base font-bold cursor-pointer rounded-xs"
               onClick={() =>
                 handleNavigate("/cutomer-details?page=1&form=dealer")
               }
             >
               <span className="text-xs capitalize">for</span>
               In-Person Scheduling
-            </Button>
-            <ul className="text-left space-y-2">
-              <li className="flex items-start gap-2">
+            </button>
+            <ul className=" space-y-2 w-full">
+              <li className="flex items-start max-md:justify-center gap-2">
                 <img
                   src="/img/white-info-icon 1.svg"
                   alt="Dot"
@@ -40,17 +39,17 @@ export default function ExperienceAlternative() {
             </ul>
           </div>
 
-          <div className="w-full md:w-1/2 flex flex-col items-start">
-            <Button
-              variant="outline"
-              className="bg-white text-[#E51C22] hover:bg-white hover:text-[#E51C22] px-6 py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold cursor-pointer"
+          <div className="w-full flex flex-col items-start">
+            <button
+              // variant="outline"
+              className="bg-white text-[#E51C22] py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold cursor-pointer rounded-xs"
               onClick={() => handleNavigate("/cutomer-details?page=1")}
             >
               <span className="capitalize text-xs">for</span>
               Customer Drop-Off
-            </Button>
-            <ul className="text-left space-y-2">
-              <li className="flex items-start gap-2">
+            </button>
+            <ul className="space-y-2 w-full">
+              <li className="flex items-start max-md:justify-center gap-2">
                 <img
                   src="/img/white-info-icon 1.svg"
                   alt="Dot"

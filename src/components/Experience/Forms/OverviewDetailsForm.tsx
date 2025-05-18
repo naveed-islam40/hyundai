@@ -53,10 +53,12 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
   }, [customerInfo]);
 
   return (
-    <div className="bg-white p-8 rounded-md shadow-sm">
+    <div className="bg-white base-sm:p-5 rounded-md shadow-sm">
       <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-        <h1 className="text-lg font-bold">OVERVIEW DETAILS</h1>
-        <p className="text-xs text-white italic">
+        <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+          OVERVIEW DETAILS
+        </h1>
+        <p className="text-xs text-white italic hidden base-sm:block">
           *All fields required to process request
         </p>
       </div>
@@ -66,7 +68,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
           CUSTOMER INFORMATION
         </h2>
 
-        <form onSubmit={formik.handleSubmit}>
+        <form onSubmit={formik.handleSubmit} className="max-base-sm:px-2 pb-2">
           <div className="mb-4">
             <label htmlFor="zipCode" className="block text-sm font-medium mb-1">
               Zip Code:
@@ -76,7 +78,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
               name="zipCode"
               type="text"
               placeholder="e.g. 75169"
-              className="w-full md:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
+              className="w-[180px] base-lg:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.zipCode}
@@ -92,7 +94,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4">
             <div>
               <label
                 htmlFor="firstName"
@@ -105,7 +107,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
                 name="firstName"
                 type="text"
                 placeholder="e.g. John"
-                className="w-full md:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
+                className="w-full base-lg:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.firstName}
@@ -133,7 +135,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
                 name="lastName"
                 type="text"
                 placeholder="e.g. Smith"
-                className="w-full md:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
+                className="w-full base-lg:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.lastName}
@@ -159,7 +161,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
               name="email"
               type="email"
               placeholder="e.g. smith.john@gmail.com"
-              className="w-full md:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
+              className="w-full base-lg:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
               onChange={formik.handleChange}
               onBlur={formik.handleBlur}
               value={formik.values.email}
@@ -175,7 +177,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
+          <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4 mt-4">
             <div>
               <label
                 htmlFor="telephone"
@@ -188,7 +190,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
                 name="telephone"
                 type="tel"
                 placeholder="e.g. xxx-xxx-xxxx"
-                className="w-full md:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
+                className="w-full base-lg:w-72 p-2 border rounded text-[#E51C22] bg-[#F5F6F9] placeholder:italic placeholder:text-xs"
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
                 value={formik.values.telephone}
@@ -216,7 +218,7 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
             />
           </div>
 
-          <div className="flex justify-end mt-8">
+          <div className="flex justify-end base-sm:mt-8 mt-4">
             <button
               type="submit"
               className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors cursor-pointer"

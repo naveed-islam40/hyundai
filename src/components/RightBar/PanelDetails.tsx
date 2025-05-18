@@ -1,7 +1,12 @@
-import { panelDetails } from "@/static/PanelPrices";
+import { useState } from "react";
 import { ChevronRight } from "lucide-react";
+import { panelDetails } from "@/static/PanelPrices";
 
-const PanelDetails = ({ selectedPanels }: any) => {
+const PanelDetails = ({ selectedPanels, isqShow = true }: any) => {
+  const [expandedPanels, setExpandedPanels] = useState<Record<string, boolean>>(
+    {}
+  );
+
   const calculateTotal = () => {
     let total = 0;
     selectedPanels != null &&
@@ -13,8 +18,15 @@ const PanelDetails = ({ selectedPanels }: any) => {
     return total;
   };
 
+  const togglePanelExpand = (panel: string) => {
+    setExpandedPanels((prev) => ({
+      ...prev,
+      [panel]: !prev[panel],
+    }));
+  };
+
   return (
-    <div className="h-full max-h-[300px] overflow-y-auto pr-2">
+    <div className="h-full w-full pr-2">
       {selectedPanels != null &&
         Object.values(selectedPanels).some(Boolean) && (
           <div className="mb-4">
@@ -41,17 +53,22 @@ const PanelDetails = ({ selectedPanels }: any) => {
 
             {Object.entries(selectedPanels).map(([panel, isSelected]: any) => {
               if (isSelected && panelDetails[panel]) {
+                const isExpanded = expandedPanels[panel] === true;
+
                 return (
                   <div
                     key={`detail-${panel}`}
                     className="border-b border-gray-700 pb-2 mb-2"
                   >
-                    <div className="flex justify-between items-center cursor-pointer py-2">
+                    <div
+                      className="flex justify-between items-center cursor-pointer py-2"
+                      onClick={() => togglePanelExpand(panel)}
+                    >
                       <div className="flex items-center">
                         <img
                           src="/img/filled-trash 2.svg"
                           alt=""
-                          className="w-5 h-5"
+                          className="w-5 h-5 mr-2"
                         />
                         <span>{panel}</span>
                       </div>
@@ -60,31 +77,37 @@ const PanelDetails = ({ selectedPanels }: any) => {
                           ${panelDetails[panel].cost.toFixed(2)}
                         </span>
                         <ChevronRight
-                          className={`transition-transform`}
+                          className={`transition-transform ${
+                            isExpanded ? "rotate-90" : ""
+                          }`}
                           size={18}
                         />
                       </div>
                     </div>
 
-                    <div className="pl-6 mt-1 space-y-1">
-                      {panelDetails[panel].services
-                        .filter(
-                          (service: any) =>
-                            service.name?.toLowerCase() ===
-                            isSelected?.toLowerCase()
-                        )
-                        .map((service: any) => (
-                          <div
-                            key={service.name}
-                            className="flex justify-between"
-                          >
-                            <div className="text-sm italic">{service.name}</div>
-                            <div className="text-sm">
-                              ${service.cost.toFixed(2)}
+                    {isExpanded && (
+                      <div className="pl-6 mt-1 space-y-1">
+                        {panelDetails[panel].services
+                          .filter(
+                            (service: any) =>
+                              service.name?.toLowerCase() ===
+                              isSelected?.toLowerCase()
+                          )
+                          .map((service: any) => (
+                            <div
+                              key={service.name}
+                              className="flex justify-between"
+                            >
+                              <div className="text-sm italic">
+                                {service.name}
+                              </div>
+                              <div className="text-sm">
+                                ${service.cost.toFixed(2)}
+                              </div>
                             </div>
-                          </div>
-                        ))}
-                    </div>
+                          ))}
+                      </div>
+                    )}
                   </div>
                 );
               }
@@ -105,10 +128,14 @@ const PanelDetails = ({ selectedPanels }: any) => {
       <div className="text-xs text-center">
         *Amount Shown Above is an ESTIMATE of Repair Total
       </div>
-      <div className="flex items-center mt-3 gap-3">
-        <img src="/img/qrcg-sample 2.svg" alt="" className="w-15 h-15" />
-        <p>*Understanding your vehicle Finish and Blend</p>
-      </div>
+      {isqShow && (
+        <div className="flex items-center mt-3 gap-3">
+          <img src="/img/qrcg-sample 2.svg" alt="" className="w-15 h-15" />
+          <p className="text-xs">
+            *Understanding your vehicle Finish and Blend
+          </p>
+        </div>
+      )}
     </div>
   );
 };

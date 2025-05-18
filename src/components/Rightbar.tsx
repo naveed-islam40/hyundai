@@ -14,7 +14,7 @@ export default function RightSidebar({ selectedPanels }: any) {
   const currentPage = Math.max(1, parseInt(queryParams.get("page") || "1", 10));
 
   return (
-    <div className="p-4 h-full flex flex-col bg-black rounded-r-md">
+    <div className="p-4 flex flex-col bg-black rounded-r-md h-screen overflow-y-auto">
       <div className="mb-8">
         {options.map((option, idx) => {
           const isCompleted = idx < currentPage - 1;

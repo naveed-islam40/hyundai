@@ -4,7 +4,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { Link } from "react-router-dom";
 import TimezoneSelect, { type ITimezone } from "react-timezone-select";
 
-export default function SchedulingForm({ setScheduleDate }: any) {
+export default function SchedulingForm({ setScheduleDate, name }: any) {
   const [date, setDate] = useState<Date | null>(null);
   const [time, setTime] = useState<any>(null);
   const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>(
@@ -26,43 +26,45 @@ export default function SchedulingForm({ setScheduleDate }: any) {
   }, []);
 
   return (
-    <div className="mx-auto p-6 bg-white shadow-sm rounded-lg h-screen flex flex-col justify-between">
+    <div className="mx-auto sm:p-6 pb-3 bg-white shadow-sm rounded-lg h-full flex flex-col justify-between">
       <div>
         <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-          <h1 className="text-lg font-bold">SCHEDULING</h1>
-          <p className="text-xs text-white italic">
+          <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+            SCHEDULING
+          </h1>
+          <p className="text-xs text-white italic hidden base-sm:block">
             *All fields required to process request
           </p>
         </div>
 
-        <div className="ml-10">
+        <div className="sm:ml-10 ml-2 px-2">
           <div className="flex justify-between mb-8">
             <div className="text-[#E51C22] font-bold text-sm">
               SCHEDULE YOUR APPOINTMENT
             </div>
-            <div>
+            <div className="hidden sm:block">
               <span className="text-[#E51C22] font-bold text-sm">
                 Customer:
               </span>{" "}
-              <span className="text-sm font-bold">SMITH, JANE</span>
+              <span className="text-sm font-bold">{name || "JANE SSMITH"}</span>
             </div>
           </div>
 
           <div className="mb-12">
             <h2 className="font-bold uppercase mb-4">DATE & TIME</h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+            <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-6 mb-4">
               <div>
                 <label className="block text-xs text-gray-500 mb-1">
                   Date: (select preferred date)
                 </label>
-                <div className="w-[345px] bg-[#C5C5C573] relative rounded-sm">
+                <div className="w-full base-lg:w-[345px] bg-[#C5C5C573] relative rounded-sm">
                   <DatePicker
                     selected={date}
                     onChange={(date) => setDate(date)}
                     dateFormat="dd/MM/yyyy"
                     placeholderText="DD/MM/YYYY"
-                    className="pl-3 pr-10 py-2 rounded text-sm w-[345px] focus:ring-0 focus:border-none focus:outline-0 text-[#E51C22]"
+                    className="pl-3 pr-10 py-2 rounded text-sm w-full base-lg:w-[345px] focus:ring-0 focus:border-none focus:outline-0 text-[#E51C22]"
                   />
                   <img
                     src="/img/calendar-picker 1.svg"
@@ -75,17 +77,17 @@ export default function SchedulingForm({ setScheduleDate }: any) {
                 <label className="block text-xs text-gray-500 mb-1">
                   Time: (select preferred time)
                 </label>
-                <div className="relative w-[345px]">
+                <div className="relative w-full base-lg:w-[345px]">
                   <input
                     type="time"
-                    className=" px-3 py-2 rounded text-sm w-[345px] focus:ring-0 focus:border-none focus:outline-0 text-[#E51C22] bg-[#C5C5C573]"
+                    className=" px-3 py-2 rounded text-sm w-full base-lg:w-[345px] focus:ring-0 focus:border-none focus:outline-0 text-[#E51C22] bg-[#C5C5C573]"
                     onChange={(e) => setTime(e.target.value)}
                   />
                 </div>
               </div>
             </div>
 
-            <div className="w-[522px] mt-10">
+            <div className="w-full base-lg:w-[522px] mt-10">
               <TimezoneSelect
                 value={selectedTimezone}
                 onChange={setSelectedTimezone}
@@ -109,7 +111,7 @@ export default function SchedulingForm({ setScheduleDate }: any) {
         </div>
       </div>
 
-      <div className="flex justify-end flex-col items-end gap-4 mt-16">
+      <div className="flex justify-end flex-col items-end gap-4 mt-16 px-2">
         <div className="mr-6">
           <div className="text-sm text-right">
             Sub-Total: <span className="font-bold">${subTotal}</span>

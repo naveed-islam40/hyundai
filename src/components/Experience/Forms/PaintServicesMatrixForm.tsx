@@ -69,22 +69,27 @@ export default function PaintServicesMatrix({
   };
 
   return (
-    <div className="mx-auto rounded-md bg-white p-6 shadow-md">
+    <div className="mx-auto rounded-md bg-white sm:p-6 shadow-md pb-3 h-screen overflow-y-auto">
       <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-        <h1 className="text-lg font-bold">PAINT SERVICES MATRIX</h1>
-        <p className="text-xs text-white italic">
+        <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+          PAINT SERVICES MATRIX
+        </h1>
+        <p className="text-xs text-white italic hidden base-sm:block">
           *All fields required to process request
         </p>
       </div>
 
-      <form onSubmit={formik.handleSubmit} className="ml-">
+      <form onSubmit={formik.handleSubmit} className="px-4">
         {/* SERVICES & LABOR Section */}
         <div className="mb-6">
           <div className="mb-6">
             <div className="flex justify-between">
               <h2 className="text-red-600 font-bold mb-3">SERVICES & LABOR</h2>
               <div className="text-right">
-                <span className="text-red-600 font-bold">Customer:</span> {name}
+                <span className="text-red-600 font-bold hidden base-xs:block">
+                  Customer:
+                </span>{" "}
+                {name}
               </div>
             </div>
 
@@ -98,7 +103,7 @@ export default function PaintServicesMatrix({
                     id="vin"
                     name="vin"
                     placeholder="e.g. Required VIN"
-                    className={`p-2 bg-gray-100 border w-[520px] text-[#E51C22] ${
+                    className={`p-2 bg-gray-100 border w-full sm:w-[345px] lg:w-[520px] text-[#E51C22] ${
                       formik.touched.vin && formik.errors.vin
                         ? "border-[#E51C22]"
                         : "border-gray-300"
@@ -136,7 +141,7 @@ export default function PaintServicesMatrix({
             </div>
 
             {/* Year, Make, Model Row */}
-            <div className="flex items-center gap-4 mb-6">
+            <div className="flex items-center flex-wrap gap-4 mb-6">
               {/* Year Field */}
               <CustomSelect
                 value={formik.values.year}
@@ -157,7 +162,7 @@ export default function PaintServicesMatrix({
                   id="make"
                   name="make"
                   placeholder="e.g. Hyundai"
-                  className={`p-2 bg-[#C5C5C573] border w-[345px] text-[#E51C22]  mb-1
+                  className={`p-2 bg-[#C5C5C573] border w-full base-sm:w-[345px] text-[#E51C22]  mb-1
                   rounded`}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
@@ -177,7 +182,7 @@ export default function PaintServicesMatrix({
                 }}
                 options={["Sonata", "Elantra", "Tucson"]}
                 placeholder="e.g. Sonata"
-                className="focus-visible:ring-[0px] bg-[#F5F6F9] w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
+                className="focus-visible:ring-[0px] bg-[#F5F6F9] border w-full base-sm:w-[345px]  rounded p-2 py-5 mb-1 text-[#E51C22]"
                 label="Model : "
               />
             </div>
@@ -190,7 +195,7 @@ export default function PaintServicesMatrix({
               }}
               options={["CA DIV SAN RAMON", "Option 2", "Option 3"]}
               placeholder="e.g. CA DIV SAN RAMON"
-              className="focus-visible:ring-[0px] bg-[#C5C5C573] w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
+              className="focus-visible:ring-[0px] bg-[#C5C5C573] border w-full base-sm:w-[345px]  rounded p-2 py-5 mb-1 text-[#E51C22]"
               label="CBSA : "
             />
 
@@ -203,7 +208,7 @@ export default function PaintServicesMatrix({
                 }}
                 options={["Clear Coat", "Base Coat", "Primer"]}
                 placeholder="e.g. Clear Coat"
-                className="focus-visible:ring-[0px] bg-[#C5C5C573] w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
+                className="focus-visible:ring-[0px] bg-[#C5C5C573] border w-full base-sm:w-[345px]  rounded p-2 py-5 mb-1 text-[#E51C22]"
                 label="Paint Materials : "
               />
             </div>
@@ -223,7 +228,7 @@ export default function PaintServicesMatrix({
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 base-xs:grid-cols-2 gap-4">
             <div>
               <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
                 Body Style

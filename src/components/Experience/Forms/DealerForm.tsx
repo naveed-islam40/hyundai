@@ -46,11 +46,13 @@ export default function DealerForm({
   }, []);
 
   return (
-    <div className="bg-white p-8 rounded-md shadow-sm">
+    <div className="bg-white sm:p-8 rounded-md shadow-sm">
       <div className="mx-auto">
         <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-          <h1 className="text-lg font-bold">OVERVIEW DETAILS</h1>
-          <p className="text-xs text-white italic">
+          <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+            OVERVIEW DETAILS
+          </h1>
+          <p className="text-xs text-white italic hidden base-sm:block">
             *All fields required to process request
           </p>
         </div>
