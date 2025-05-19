@@ -13,6 +13,7 @@ import InformationReviewMobile from "./Forms/InformationReviewMobile";
 
 export default function OverviewDetails() {
   const [cutomerInfo, setCustomerInfo] = useState<any>({});
+  const [dealerInfo, setDealerInfo] = useState<any>({});
   const [selectedPanels, setSelectedPanels] = useState<Record<string, string>>(
     {}
   );
@@ -22,7 +23,7 @@ export default function OverviewDetails() {
   const queryParams = new URLSearchParams(location.search);
 
   const page = queryParams.get("page");
-  const path = queryParams.get("form");
+  const skip = queryParams.get("skip");
 
   useEffect(() => {
     if (Object.keys(selectedPanels).length !== 0) {
@@ -41,21 +42,26 @@ export default function OverviewDetails() {
     return total;
   };
 
+  console.log(selectedPanels);
+
   const renderForm = () => {
     switch (page) {
       case "1":
-        return path === "dealer" ? (
-          <DealerForm
-            setCustomerInfo={setCustomerInfo}
-            customerInfo={cutomerInfo}
-          />
-        ) : (
+        return (
           <OverviewDetailsForm
             setCustomerInfo={setCustomerInfo}
             customerInfo={cutomerInfo}
           />
         );
       case "2":
+        return (
+          <DealerForm
+            setCustomerInfo={setDealerInfo}
+            customerInfo={dealerInfo}
+          />
+        );
+
+      case "3":
         return (
           <PaintServicesMatrixForm
             setSelectedPanels={setSelectedPanels}
@@ -67,8 +73,26 @@ export default function OverviewDetails() {
             paintServiceInfo={PaintServiceInfo}
           />
         );
-      case "3":
-        return (
+
+      case "4":
+        return skip === "schedule" ? (
+          <div>
+            <div className="hidden sm:block">
+              <InformationReview
+                PaintServiceInfo={PaintServiceInfo}
+                customerInfo={cutomerInfo}
+                scheduleDate={scheduleDate}
+              />
+            </div>
+            <div className="block sm:hidden">
+              <InformationReviewMobile
+                PaintServiceInfo={PaintServiceInfo}
+                customerInfo={cutomerInfo}
+                scheduleDate={scheduleDate}
+              />
+            </div>
+          </div>
+        ) : (
           <SchedulingForm
             setScheduleDate={setScheduleDate}
             scheduleDate={scheduleDate}
@@ -77,7 +101,8 @@ export default function OverviewDetails() {
             }`}
           />
         );
-      case "4":
+
+      case "5":
         return (
           <div>
             <div className="hidden sm:block">
@@ -96,7 +121,7 @@ export default function OverviewDetails() {
             </div>
           </div>
         );
-      case "5":
+      case "6":
         return <ConfirmationPage />;
     }
   };
@@ -104,11 +129,17 @@ export default function OverviewDetails() {
   return (
     <div className="flex min-h-screen items-stretch bg-gray-100 sm:px-6 md:w-[100%] 2xl:w-[80%] mx-auto max-base-sm:flex-col">
       <div className="block base-sm:hidden">
-        <RepairEstimate selectedPanels={selectedPanels} />
+        <RepairEstimate
+          selectedPanels={selectedPanels}
+          setSelectedPanels={setSelectedPanels}
+        />
       </div>
       <div className="flex-1 sm:p-4 py-10">{renderForm()}</div>
       <div className="w-80 p-6 h-full text-white hidden base-sm:block">
-        <RightSidebar selectedPanels={selectedPanels} />
+        <RightSidebar
+          selectedPanels={selectedPanels}
+          setSelectedPanels={setSelectedPanels}
+        />
       </div>
     </div>
   );

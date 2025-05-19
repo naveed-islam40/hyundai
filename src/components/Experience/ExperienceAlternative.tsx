@@ -18,9 +18,7 @@ export default function ExperienceAlternative() {
           <div className="w-full md:w-1/2 flex flex-col items-start">
             <button
               className="bg-[#E51C22] hover:bg-[#E51C22] hover:text-white text-white py-2 h-auto w-full md:w-[345px] mb-4 uppercase flex flex-col text-base font-bold cursor-pointer rounded-xs"
-              onClick={() =>
-                handleNavigate("/cutomer-details?page=1&form=dealer")
-              }
+              onClick={() => handleNavigate("/cutomer-details?page=1")}
             >
               <span className="text-xs capitalize">for</span>
               In-Person Scheduling
@@ -43,7 +41,9 @@ export default function ExperienceAlternative() {
             <button
               // variant="outline"
               className="bg-white text-[#E51C22] py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold cursor-pointer rounded-xs"
-              onClick={() => handleNavigate("/cutomer-details?page=1")}
+              onClick={() =>
+                handleNavigate("/cutomer-details?page=1&skip=schedule")
+              }
             >
               <span className="capitalize text-xs">for</span>
               Customer Drop-Off

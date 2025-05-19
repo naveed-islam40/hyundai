@@ -8,7 +8,10 @@ const options = [
   "Information Review",
 ];
 
-export default function RightSidebar({ selectedPanels }: any) {
+export default function RightSidebar({
+  selectedPanels,
+  setSelectedPanels,
+}: any) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const currentPage = Math.max(1, parseInt(queryParams.get("page") || "1", 10));
@@ -48,7 +51,10 @@ export default function RightSidebar({ selectedPanels }: any) {
 
       <div className="mt-auto">
         <h3 className="text-lg font-semibold mb-4">Estimated Repair Charges</h3>
-        <PanelDetails selectedPanels={selectedPanels} />
+        <PanelDetails
+          selectedPanels={selectedPanels}
+          setSelectedPanels={setSelectedPanels}
+        />
       </div>
     </div>
   );

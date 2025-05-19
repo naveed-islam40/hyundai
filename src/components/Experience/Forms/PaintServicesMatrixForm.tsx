@@ -2,7 +2,7 @@
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import CustomSelect from "@/components/Dropdown";
 
 export default function PaintServicesMatrix({
@@ -12,11 +12,17 @@ export default function PaintServicesMatrix({
   setPaintServiceInfo,
 }: any) {
   const navigate = useNavigate();
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
+  queryParams.set("page", "2");
+  const prevPath = `${location.pathname}?${queryParams.toString()}`;
+
   const formik = useFormik({
     initialValues: {
       vin: "",
       year: "",
-      make: "",
+      make: "Hyndai",
       model: "",
       cesa: "",
       paintMaterials: "",
@@ -31,23 +37,26 @@ export default function PaintServicesMatrix({
     }),
     onSubmit: (values) => {
       setPaintServiceInfo({ ...values, selectedPanels });
-      navigate("?page=3");
+      queryParams.set("page", "4");
+      navigate(`?${queryParams.toString()}`);
     },
   });
 
-  const handlePanelSelection = (panel: string, finish: string) => {
-    const isExactMatch = Object.entries(selectedPanels).some(
-      ([key, value]) => key === panel && value === finish
-    );
+  const handlePanelSelection = (panel: string, service: string) => {
+    const current = selectedPanels[panel] || [];
 
-    if (isExactMatch) {
-      setSelectedPanels({ ...selectedPanels, [panel]: "" });
+    let updated;
+    if (current.includes(service)) {
+      updated = current.filter((s: string) => s !== service);
     } else {
-      setSelectedPanels({ ...selectedPanels, [panel]: finish });
+      updated = [...current, service];
     }
-  };
 
-  console.log("name", name);
+    setSelectedPanels({
+      ...selectedPanels,
+      [panel]: updated,
+    });
+  };
 
   const bodyParts = {
     left: [
@@ -63,10 +72,17 @@ export default function PaintServicesMatrix({
     left: [
       "Left Front Fender",
       "Left Front Door",
-      "Deck Lid",
-      "Right Rear Quarter Panel",
+      "Left Rear Door",
+      "Left Rocker Panel",
+      "Left A Pillar",
+      "Left B Pillar",
+      "Left C Pillar",
+      "Left Mirror",
+      "Left Roof Rail",
     ],
   };
+
+  console.log("selectedPanels", selectedPanels["Hood"]?.includes("Blend"));
 
   return (
     <div className="mx-auto rounded-md bg-white sm:p-6 shadow-md pb-3 h-screen overflow-y-auto">
@@ -161,11 +177,9 @@ export default function PaintServicesMatrix({
                   type="text"
                   id="make"
                   name="make"
-                  placeholder="e.g. Hyundai"
                   className={`p-2 bg-[#C5C5C573] border w-full base-sm:w-[345px] text-[#E51C22]  mb-1
                   rounded`}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  disabled
                   value={formik.values.make}
                 />
 
@@ -192,6 +206,10 @@ export default function PaintServicesMatrix({
               value={formik.values.cesa}
               onChange={(value: any) => {
                 formik.setFieldValue("cesa", value);
+                setSelectedPanels((prev: any) => ({
+                  ...prev,
+                  ["CESA"]: ["both"],
+                }));
               }}
               options={["CA DIV SAN RAMON", "Option 2", "Option 3"]}
               placeholder="e.g. CA DIV SAN RAMON"
@@ -205,6 +223,10 @@ export default function PaintServicesMatrix({
                 value={formik.values.paintMaterials}
                 onChange={(value: any) => {
                   formik.setFieldValue("paintMaterials", value);
+                  setSelectedPanels((prev: any) => ({
+                    ...prev,
+                    ["Paint Materials"]: ["both"],
+                  }));
                 }}
                 options={["Clear Coat", "Base Coat", "Primer"]}
                 placeholder="e.g. Clear Coat"
@@ -233,7 +255,7 @@ export default function PaintServicesMatrix({
               <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
                 Body Style
               </h3>
-              <div className="space-y-2">
+              <div className="space-y-2 max-h-[110px] overflow-y-auto">
                 {bodyPanels.left.map((part) => (
                   <div key={part} className="flex items-center">
                     <input
@@ -241,7 +263,10 @@ export default function PaintServicesMatrix({
                       id={part.replace(/\s+/g, "")}
                       className="mr-2"
                       onChange={() => handlePanelSelection(part, "Refinish")}
-                      checked={selectedPanels[part] === "Refinish"}
+                      checked={
+                        Array.isArray(selectedPanels[part]) &&
+                        selectedPanels[part]?.includes("Refinish")
+                      }
                     />
                     <label
                       htmlFor={part.replace(/\s+/g, "")}
@@ -268,7 +293,10 @@ export default function PaintServicesMatrix({
                         name={`finish-${part}`}
                         className="mr-2"
                         onChange={() => handlePanelSelection(part, "Refinish")}
-                        checked={selectedPanels[part] === "Refinish"}
+                        checked={
+                          Array.isArray(selectedPanels[part]) &&
+                          selectedPanels[part]?.includes("Refinish")
+                        }
                       />
                       <label
                         htmlFor={`refinish-${part.replace(/\s+/g, "")}`}
@@ -289,7 +317,10 @@ export default function PaintServicesMatrix({
                         id={`blend-${part.replace(/\s+/g, "")}`}
                         name={`finish-${part}`}
                         onChange={() => handlePanelSelection(part, "Blend")}
-                        checked={selectedPanels[part] === "Blend"}
+                        checked={
+                          Array.isArray(selectedPanels[part]) &&
+                          selectedPanels[part].includes("Blend")
+                        }
                       />
 
                       <label
@@ -310,7 +341,7 @@ export default function PaintServicesMatrix({
         <div className="flex justify-end gap-2 mt-6">
           <Link
             type="button"
-            to={"?page=1"}
+            to={`${prevPath}`}
             className="bg-black text-white px-4 py-2 text-sm rounded-[3px]"
           >
             PREV

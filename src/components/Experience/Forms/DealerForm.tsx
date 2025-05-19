@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface CustomerFormProps {
   customerInfo: any;
@@ -25,6 +25,7 @@ export default function DealerForm({
   setCustomerInfo,
   customerInfo,
 }: CustomerFormProps) {
+  const navigate = useNavigate();
   const formik = useFormik({
     initialValues: {
       poNumber: "",
@@ -36,14 +37,25 @@ export default function DealerForm({
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
       setCustomerInfo(values);
+      navigate(nextPath);
     },
   });
 
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
+
+  queryParams.set("page", "3");
+  const nextPath = `${location.pathname}?${queryParams.toString()}`;
+
+  queryParams.set("page", "1");
+  const prevPath = `${location.pathname}?${queryParams.toString()}`;
+
   useEffect(() => {
     formik.setValues(customerInfo);
-  }, []);
+  }, [customerInfo]);
+
+  console.log(customerInfo);
 
   return (
     <div className="bg-white sm:p-8 rounded-md shadow-sm">
@@ -233,7 +245,7 @@ export default function DealerForm({
             </div>
 
             <div className="flex justify-end mt-8 space-x-2">
-              <Link to="/experience">
+              <Link to={`${prevPath}`}>
                 <Button
                   type="button"
                   variant="outline"
@@ -242,15 +254,14 @@ export default function DealerForm({
                   PREV
                 </Button>
               </Link>
-              <Link to={"/cutomer-details?page=2"}>
-                <Button
-                  type="submit"
-                  className="bg-[#E51C22] hover:bg-[#E51C22] rounded-[3px] cursor-pointer"
-                  disabled={formik.isSubmitting}
-                >
-                  NEXT
-                </Button>
-              </Link>
+
+              <Button
+                type="submit"
+                className="bg-[#E51C22] hover:bg-[#E51C22] rounded-[3px] cursor-pointer"
+                disabled={formik.isSubmitting}
+              >
+                NEXT
+              </Button>
             </div>
           </form>
         </div>

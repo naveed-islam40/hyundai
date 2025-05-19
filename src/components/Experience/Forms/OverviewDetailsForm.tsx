@@ -1,7 +1,7 @@
 import CustomSelect from "@/components/Dropdown";
 import { useFormik } from "formik";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 
 interface CustomerFormProps {
@@ -34,6 +34,8 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
       setCustomerInfo(values);
     },
   });
+  const location = useLocation();
+  const queryParams = new URLSearchParams(location.search);
 
   const handleNavigate = () => {
     if (
@@ -44,7 +46,8 @@ const CustomerForm = ({ setCustomerInfo, customerInfo }: CustomerFormProps) => {
       formik.values.zipCode,
       formik.values.zipCode)
     ) {
-      navigate("?page=2");
+      queryParams.set("page", "2");
+      navigate(`?${queryParams.toString()}`);
     }
   };
 

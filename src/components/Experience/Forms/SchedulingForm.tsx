@@ -119,13 +119,13 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
         </div>
         <div className="flex space-x-2">
           <Link
-            to={"?page=2"}
+            to={"?page=3"}
             className="bg-black text-white hover:bg-black px-6 rounded-[3px] py-2"
           >
             PREV
           </Link>
           <Link
-            to={"?page=4"}
+            to={"?page=5"}
             onClick={handleNext}
             className="bg-[#E51C22] text-white hover:bg-[#E51C22] px-6 rounded-[3px] py-2 "
           >

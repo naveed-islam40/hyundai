@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="md:w-[100%] 2xl:w-[80%] max-sm:py-4 mx-auto flex justify-between items-center md:px-10 px-5  bg-[#FFFFFF] py-2 md:py-5 text-center border-t border-gray-200 font-sans relative z-10">
       <div className="text-gray-500 text-xs md:text-sm mb-2 font-semibold hidden sm:block">
-        © 2025 Chain Champions. All rights reserved.
+        © 2025 Crash Champions
       </div>
       <div className="text-gray-500 text-xs md:text-sm font-semibold block sm:hidden">
         © 2025 Crash Champions
