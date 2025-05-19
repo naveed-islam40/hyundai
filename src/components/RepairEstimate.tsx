@@ -2,7 +2,10 @@ import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import PanelDetails from "./RightBar/PanelDetails";
 
-export default function RepairEstimate({ selectedPanels }: any) {
+export default function RepairEstimate({
+  selectedPanels,
+  setSelectedPanels,
+}: any) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
   const page = queryParams.get("page");
@@ -61,7 +64,11 @@ export default function RepairEstimate({ selectedPanels }: any) {
                 </span>
               )}
               {showFullDetails && (
-                <PanelDetails selectedPanels={selectedPanels} isqShow={false} />
+                <PanelDetails
+                  selectedPanels={selectedPanels}
+                  isqShow={false}
+                  setSelectedPanels={setSelectedPanels}
+                />
               )}
             </div>
           </div>

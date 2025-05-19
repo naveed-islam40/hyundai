@@ -34,6 +34,7 @@ const PanelDetails = ({
   };
 
   const deletePanel = (panel: string) => {
+    console.log("Hello World");
     const updatedPanels = { ...selectedPanels };
     delete updatedPanels[panel];
     setSelectedPanels(updatedPanels);
@@ -106,7 +107,7 @@ const PanelDetails = ({
                           <img
                             src="/img/filled-trash 2.svg"
                             alt=""
-                            className="w-5 h-5 mr-2"
+                            className="w-5 h-5 mr-2 max-base-sm:invert max-base-sm:hue-rotate-180 max-base-sm:brightness-150"
                             onClick={() => deletePanel(panel)}
                           />
                           <span>{panel}</span>

@@ -1,15 +1,15 @@
-import OverviewDetailsForm from "@/components/Experience/Forms/OverviewDetailsForm";
+import OverviewDetailsForm from "@/components/Forms/OverviewDetailsForm";
 import RightSidebar from "@/components/Rightbar";
 import { useLocation } from "react-router-dom";
-import SchedulingForm from "./Forms/SchedulingForm";
-import InformationReview from "./Forms/InformationReview";
-import ConfirmationPage from "./Forms/Confirmation";
-import PaintServicesMatrixForm from "./Forms/PaintServicesMatrixForm";
+import SchedulingForm from "../Forms/SchedulingForm";
+import InformationReview from "../Forms/InformationReview";
+import ConfirmationPage from "../Forms/Confirmation";
+import PaintServicesMatrixForm from "../Forms/PaintServicesMatrixForm";
 import { useEffect, useState } from "react";
-import DealerForm from "./Forms/DealerForm";
+import DealerForm from "../Forms/DealerForm";
 import { panelDetails } from "@/static/PanelPrices";
 import RepairEstimate from "../RepairEstimate";
-import InformationReviewMobile from "./Forms/InformationReviewMobile";
+import InformationReviewMobile from "../Forms/InformationReviewMobile";
 
 export default function OverviewDetails() {
   const [cutomerInfo, setCustomerInfo] = useState<any>({});
