@@ -33,17 +33,30 @@ export default function OverviewDetails() {
 
   const calculateTotal = () => {
     let total = 0;
-    selectedPanels != null &&
-      Object.entries(selectedPanels).forEach(([panel, isSelected]) => {
-        if (isSelected && panelDetails[panel]) {
-          total += panelDetails[panel].cost;
+
+    Object.entries(selectedPanels || {}).forEach(
+      ([panel, selectedServices]) => {
+        if (Array.isArray(selectedServices)) {
+          const panelSum = selectedServices.reduce(
+            (sum: number, svc: string) => {
+              const cost =
+                panelDetails[panel].services.find(
+                  (s: any) => s.name.toLowerCase() === svc.toLowerCase()
+                )?.cost ?? 0;
+              return sum + cost;
+            },
+            0
+          );
+
+          total += panelSum;
         }
-      });
+      }
+    );
+
     return total;
   };
 
-  console.log(selectedPanels);
-
+  console.log(calculateTotal());
   const renderForm = () => {
     switch (page) {
       case "1":
@@ -82,6 +95,7 @@ export default function OverviewDetails() {
                 PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
+                selectedPanels={selectedPanels}
               />
             </div>
             <div className="block sm:hidden">
@@ -110,6 +124,7 @@ export default function OverviewDetails() {
                 PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
+                selectedPanels={selectedPanels}
               />
             </div>
             <div className="block sm:hidden">
@@ -117,6 +132,7 @@ export default function OverviewDetails() {
                 PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
+                selectedPanels={selectedPanels}
               />
             </div>
           </div>

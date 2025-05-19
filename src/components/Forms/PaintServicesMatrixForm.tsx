@@ -1,5 +1,3 @@
-"use client";
-
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link, useLocation, useNavigate } from "react-router-dom";
@@ -58,32 +56,25 @@ export default function PaintServicesMatrix({
     });
   };
 
-  const bodyParts = {
-    left: [
-      "Left Front Fender",
-      "Left Front Door",
-      "Deck Lid",
-      "Right Rear Quarter Panel",
-    ],
-    right: ["Roof", "Hood", "Bumper", "Doors"],
-  };
+  const bodyPanels = [
+    "Left Front Fender",
+    "Left Front Door",
+    "Left Rear Door",
+    "Left Rocker Panel",
+    "Left A Pillar",
+    "Left B Pillar",
+    "Left C Pillar",
+    "Left Mirror",
+    "Left Roof Rail",
+  ];
 
-  const bodyPanels = {
-    left: [
-      "Left Front Fender",
-      "Left Front Door",
-      "Left Rear Door",
-      "Left Rocker Panel",
-      "Left A Pillar",
-      "Left B Pillar",
-      "Left C Pillar",
-      "Left Mirror",
-      "Left Roof Rail",
-    ],
-  };
-
-  console.log("selectedPanels", selectedPanels["Hood"]?.includes("Blend"));
-
+  console.log(
+    Array.isArray(
+      (selectedPanels["Left C Pillar"] &&
+        selectedPanels["Left C Pillar"]?.includes("Refinish")) ||
+        selectedPanels["Left C Pillar"]?.includes("Blend")
+    )
+  );
   return (
     <div className="mx-auto rounded-md bg-white sm:p-6 shadow-md pb-3 h-screen overflow-y-auto">
       <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
@@ -250,13 +241,13 @@ export default function PaintServicesMatrix({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 base-xs:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 base-xs:grid-cols-2 gap-4 max-h-[150px] overflow-y-auto">
             <div>
               <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
                 Body Style
               </h3>
-              <div className="space-y-2 max-h-[110px] overflow-y-auto">
-                {bodyPanels.left.map((part) => (
+              <div className="space-y-2">
+                {bodyPanels.map((part) => (
                   <div key={part} className="flex items-center">
                     <input
                       type="checkbox"
@@ -265,7 +256,8 @@ export default function PaintServicesMatrix({
                       onChange={() => handlePanelSelection(part, "Refinish")}
                       checked={
                         Array.isArray(selectedPanels[part]) &&
-                        selectedPanels[part]?.includes("Refinish")
+                        (selectedPanels[part].includes("Refinish") ||
+                          selectedPanels[part].includes("Blend"))
                       }
                     />
                     <label
@@ -284,8 +276,7 @@ export default function PaintServicesMatrix({
               </h3>
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <p className="text-sm font-medium">Refinish</p>
-                  {bodyParts.right.map((part) => (
+                  {bodyPanels.map((part) => (
                     <div key={`refinish-${part}`} className="flex items-center">
                       <input
                         type="checkbox"
@@ -302,14 +293,13 @@ export default function PaintServicesMatrix({
                         htmlFor={`refinish-${part.replace(/\s+/g, "")}`}
                         className="text-sm"
                       >
-                        {part}
+                        {"Refinish"}
                       </label>
                     </div>
                   ))}
                 </div>
                 <div className="space-y-2">
-                  <p className="text-sm font-medium">Blend</p>
-                  {bodyParts.right.map((part) => (
+                  {bodyPanels.map((part) => (
                     <div key={`blend-${part}`} className="flex items-center">
                       <input
                         type="checkbox"
@@ -327,7 +317,7 @@ export default function PaintServicesMatrix({
                         htmlFor={`blend-${part.replace(/\s+/g, "")}`}
                         className="text-sm"
                       >
-                        {part}
+                        {"Blend"}
                       </label>
                     </div>
                   ))}

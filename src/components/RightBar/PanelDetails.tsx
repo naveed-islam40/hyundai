@@ -34,7 +34,6 @@ const PanelDetails = ({
   };
 
   const deletePanel = (panel: string) => {
-    console.log("Hello World");
     const updatedPanels = { ...selectedPanels };
     delete updatedPanels[panel];
     setSelectedPanels(updatedPanels);

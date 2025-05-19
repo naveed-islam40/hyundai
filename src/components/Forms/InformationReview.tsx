@@ -5,6 +5,7 @@ export default function InformationReview({
   PaintServiceInfo,
   customerInfo,
   scheduleDate,
+  selectedPanels,
 }: any) {
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -113,19 +114,19 @@ export default function InformationReview({
                 <div className="mr-8">
                   <p className="text-xs text-center">DATE</p>
                   <p className="font-bold">
-                    {new Date(scheduleDate?.date).toLocaleDateString() ||
-                      "06/05/2025"}
+                    {new Date(scheduleDate?.date || "").toLocaleDateString() ||
+                      ""}
                   </p>
                 </div>
                 <div>
                   <p className="text-xs text-center">TIME</p>
-                  <p className="font-bold">{scheduleDate?.time || "2:00pm"}</p>
+                  <p className="font-bold">{scheduleDate?.time || ""}</p>
                 </div>
               </div>
             </div>
           </div>
           {/* Body Repair Status */}
-          <PanelInfo selectedPanels={PaintServiceInfo?.selectedPanels} />
+          <PanelInfo selectedPanels={selectedPanels} />
           {/* Navigation Buttons */}
           <div className="flex justify-end gap-2 mt-8">
             <Link

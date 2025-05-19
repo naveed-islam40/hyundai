@@ -27,9 +27,12 @@ export default function RepairEstimate({
   const [showFullDetails, setShowFullDetails] = useState(false);
 
   useEffect(() => {
-    const total = localStorage.getItem("totalCost");
-    setTotal(Number(total));
+    setTimeout(() => {
+      const total = localStorage.getItem("totalCost");
+      setTotal(Number(total));
+    }, 200);
   }, [selectedPanels]);
+
   return (
     <div className="bg-white py-8 my-5 sm:mx-5 rounded-md">
       <div className="max-w-xl mx-auto">

@@ -5,6 +5,7 @@ export default function InformationReviewMobile({
   PaintServiceInfo,
   customerInfo,
   scheduleDate,
+  selectedPanels,
 }: any) {
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -94,7 +95,7 @@ export default function InformationReviewMobile({
       </div>
 
       {/* Body Repair Status */}
-      <PanelInfo selectedPanels={PaintServiceInfo?.selectedPanels} />
+      <PanelInfo selectedPanels={selectedPanels} />
 
       {/* Navigation Buttons */}
       <div className="mt-auto p-4 flex justify-end gap-2">
