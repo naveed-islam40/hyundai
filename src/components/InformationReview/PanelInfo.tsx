@@ -34,14 +34,16 @@ const PanelInfo = ({ selectedPanels }: any) => {
 
           const matchedService = panel.services.find(
             (service: any) =>
-              service.name.toLowerCase() === finish.toLowerCase()
+              Array.isArray(finish) &&
+              finish
+                .map((s) => s.toLowerCase())
+                .includes(service.name.toLowerCase())
           );
 
           if (!matchedService) return null;
 
           let panelTotal = baseCost + matchedService.cost;
 
-          // Check for Tri-Coat if finish is Refinish
           const triCoatService =
             finish === "Refinish"
               ? panel.services.find(

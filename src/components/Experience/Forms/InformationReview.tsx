@@ -11,8 +11,8 @@ export default function InformationReview({
   queryParams.set("page", "3");
   const prevPath = queryParams?.toString();
   return (
-    <div className="min-h-screen max-h-screen overflow-y-auto bg-gray-50 flex items-center justify-center sm:p-4">
-      <div className="w-full">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center sm:p-4">
+      <div className="w-full h-screen overflow-y-auto">
         <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
           <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
             INFORMATION REVIEW
