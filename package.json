@@ -29,12 +29,15 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.0",
     "react-timezone-select": "^3.2.8",
+    "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
     "tailwindcss": "^4.1.6",
     "yup": "^1.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
+    "@locator/babel-jsx": "^0.4.4",
+    "@locator/runtime": "^0.4.4",
     "@types/node": "^22.15.18",
     "@types/react": "^19.1.2",
     "@types/react-datepicker": "^6.2.0",

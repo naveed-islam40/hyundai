@@ -12,13 +12,13 @@ const Footer = () => {
       <div className="md:text-sm text-xs sm:flex gap-2 items-center hidden">
         <div>
           <Link to={"#"} className="text-[#6B717B] px-1">
-            DMC Policy
+            SMS Policy
           </Link>{" "}
           <span>|</span>
         </div>
         <div>
           <Link to="#" className="text-[#6B717B] px-1">
-            Privacy
+            Privacy Policy
           </Link>{" "}
           <span>|</span>
         </div>
@@ -30,18 +30,18 @@ const Footer = () => {
       <div className="md:text-sm text-xs flex gap-2 items-center sm:hidden">
         <div>
           <Link to={"#"} className="text-[#6B717B] px-1">
-            SMS
+            SMS Policy
           </Link>{" "}
           <span>|</span>
         </div>
         <div>
           <Link to="#" className="text-[#6B717B] px-1">
-            Terms
+            Privacy Policy
           </Link>{" "}
           <span>|</span>
         </div>
         <Link to="#" className="text-[#6B717B]">
-          Policy
+          Terms of Use
         </Link>
       </div>
     </footer>

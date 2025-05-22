@@ -6,6 +6,7 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Label } from "./ui/label";
+import { useState } from "react";
 
 interface CustomSelectProps {
   value: string;
@@ -24,27 +25,34 @@ export default function CustomSelect({
   className = "",
   label,
 }: CustomSelectProps) {
+  const [touched, setTouched] = useState(false);
+
+  const handleBlur = () => {
+    setTouched(true);
+  };
+
   return (
-    <Select value={value} onValueChange={onChange}>
-      <div className="flex flex-col gap-1">
-        <div>
-          <Label className="mb-1">{label}</Label>
-          <SelectTrigger
-            className={className}
-            style={!value ? { color: "#E48096" } : {}}
-          >
-            <SelectValue placeholder={placeholder} />
-          </SelectTrigger>
-          <div className="text-xs text-gray-500 italic">*Required field</div>
-        </div>
-      </div>
-      <SelectContent>
-        {options.map((option) => (
-          <SelectItem key={option} value={option}>
-            {option}
-          </SelectItem>
-        ))}
-      </SelectContent>
-    </Select>
+    <div className="flex flex-col gap-1">
+      {label && <Label className="mb-1">{label}</Label>}
+      <Select value={value} onValueChange={onChange}>
+        <SelectTrigger
+          className={className}
+          style={!value ? { color: "#E48096" } : {}}
+          onBlur={handleBlur}
+        >
+          <SelectValue placeholder={placeholder} />
+        </SelectTrigger>
+        <SelectContent>
+          {options.map((option) => (
+            <SelectItem key={option} value={option}>
+              {option}
+            </SelectItem>
+          ))}
+        </SelectContent>
+      </Select>
+      {touched && !value && (
+        <div className="text-xs text-gray-600 italic mt-1">*Required field</div>
+      )}
+    </div>
   );
 }

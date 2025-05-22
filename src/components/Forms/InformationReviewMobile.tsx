@@ -6,6 +6,7 @@ export default function InformationReviewMobile({
   customerInfo,
   scheduleDate,
   selectedPanels,
+  dealerInfo,
 }: any) {
   return (
     <div className="min-h-screen bg-white flex flex-col">
@@ -15,26 +16,28 @@ export default function InformationReviewMobile({
       </div>
 
       {/* Scheduled Date Box */}
-      <div className="bg-[#E51C22] text-white p-4 mx-10 rounded">
-        <h4 className="font-bold text-base text-center uppercase mb-2">
-          Scheduled Date
-        </h4>
-        <div className="flex items-center justify-center">
-          <div className="mr-8">
-            <p className="text-xs text-center">DATE</p>
-            <p className="font-bold text-center">
-              {new Date(scheduleDate?.date).toLocaleDateString() ||
-                "06/05/2025"}
-            </p>
-          </div>
-          <div>
-            <p className="text-xs text-center">TIME</p>
-            <p className="font-bold text-center">
-              {scheduleDate?.time || "2:00pm"}
-            </p>
+      {Object.keys(scheduleDate || {}).length > 0 && (
+        <div className="bg-[#E51C22] text-white p-4 mx-10 rounded">
+          <h4 className="font-bold text-base text-center uppercase mb-2">
+            Scheduled Date
+          </h4>
+          <div className="flex items-center justify-center">
+            <div className="mr-8">
+              <p className="text-xs text-center">DATE</p>
+              <p className="font-bold text-center">
+                {new Date(scheduleDate?.date).toLocaleDateString() ||
+                  "06/05/2025"}
+              </p>
+            </div>
+            <div>
+              <p className="text-xs text-center">TIME</p>
+              <p className="font-bold text-center">
+                {scheduleDate?.time || "2:00pm"}
+              </p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
       {/* Customer Information */}
       <div className="p-4">
@@ -69,6 +72,36 @@ export default function InformationReviewMobile({
         </div>
       </div>
 
+      {/* Dealer Information */}
+      <div className="p-4">
+        <h3 className="text-[#E51C22] font-bold text-base mb-2">
+          Dealer Information
+        </h3>
+        <div className="flex justify-between mb-1">
+          <p className="text-sm font-bold">Service Advisor Name:</p>
+          <p className="text-sm font-bold">
+            {`${dealerInfo?.serviceAdvisorFirstName || ""} ${
+              dealerInfo?.serviceAdvisorLastName || ""
+            }` || "SMITH, JANE"}
+          </p>
+        </div>
+        <div className="flex justify-between mb-1">
+          <p className="text-sm font-bold">Email:</p>
+          <p className="text-sm font-bold">
+            {`${dealerInfo?.emailAddress2 || ""}`}
+          </p>
+        </div>
+        <div className="flex justify-between mb-1">
+          <p className="text-sm  font-bold">Telephone:</p>
+          <p className="text-sm font-bold">
+            {dealerInfo?.telephone2 || "(972) 123-4567"}
+          </p>
+        </div>
+        <div className="flex justify-between mb-1">
+          <p className="text-sm  font-bold">Telephone:</p>
+          <p className="text-sm font-bold">{dealerInfo?.poNumber || "75189"}</p>
+        </div>
+      </div>
       {/* Vehicle Information */}
       <div className="p-4 border-t border-gray-200">
         <h3 className="text-[#E51C22] font-bold text-base mb-2">

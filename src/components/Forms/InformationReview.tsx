@@ -1,25 +1,41 @@
 import PanelInfo from "@/components/InformationReview/PanelInfo";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { useEffect, useState } from "react";
 
 export default function InformationReview({
   PaintServiceInfo,
   customerInfo,
   scheduleDate,
   selectedPanels,
+  dealerInfo,
 }: any) {
   const location = useLocation();
+  const navigate = useNavigate();
   const queryParams = new URLSearchParams(location.search);
   queryParams.set("page", "3");
   const prevPath = queryParams?.toString();
+  const [, setFormData] = useState<any>({}); // this will send to backend on submit
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    navigate(`?page=6&skip=schedule`);
+  };
+
+  useEffect(() => {
+    setFormData({ PaintServiceInfo, customerInfo, dealerInfo, scheduleDate });
+  }, [PaintServiceInfo, customerInfo, dealerInfo, scheduleDate]);
+
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center sm:p-4">
-      <div className="w-full h-screen overflow-y-auto">
+    <form className="sm:p-5 pb-3 bg-white shadow-sm rounded-lg h-full flex flex-col justify-between">
+      <div className="">
         <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
           <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
             INFORMATION REVIEW
           </h1>
           <p className="text-xs text-white italic hidden base-sm:block">
-            *All fields required to process request
+            *Please Note: Review all the information. Use the PREV to make
+            necessary changes.
           </p>
         </div>
 
@@ -31,20 +47,15 @@ export default function InformationReview({
                 TOTAL COST REVIEW
               </h2>
             </div>
-            <div className="mt-2 md:mt-0">
-              <span className="flex items-center gap-2">
-                {" "}
-                <p className="text-sm text-[#E51C22] font-bold">Customer:</p>
-                <p className="font-bold">
-                  {`${customerInfo?.firstName || ""} ${
-                    customerInfo?.lastName || ""
-                  }` || "SMITH, JANE"}
-                </p>
-              </span>
-              <div className="flex items-center justify-end mt-1">
-                <p className="text-sm font-semibold">Print Copy</p>
+            <div className="flex justify-end mb-6">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="text-sm flex items-center gap-1 text-gray-500"
+              >
+                Print Copy
                 <img src="/img/printer 1.svg" className="ml-2 w-5 h-5" />
-              </div>
+              </Button>
             </div>
           </div>
           {/* Customer Information */}
@@ -76,16 +87,48 @@ export default function InformationReview({
             </div>
             <div className="border-b border-gray-200 mt-4"></div>
           </div>
-          {/* Vehicle Information */};
+
+          {/* Dealer Information */}
+          <div className="mb-6">
+            <h3 className="text-red-600 font-bold text-sm mb-2">
+              Dealer Information
+            </h3>
+            <div className="grid grid-cols-1 base-lg:grid-cols-3 gap-4">
+              <div className="flex items-center gap-2 font-bold">
+                <p className="text-sm">Service Advisor Name:</p>
+                <p>
+                  {`${dealerInfo?.serviceAdvisorFirstName || ""} ${
+                    dealerInfo?.serviceAdvisorLastName || ""
+                  }` || "SMITH, JANE"}
+                </p>
+              </div>
+              <div className="flex items-center gap-2 font-bold">
+                <p className="text-sm">Email:</p>
+                <p>{`${dealerInfo?.emailAddress2 || ""}`}</p>
+              </div>
+              <div className="flex items-center gap-2 font-bold">
+                <p className="text-sm">Telephone:</p>
+                <p>{dealerInfo?.telephone2 || "(972) 123-4567"}</p>
+              </div>
+              <div className="flex items-center gap-2 font-bold">
+                <p className="text-sm">PO Number:</p>
+                <p>{dealerInfo?.poNumber || "75189"}</p>
+              </div>
+            </div>
+            <div className="border-b border-gray-200 mt-4"></div>
+          </div>
+
+          {/* Vehicle Information */}
+
           <div className="mb-6 flex border-b pb-5 flex-col base-lg:flex-row">
             <div className="flex-1">
               <h3 className="text-red-600 font-bold text-sm mb-2">
                 Vehicle Information
               </h3>
 
-              <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4 px-2">
+              <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 font-bold">
-                  <p className="text-sm font-bold">CRSA:</p>
+                  <p className="text-sm font-bold">CBSA:</p>
                   <p>{PaintServiceInfo?.crsa || "CA Dir San Ramon"}</p>
                 </div>
                 <div className="flex items-center gap-2 font-bold">
@@ -106,25 +149,31 @@ export default function InformationReview({
                 </div>
               </div>
             </div>
-            <div className="bg-[#E51C22] text-white p-4 rounded w-[289px] flex flex-col justify-between mt-10 base-lg:mt-0">
-              <h4 className="font-bold text-base text-center">
-                SCHEDULED DATE
-              </h4>
-              <div className="flex items-center justify-center mt-2">
-                <div className="mr-8">
-                  <p className="text-xs text-center">DATE</p>
-                  <p className="font-bold">
-                    {new Date(scheduleDate?.date || "").toLocaleDateString() ||
-                      ""}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-xs text-center">TIME</p>
-                  <p className="font-bold">{scheduleDate?.time || ""}</p>
+            {Object.entries(scheduleDate || {}).length > 0 && (
+              <div className="bg-[#E51C22] text-white p-4 rounded w-[289px] flex flex-col justify-between mt-10 base-lg:mt-0">
+                <h3 className="font-bold text-center text-xl">
+                  SCHEDULED DATE
+                </h3>
+                <div className="flex items-center justify-center mt-1">
+                  <div className="mr-8">
+                    <p className="text-xs text-center">DATE</p>
+                    <p className="font-bold text-2xl">
+                      {new Date(
+                        scheduleDate?.date || ""
+                      ).toLocaleDateString() || ""}
+                    </p>
+                  </div>
+                  <div>
+                    <p className="text-xs text-center">TIME</p>
+                    <p className="font-bold text-2xl">
+                      {scheduleDate?.time || ""}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
+
           {/* Body Repair Status */}
           <PanelInfo selectedPanels={selectedPanels} />
           {/* Navigation Buttons */}
@@ -135,15 +184,16 @@ export default function InformationReview({
             >
               PREV
             </Link>
-            <Link
-              to="?page=6"
-              className="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition-colors flex items-center"
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              className="bg-red-600 text-white cursor-pointer px-6 py-2 rounded hover:bg-red-700 transition-colors flex items-center"
             >
-              NEXT
-            </Link>
+              SAVE &amp; SUBMIT
+            </button>
           </div>
         </div>
       </div>
-    </div>
+    </form>
   );
 }

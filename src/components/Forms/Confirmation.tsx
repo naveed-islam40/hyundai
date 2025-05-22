@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 export default function ConfirmationPage() {
   const handleNavigation = () => {
-    window.location.href = "/cutomer-details?page=1";
+    window.location.href = "/experience"; {/*customer-details?page=1*/}
     localStorage.removeItem("totalCost");
   };
 
@@ -15,18 +15,19 @@ export default function ConfirmationPage() {
   }, []);
 
   return (
-    <div className=" bg-white shadow-lg border flex items-center justify-center sm:p-4 rounded-md">
-      <div className="w-full">
+    <div className="sm:p-5 pb-3 bg-white shadow-sm rounded-lg h-full flex flex-col justify-between">
+      <div className="">
         <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-          <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+            <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
             CONFIRMATION
           </h1>
           <p className="text-xs text-white italic hidden base-sm:block">
-            *All fields required to process request
+            *Please Note: You have completed your request
           </p>
         </div>
 
-        <div className="p-8 md:p-12">
+        <div className="p-6">
+          {/* Thank you confirmation */}
           <div className="flex justify-end mb-6">
             <Button
               variant="ghost"
@@ -42,21 +43,19 @@ export default function ConfirmationPage() {
             <h1 className="text-2xl font-bold">
               Thank you!
               <br className="block base-sm:hidden" />
-              Your Confirmation has emailed.
+              &nbsp;&nbsp;Your Confirmation has emailed.
             </h1>
 
             <div className="space-y-1">
-              <p className="text-sm font-bold text-[#B3B2B2] sm:text-black">
+              <p className="text-xl font-bold text-[#B3B2B2] sm:text-black">
                 Reference:
               </p>
-              <p className="font-bold text-2xl">Smith, Jane</p>
-              <p className="font-bold text-2xl">2022 Hyundai Sonata, 2-DR</p>
             </div>
 
             <div className="space-y-2">
               <p className="font-bold text-2xl">Repair Total: ${total}</p>
               <p className="text-[#E51C22] font-bold text-2xl">
-                Reference No. 205923403402
+                Reference No. 1972845923 {/* add auto-generated reference number*/}
               </p>
             </div>
 
@@ -65,7 +64,7 @@ export default function ConfirmationPage() {
                 className="bg-[#E51C22] hidden sm:block cursor-pointer hover:bg-[#E51C22] text-white px-6 py-2 rounded text-sm uppercase"
                 onClick={handleNavigation}
               >
-                Start New Warranty
+                START NEW HYUNDAI CLAIM
               </Button>
             </div>
             <div className="flex justify-center">
@@ -73,7 +72,7 @@ export default function ConfirmationPage() {
                 className="bg-[#E51C22] block sm:hidden cursor-pointer hover:bg-[#E51C22] text-white px-6 py-2 rounded text-sm uppercase"
                 onClick={handleNavigation}
               >
-                START NEW CLAIM
+                START NEW HYUNDAI CLAIM
               </Button>
             </div>
           </div>

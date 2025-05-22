@@ -11,6 +11,8 @@ const PanelDetails = ({
     {}
   );
 
+  console.log("selectedPanels", selectedPanels);
+
   const calculateTotal = () => {
     let total = 0;
     selectedPanels != null &&
@@ -44,12 +46,24 @@ const PanelDetails = ({
       {selectedPanels != null &&
         Object.values(selectedPanels).some(Boolean) && (
           <div className="mb-4">
+            {/* calculations total */}
+            <div className="flex justify-center mt-6 mb-8 relative top-0">
+              <div className="bg-white text-black p-4 text-center text-2xl font-bold mb-2 rounded w-full">
+                <div>
+                  <div className="text-center text-2xl font-bold">
+                    ${calculateTotal().toFixed(0)}
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div className="flex justify-between mb-2 border-b">
               <div className="font-bold">ITEMS</div>
               <div className="font-bold">EST. COST</div>
             </div>
 
-            {Object.entries(selectedPanels).map(([panel, selectedServices]) => {
+            {/* itemized cost of repairs */}
+            {/*{Object.entries(selectedPanels).map(([panel, selectedServices]) => {
               if (
                 Array.isArray(selectedServices) &&
                 selectedServices.length > 0 &&
@@ -78,96 +92,100 @@ const PanelDetails = ({
                 );
               }
               return null;
-            })}
+            })}*/}
 
             <div className="bg-gray-300 text-black p-2 text-center mt-4 mb-2 font-bold">
               Painted Item Detail
             </div>
+            <div className="h-[calc(100vh-380px)] overflow-y-auto pr-1">
+              {Object.entries(selectedPanels).map(
+                ([panel, selectedServices]: any) => {
+                  if (
+                    Array.isArray(selectedServices) &&
+                    selectedServices.length > 0 &&
+                    panelDetails[panel]
+                  ) {
+                    const isExpanded = expandedPanels[panel] === true;
 
-            {Object.entries(selectedPanels).map(
-              ([panel, selectedServices]: any) => {
-                if (
-                  Array.isArray(selectedServices) &&
-                  selectedServices.length > 0 &&
-                  panelDetails[panel]
-                ) {
-                  const isExpanded = expandedPanels[panel] === true;
-
-                  return (
-                    <div
-                      key={`detail-${panel}`}
-                      className="border-b border-gray-700 pb-2 mb-2"
-                    >
+                    return (
                       <div
-                        className="flex justify-between items-center cursor-pointer py-2"
-                        onClick={() => togglePanelExpand(panel)}
+                        key={`detail-${panel}`}
+                        className="border-b border-gray-700 pb-2 mb-2"
                       >
-                        <div className="flex items-center">
-                          <img
-                            src="/img/filled-trash 2.svg"
-                            alt=""
-                            className="w-5 h-5 mr-2 max-base-sm:invert max-base-sm:hue-rotate-180 max-base-sm:brightness-150"
-                            onClick={() => deletePanel(panel)}
-                          />
-                          <span>{panel}</span>
+                        <div
+                          className="flex justify-between items-center cursor-pointer py-2"
+                          onClick={() => togglePanelExpand(panel)}
+                        >
+                          <div className="flex items-center">
+                            {panel !== "CBSA" && panel !== "Three Stage" && (
+                              <img
+                                src="/img/filled-trash 2.svg"
+                                alt=""
+                                className="w-5 h-5 mr-2 max-base-sm:invert max-base-sm:hue-rotate-180 max-base-sm:brightness-150"
+                                onClick={() => deletePanel(panel)}
+                              />
+                            )}
+                            <span>{panel}</span>
+                          </div>
+                          <div className="flex items-center">
+                            <span className="mr-2">
+                              $
+                              {selectedServices
+                                .reduce((sum: number, svc: string) => {
+                                  const cost =
+                                    panelDetails[panel].services.find(
+                                      (s: any) =>
+                                        s.name.toLowerCase() ===
+                                        svc.toLowerCase()
+                                    )?.cost || 0;
+                                  return sum + cost;
+                                }, 0)
+                                .toFixed(2)}
+                            </span>
+                            <ChevronRight
+                              className={`transition-transform ${
+                                isExpanded ? "rotate-90" : ""
+                              }`}
+                              size={18}
+                            />
+                          </div>
                         </div>
-                        <div className="flex items-center">
-                          <span className="mr-2">
-                            $
-                            {selectedServices
-                              .reduce((sum: number, svc: string) => {
-                                const cost =
-                                  panelDetails[panel].services.find(
-                                    (s: any) =>
-                                      s.name.toLowerCase() === svc.toLowerCase()
-                                  )?.cost || 0;
-                                return sum + cost;
-                              }, 0)
-                              .toFixed(2)}
-                          </span>
-                          <ChevronRight
-                            className={`transition-transform ${
-                              isExpanded ? "rotate-90" : ""
-                            }`}
-                            size={18}
-                          />
-                        </div>
+
+                        {isExpanded && (
+                          <div className="pl-6 mt-1 space-y-1">
+                            {panelDetails[panel].services
+                              .filter((service: any) =>
+                                selectedServices
+                                  .map((s: string) => s.toLowerCase())
+                                  .includes(service.name.toLowerCase())
+                              )
+                              .map((service: any) => (
+                                <div
+                                  key={service.name}
+                                  className="flex justify-between"
+                                >
+                                  <div className="text-sm italic">
+                                    {service.name}
+                                  </div>
+                                  <div className="text-sm">
+                                    ${service.cost.toFixed(2)}
+                                  </div>
+                                </div>
+                              ))}
+                          </div>
+                        )}
                       </div>
+                    );
 
-                      {isExpanded && (
-                        <div className="pl-6 mt-1 space-y-1">
-                          {panelDetails[panel].services
-                            .filter((service: any) =>
-                              selectedServices
-                                .map((s: string) => s.toLowerCase())
-                                .includes(service.name.toLowerCase())
-                            )
-                            .map((service: any) => (
-                              <div
-                                key={service.name}
-                                className="flex justify-between"
-                              >
-                                <div className="text-sm italic">
-                                  {service.name}
-                                </div>
-                                <div className="text-sm">
-                                  ${service.cost.toFixed(2)}
-                                </div>
-                              </div>
-                            ))}
-                        </div>
-                      )}
-                    </div>
-                  );
-
-                  return null;
+                    return null;
+                  }
                 }
-              }
-            )}
+              )}
+            </div>
           </div>
         )}
-
-      <div className="flex justify-center mt-6 mb-4">
+      {/* moved calculations to top */}
+      {/*<div className="flex justify-center mt-6 mb-4">
         <div className="bg-white text-black p-4 text-center text-2xl font-bold mb-2 rounded w-full">
           <div>
             <div className="text-2xl font-bold">
@@ -175,18 +193,20 @@ const PanelDetails = ({
             </div>
           </div>
         </div>
-      </div>
-      <div className="text-xs text-center">
-        *Amount Shown Above is an ESTIMATE of Repair Total
-      </div>
-      {isqShow && (
-        <div className="flex items-center mt-3 gap-3">
-          <img src="/img/qrcg-sample 2.svg" alt="" className="w-15 h-15" />
-          <p className="text-xs">
-            *Understanding your vehicle Finish and Blend
-          </p>
+      </div>*/}
+      <div className="relative bottom-0 pt-7">
+        <div className="text-xs text-center bottom">
+          *Amount Shown Above is an ESTIMATE of Repair Total
         </div>
-      )}
+        {isqShow && (
+          <div className="flex items-center mt-3 gap-3">
+            <img src="/img/qrcg-sample 2.svg" alt="" className="w-15 h-15" />
+            <p className="text-xs">
+              *Understanding your vehicle Finish and Blend
+            </p>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -56,7 +56,6 @@ export default function OverviewDetails() {
     return total;
   };
 
-  console.log(calculateTotal());
   const renderForm = () => {
     switch (page) {
       case "1":
@@ -96,6 +95,7 @@ export default function OverviewDetails() {
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 selectedPanels={selectedPanels}
+                dealerInfo={dealerInfo}
               />
             </div>
             <div className="block sm:hidden">
@@ -103,6 +103,7 @@ export default function OverviewDetails() {
                 PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
+                dealerInfo={dealerInfo}
               />
             </div>
           </div>
@@ -125,6 +126,7 @@ export default function OverviewDetails() {
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 selectedPanels={selectedPanels}
+                dealerInfo={dealerInfo}
               />
             </div>
             <div className="block sm:hidden">
@@ -133,6 +135,7 @@ export default function OverviewDetails() {
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 selectedPanels={selectedPanels}
+                dealerInfo={dealerInfo}
               />
             </div>
           </div>

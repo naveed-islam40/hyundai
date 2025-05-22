@@ -22,7 +22,7 @@ export default function PaintServicesMatrix({
       year: "",
       make: "Hyndai",
       model: "",
-      cesa: "",
+      cbsa: "",
       paintMaterials: "",
     },
     validationSchema: Yup.object({
@@ -30,7 +30,7 @@ export default function PaintServicesMatrix({
       year: Yup.string().required("Year is required"),
       make: Yup.string().required("Make is required"),
       model: Yup.string().required("Model is required"),
-      cesa: Yup.string().required("CESA is required"),
+      cbsa: Yup.string().required("CBSA is required"),
       paintMaterials: Yup.string().required("Paint Materials is required"),
     }),
     onSubmit: (values) => {
@@ -57,41 +57,50 @@ export default function PaintServicesMatrix({
   };
 
   const bodyPanels = [
-    "Left Front Fender",
+    "Front Bumper",
+    "Left Fender",
+    "Right Fender",
+    "Hood",
     "Left Front Door",
+    "Right Front Door",
     "Left Rear Door",
-    "Left Rocker Panel",
-    "Left A Pillar",
-    "Left B Pillar",
-    "Left C Pillar",
-    "Left Mirror",
+    "Right Rear Door",
+    "Roof",
+    "Left Quarter Panel",
+    "Right Quarter Panel",
+    "Deck Lid",
+    "Rear Bumper",
     "Left Roof Rail",
+    "Right Roof Rail",
+    "Cover Car",
+    "Corrosion Protection",
+    "Hazardous Waste",
+    "Color/Sand/Buff",
+    "Color Tint",
   ];
 
-  console.log(
-    Array.isArray(
-      (selectedPanels["Left C Pillar"] &&
-        selectedPanels["Left C Pillar"]?.includes("Refinish")) ||
-        selectedPanels["Left C Pillar"]?.includes("Blend")
-    )
-  );
   return (
-    <div className="mx-auto rounded-md bg-white sm:p-6 shadow-md pb-3 h-screen overflow-y-auto">
-      <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
-        <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
-          PAINT SERVICES MATRIX
-        </h1>
-        <p className="text-xs text-white italic hidden base-sm:block">
-          *All fields required to process request
-        </p>
-      </div>
+    <div className="bg-white base-sm:p-5 rounded-md shadow-sm">
+      <div className="mx-auto">
+        <div className="flex justify-between items-center mb-6 border-b bg-[#000000] text-white p-5">
+          <h1 className="text-center base-sm:text-left text-lg font-bold  max-base-sm:w-full">
+            PAINT SERVICES MATRIX
+          </h1>
+          <p className="text-xs text-white italic hidden base-sm:block">
+            *All fields required to process request
+          </p>
+        </div>
 
-      <form onSubmit={formik.handleSubmit} className="px-4">
-        {/* SERVICES & LABOR Section */}
-        <div className="mb-6">
-          <div className="mb-6">
+        <div className="p-6">
+          <form
+            onSubmit={formik.handleSubmit}
+            className="max-base-sm:px-2 pb-2"
+          >
+            {/* SERVICES & LABOR Section */}
             <div className="flex justify-between">
-              <h2 className="text-red-600 font-bold mb-3">SERVICES & LABOR</h2>
+              <h2 className="text-red-600 font-bold text-sm mb-4">
+                SERVICES & LABOR
+              </h2>
               <div className="text-right">
                 <span className="text-red-600 font-bold hidden base-xs:block">
                   Customer:
@@ -101,61 +110,81 @@ export default function PaintServicesMatrix({
             </div>
 
             {/* VIN Field */}
-            <div className="mb-6">
-              <label className="block text-sm font-medium mb-1">VIN:</label>
-              <div className="flex items-center gap-5">
-                <div className="relative">
-                  <input
-                    type="text"
-                    id="vin"
-                    name="vin"
-                    placeholder="e.g. Required VIN"
-                    className={`p-2 bg-gray-100 border w-full sm:w-[345px] lg:w-[520px] text-[#E51C22] ${
-                      formik.touched.vin && formik.errors.vin
-                        ? "border-[#E51C22]"
-                        : "border-gray-300"
-                    } rounded`}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    value={formik.values.vin}
-                  />
-                </div>
-                <div className="flex flex-col items-center">
-                  <div>
-                    <p className="text-xs text-gray-500">Authenticate</p>
-                    <p className="text-xs text-center text-gray-500">VIN</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+              <div className="mb-4">
+                <label htmlFor="VIN" className="block text-sm font-medium mb-1">
+                  VIN :
+                </label>
+                <div className="flex items-center gap-5">
+                  <div className="relative">
+                    <input
+                      type="text"
+                      id="vin"
+                      name="vin"
+                      maxLength={17}
+                      placeholder="e.g. Required VIN"
+                      className={`p-2 bg-gray-100 border w-full sm:w-[345px] lg:w-[520px] text-[#E51C22] ${
+                        formik.touched.vin && formik.errors.vin
+                          ? "border-[#E51C22]"
+                          : "border-gray-300"
+                      } rounded`}
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.vin}
+                    />
                   </div>
                   {/* Verified Button  */}
-                  <button
-                    type="button"
-                    className="flex items-center justify-center w-8 h-8 rounded-full"
-                  >
-                    <img
-                      src="/img/verified-icon-512x512-5rv3ez90 2.svg"
-                      alt=""
-                    />
-                  </button>
+                  {/*<div className="flex flex-col items-center">
+                    <div>
+                      <p className="text-xs text-gray-500">Authenticate</p>
+                      <p className="text-xs text-center text-gray-500">VIN</p>
+                    </div>
+                    <button
+                      type="button"
+                      className="flex items-center justify-center w-8 h-8 rounded-full"
+                    >
+                      <img
+                        src="/img/verified-icon-512x512-5rv3ez90 2.svg"
+                        alt=""
+                      />
+                    </button>
+                  </div>*/}
                 </div>
-              </div>
-              {formik.touched.vin && formik.errors.vin ? (
-                <div className="text-[#E51C22] text-xs mt-1">
-                  {formik.errors.vin}
-                </div>
-              ) : null}
-              <div className="text-xs text-gray-500 mt-1 italic">
-                *Required field
+                {formik.touched.vin && formik.errors.vin && (
+                  <div className="text-gray-600 text-xs mt-1">
+                    {formik.errors.vin}
+                  </div>
+                )}
               </div>
             </div>
 
             {/* Year, Make, Model Row */}
-            <div className="flex items-center flex-wrap gap-4 mb-6">
+            <div className="flex items-center flex-wrap gap-6 mb-9">
               {/* Year Field */}
               <CustomSelect
                 value={formik.values.year}
                 onChange={(value: any) => {
                   formik.setFieldValue("year", value);
                 }}
-                options={["2017", "2018", "2019", "2020"]}
+                options={[
+                  "2010",
+                  "2011",
+                  "2012",
+                  "2013",
+                  "2014",
+                  "2015",
+                  "2016",
+                  "2017",
+                  "2018",
+                  "2019",
+                  "2020",
+                  "2021",
+                  "2022",
+                  "2023",
+                  "2024",
+                  "2025",
+                  "2026",
+                ]}
                 placeholder="e.g. 2017"
                 className="focus-visible:ring-[0px] bg-[#F5F6F9] w-[129px] rounded p-2 py-5 mb-1 text-[#E51C22]"
                 label="Year : "
@@ -168,15 +197,11 @@ export default function PaintServicesMatrix({
                   type="text"
                   id="make"
                   name="make"
-                  className={`p-2 bg-[#C5C5C573] border w-full base-sm:w-[345px] text-[#E51C22]  mb-1
+                  className={`bg-[#C5C5C573] w-full base-sm:w-[345px] p-2 mb-1 text-[#E51C22
                   rounded`}
                   disabled
                   value={formik.values.make}
                 />
-
-                <div className="text-xs text-gray-500 mt-1 italic">
-                  *Required field
-                </div>
               </div>
 
               {/* Model Field */}
@@ -185,165 +210,196 @@ export default function PaintServicesMatrix({
                 onChange={(value: any) => {
                   formik.setFieldValue("model", value);
                 }}
-                options={["Sonata", "Elantra", "Tucson"]}
+                options={[
+                  "i10",
+                  "i20",
+                  "Creta",
+                  "Elantra",
+                  "Ioniq 5",
+                  "Ioniq 6",
+                  "Kona",
+                  "Kona Electric",
+                  "Palisade",
+                  "Santa Cruz",
+                  "Santa Fe",
+                  "Sonata",
+                  "Tucson",
+                  "Venue",
+                  "Verna",
+                ]}
                 placeholder="e.g. Sonata"
-                className="focus-visible:ring-[0px] bg-[#F5F6F9] border w-full base-sm:w-[345px]  rounded p-2 py-5 mb-1 text-[#E51C22]"
+                className="focus-visible:ring-[0px] bg-[#F5F6F9] border w-full base-sm:w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
                 label="Model : "
               />
             </div>
 
-            {/* CESA Field */}
+            {/* CBSA Field - calculations*/}
             <CustomSelect
-              value={formik.values.cesa}
+              value={formik.values.cbsa}
               onChange={(value: any) => {
-                formik.setFieldValue("cesa", value);
+                formik.setFieldValue("cbsa", value);
                 setSelectedPanels((prev: any) => ({
                   ...prev,
-                  ["CESA"]: ["both"],
+                  ["CBSA"]: ["Market Location"],
                 }));
               }}
-              options={["CA DIV SAN RAMON", "Option 2", "Option 3"]}
+              options={[
+                "-Select One-",
+                "CA DIV SAN RAMON",
+                "AZ PHOENIX-MESA-SCOTTSDALE",
+                "AR LITTLE ROCK NORTH LITTLE RO",
+              ]}
               placeholder="e.g. CA DIV SAN RAMON"
-              className="focus-visible:ring-[0px] bg-[#C5C5C573] border w-full base-sm:w-[345px]  rounded p-2 py-5 mb-1 text-[#E51C22]"
+              className="p-2 bg-[#F5F6F9] border py-5 w-full sm:w-[345px] lg:w-[520px] text-[#E51C22] mb-1"
               label="CBSA : "
             />
 
-            {/* Paint Materials Field */}
-            <div className="mt-3">
+            {/* ClearCoat - Three Stage Field - calculations*/}
+            <div className="mt-9">
               <CustomSelect
                 value={formik.values.paintMaterials}
                 onChange={(value: any) => {
                   formik.setFieldValue("paintMaterials", value);
                   setSelectedPanels((prev: any) => ({
                     ...prev,
-                    ["Paint Materials"]: ["both"],
+                    ["Three Stage"]: ["Paint Material-Clear Coat"],
                   }));
                 }}
-                options={["Clear Coat", "Base Coat", "Primer"]}
+                options={["-Select One-", "Clear Coat", "Three Stage"]}
                 placeholder="e.g. Clear Coat"
-                className="focus-visible:ring-[0px] bg-[#C5C5C573] border w-full base-sm:w-[345px]  rounded p-2 py-5 mb-1 text-[#E51C22]"
-                label="Paint Materials : "
+                className="focus-visible:ring-[0px] bg-[#F5F6F9] w-full base-sm:w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
+                label="Clear Coat/Three Stage : "
               />
             </div>
 
             {/* Divider */}
             <div className="border-t border-gray-300 my-6"></div>
-          </div>
-        </div>
 
-        {/* BODY STYLES Section */}
-        <div className="mb-6">
-          <h2 className="text-red-600 font-bold mb-3">BODY STYLES</h2>
-          <div className="mb-2">
-            <p className="text-sm font-bold">
-              Panel Types:{" "}
-              <span className="font-medium">(Select ALL that apply)</span>
-            </p>
-          </div>
+            {/* BODY STYLES Section */}
+            <div className="mb-6">
+              <h2 className="text-red-600 font-bold mb-3">BODY STYLES</h2>
+              <div className="mb-2">
+                <p className="text-sm font-bold">
+                  Panel Types:{" "}
+                  <span className="font-medium">(Select ALL that apply)</span>
+                </p>
+              </div>
 
-          <div className="grid grid-cols-1 base-xs:grid-cols-2 gap-4 max-h-[150px] overflow-y-auto">
-            <div>
-              <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
-                Body Style
-              </h3>
-              <div className="space-y-2">
-                {bodyPanels.map((part) => (
-                  <div key={part} className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id={part.replace(/\s+/g, "")}
-                      className="mr-2"
-                      onChange={() => handlePanelSelection(part, "Refinish")}
-                      checked={
-                        Array.isArray(selectedPanels[part]) &&
-                        (selectedPanels[part].includes("Refinish") ||
-                          selectedPanels[part].includes("Blend"))
-                      }
-                    />
-                    <label
-                      htmlFor={part.replace(/\s+/g, "")}
-                      className="text-sm"
-                    >
-                      {part}
-                    </label>
+              <div className="grid grid-cols-1 base-xs:grid-cols-2 gap-4 max-h-[150px] overflow-y-auto">
+                <div>
+                  <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
+                    Body Style
+                  </h3>
+                  <div className="space-y-2">
+                    {bodyPanels.map((part) => (
+                      <div key={part} className="flex items-center">
+                        <input
+                          type="checkbox"
+                          id={part.replace(/\s+/g, "")}
+                          className="mr-2"
+                          onChange={() =>
+                            handlePanelSelection(part, "Refinish")
+                          }
+                          checked={
+                            Array.isArray(selectedPanels[part]) &&
+                            (selectedPanels[part].includes("Refinish") ||
+                              selectedPanels[part].includes("Blend"))
+                          }
+                        />
+                        <label
+                          htmlFor={part.replace(/\s+/g, "")}
+                          className="text-sm"
+                        >
+                          {part}
+                        </label>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
+                <div>
+                  <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
+                    Finish and Blend
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      {bodyPanels.map((part) => (
+                        <div
+                          key={`refinish-${part}`}
+                          className="flex items-center"
+                        >
+                          <input
+                            type="checkbox"
+                            id={`refinish-${part.replace(/\s+/g, "")}`}
+                            name={`finish-${part}`}
+                            className="mr-2"
+                            onChange={() =>
+                              handlePanelSelection(part, "Refinish")
+                            }
+                            checked={
+                              Array.isArray(selectedPanels[part]) &&
+                              selectedPanels[part]?.includes("Refinish")
+                            }
+                          />
+                          <label
+                            htmlFor={`refinish-${part.replace(/\s+/g, "")}`}
+                            className="text-sm"
+                          >
+                            {"Refinish"}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="space-y-2">
+                      {bodyPanels.map((part) => (
+                        <div
+                          key={`blend-${part}`}
+                          className="flex items-center"
+                        >
+                          <input
+                            type="checkbox"
+                            className="mr-2"
+                            id={`blend-${part.replace(/\s+/g, "")}`}
+                            name={`finish-${part}`}
+                            onChange={() => handlePanelSelection(part, "Blend")}
+                            checked={
+                              Array.isArray(selectedPanels[part]) &&
+                              selectedPanels[part].includes("Blend")
+                            }
+                          />
+
+                          <label
+                            htmlFor={`blend-${part.replace(/\s+/g, "")}`}
+                            className="text-sm"
+                          >
+                            {"Blend"}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div>
-              <h3 className="border-b border-gray-300 pb-1 mb-3 text-sm text-center">
-                Finish and Blend
-              </h3>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  {bodyPanels.map((part) => (
-                    <div key={`refinish-${part}`} className="flex items-center">
-                      <input
-                        type="checkbox"
-                        id={`refinish-${part.replace(/\s+/g, "")}`}
-                        name={`finish-${part}`}
-                        className="mr-2"
-                        onChange={() => handlePanelSelection(part, "Refinish")}
-                        checked={
-                          Array.isArray(selectedPanels[part]) &&
-                          selectedPanels[part]?.includes("Refinish")
-                        }
-                      />
-                      <label
-                        htmlFor={`refinish-${part.replace(/\s+/g, "")}`}
-                        className="text-sm"
-                      >
-                        {"Refinish"}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-                <div className="space-y-2">
-                  {bodyPanels.map((part) => (
-                    <div key={`blend-${part}`} className="flex items-center">
-                      <input
-                        type="checkbox"
-                        className="mr-2"
-                        id={`blend-${part.replace(/\s+/g, "")}`}
-                        name={`finish-${part}`}
-                        onChange={() => handlePanelSelection(part, "Blend")}
-                        checked={
-                          Array.isArray(selectedPanels[part]) &&
-                          selectedPanels[part].includes("Blend")
-                        }
-                      />
 
-                      <label
-                        htmlFor={`blend-${part.replace(/\s+/g, "")}`}
-                        className="text-sm"
-                      >
-                        {"Blend"}
-                      </label>
-                    </div>
-                  ))}
-                </div>
-              </div>
+            {/* Navigation Buttons */}
+            <div className="flex justify-end base-sm:mt-8 mt-4 gap-4">
+              <Link
+                type="button"
+                to={`${prevPath}`}
+                className="bg-[#000000] text-white px-6 py-2 rounded-[3px] hover:bg-[#000000] hover:text-white transition-colors cursor-pointer"
+              >
+                PREV
+              </Link>
+              <button
+                type="submit"
+                className="bg-[#E51C22] text-white px-6 py-2 rounded-[3px] hover:bg-[#E51C22] hover:text-white transition-colors cursor-pointer"
+              >
+                NEXT
+              </button>
             </div>
-          </div>
+          </form>
         </div>
-
-        {/* Navigation Buttons */}
-        <div className="flex justify-end gap-2 mt-6">
-          <Link
-            type="button"
-            to={`${prevPath}`}
-            className="bg-black text-white px-4 py-2 text-sm rounded-[3px]"
-          >
-            PREV
-          </Link>
-          <button
-            type="submit"
-            className="bg-[#E51C22] text-white px-4 py-2 text-sm rounded-[3px] cursor-pointer"
-          >
-            NEXT
-          </button>
-        </div>
-      </form>
+      </div>
     </div>
   );
 }

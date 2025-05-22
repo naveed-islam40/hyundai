@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function ExperienceAlternative() {
   const navigate = useNavigate();
@@ -23,8 +23,8 @@ export default function ExperienceAlternative() {
               <span className="text-xs capitalize">for</span>
               In-Person Scheduling
             </button>
-            <ul className=" space-y-2 w-full">
-              <li className="flex items-start max-md:justify-center gap-2">
+            <ul className=" space-y-2 w-full left">
+              {/*<li className="flex items-start max-md:justify-center gap-2">
                 <img
                   src="/img/white-info-icon 1.svg"
                   alt="Dot"
@@ -33,6 +33,22 @@ export default function ExperienceAlternative() {
                 <Link to={""} className="underline">
                   What Happens When Your Pick This?
                 </Link>
+              </li>*/}
+              <li className="flex items-start gap-2 text-left">
+                <img
+                  src="/img/Ellipse 93.svg"
+                  alt="Dot"
+                  className="h-3 w-3 mt-2"
+                />
+                <span>e.g. Ready to Schedule/Coordinate Repairs</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <img
+                  src="/img/Ellipse 93.svg"
+                  alt="Dot"
+                  className="h-3 w-3 mt-2"
+                />
+                <span>e.g. Customer ready to schedule repairs</span>
               </li>
             </ul>
           </div>
@@ -48,8 +64,8 @@ export default function ExperienceAlternative() {
               <span className="capitalize text-xs">for</span>
               Customer Drop-Off
             </button>
-            <ul className="space-y-2 w-full">
-              <li className="flex items-start max-md:justify-center gap-2">
+            <ul className="space-y-2 w-full text-left">
+              {/*<li className="flex items-start max-md:justify-center gap-2">
                 <img
                   src="/img/white-info-icon 1.svg"
                   alt="Dot"
@@ -58,6 +74,27 @@ export default function ExperienceAlternative() {
                 <Link to={""} className="underline">
                   What Happens When Your Pick This?
                 </Link>
+              </li>*/}
+              <li className="flex items-start gap-2">
+                <img
+                  src="/img/Ellipse 93.svg"
+                  alt="Dot"
+                  className="h-3 w-3 mt-2"
+                />
+                <span>
+                  e.g. Refer customer to Crash Champions for repairs NOT ready
+                  to schedule at this time
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <img
+                  src="/img/Ellipse 93.svg"
+                  alt="Dot"
+                  className="h-3 w-3 mt-2"
+                />
+                <span>
+                  e.g. If PO has been created and warranty work is approved
+                </span>
               </li>
             </ul>
           </div>
