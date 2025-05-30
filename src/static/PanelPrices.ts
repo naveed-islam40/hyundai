@@ -1,3 +1,66 @@
+const colorTemplates = [
+ "Ice/Quartz White Pearl Tricoat",
+    "Century White",
+    "Monaco White",
+    "Powder White Pearl Tricoat",
+    "Casablanca White Pearl",
+    "Shimmering White",
+    "Dazzling White",
+    "Diamond White Pearl",
+    "Noble White",
+    "Ceramic White",
+    "Symphony Silver Metallic",
+    "Harbor Gray Metallic",
+    "Shale Gray Metallic",
+    "Mineral Gray Metallic",
+    "Ironman/Sleek Silver Metallic",
+    "Titanium Gray Metallic",
+    "Shimmering Silver Metallic",
+    "Galactic Gray",
+    "Coliseum Gray",
+    "Charming Gray Metallic",
+    "Parisian Gray Metallic",
+    "Triathlon Gray Metallic",
+    "Empire State Gray Metallic",
+    "Santiago Silver Metallic",
+    "Platinum Graphite Metallic",
+    "Platinum Sage Metallic",
+    "Electric/Marina Blue Metallic",
+    "Caribbean Blue",
+    "Marathon Blue Pearl",
+    "Pacific Blue Pearl",
+    "Nouveau Blue Metallic",
+    "Indigo Blue Pearl",
+    "Pacific Blue Metallic",
+    "Nightfall Blue",
+    "Deepwater Blue Pearl",
+    "Venetian Red Metallic",
+    "Boston Red Pearl",
+    "Scarlet Red Pearl",
+    "Venetian Red Pearl",
+    "Serrano Red Pearl",
+    "Ruby Wine Tricoat",
+    "Dark Cherry Red Pearl",
+    "Garnet Red Pearl",
+    "Tsukuba Red",
+    "Black",
+    "Silver",
+    "Green",
+    "Orange",
+    "Beige",
+    "Brown",
+].reduce((acc, color) => {
+  acc[color] = {
+    name: color,
+    cost: 1,
+    services: [
+      {name: "Three Stage", cost: 1},
+    ]
+  };
+  return acc;
+}, {} as Record<string, { name: string; cost: number; services: any[] }>);
+
+
 export const panelDetails: any = {
   "Front Bumper": {
     name: "Front Bumper",
@@ -23,7 +86,7 @@ export const panelDetails: any = {
       { name: "BLEND", cost: 80 },
     ],
   },
-  "Hood": {
+  Hood: {
     name: "Hood",
     cost: 1,
     services: [
@@ -48,13 +111,13 @@ export const panelDetails: any = {
     ],
   },
   "Left Rear Door": {
-      name: "Left Rear Door",
-      cost: 1,
-      services: [
-        { name: "REFINISH", cost: 600 },
-        { name: "BLEND", cost: 80 },
-      ],
-    },
+    name: "Left Rear Door",
+    cost: 1,
+    services: [
+      { name: "REFINISH", cost: 600 },
+      { name: "BLEND", cost: 80 },
+    ],
+  },
   "Right Rear Door": {
     name: "Right Rear Door",
     cost: 1,
@@ -63,7 +126,7 @@ export const panelDetails: any = {
       { name: "BLEND", cost: 80 },
     ],
   },
-  "Roof": {
+  Roof: {
     name: "Roof",
     cost: 1,
     services: [
@@ -159,25 +222,22 @@ export const panelDetails: any = {
       { name: "BLEND", cost: 0 },
     ],
   },
-   "Clear Coat": {
+  "Clear Coat": {
     name: "Clear Coat",
     cost: 1,
-    services: [
-      { name: "both", cost: 1 },
-    ],
+    services: [{ name: "both", cost: 1 }],
   },
-   "Three Stage": {
+  "Three Stage": {
     name: "Three Stage",
     cost: 100,
-    services: [
-      { name: "Paint Material-Clear Coat", cost: 100 },
-    ],
+    services: [{ name: "Clear Coat", cost: 100 }],
   },
-  "CBSA": {
+  CBSA: {
     name: "CBSA",
     cost: 1,
-    services: [
-      { name: "Market Location", cost: 1 },
-    ],
+    services: [{ name: "Market Location", cost: 1 }],
   },
+  ...colorTemplates
 };
+
+

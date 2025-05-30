@@ -15,6 +15,7 @@ interface CustomSelectProps {
   placeholder?: string;
   className?: string;
   label?: string;
+  isDisabled?: boolean;
 }
 
 export default function CustomSelect({
@@ -24,6 +25,7 @@ export default function CustomSelect({
   placeholder = "Select...",
   className = "",
   label,
+  isDisabled = false,
 }: CustomSelectProps) {
   const [touched, setTouched] = useState(false);
 
@@ -36,6 +38,7 @@ export default function CustomSelect({
       {label && <Label className="mb-1">{label}</Label>}
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger
+          disabled={isDisabled}
           className={className}
           style={!value ? { color: "#E48096" } : {}}
           onBlur={handleBlur}

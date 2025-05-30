@@ -26,6 +26,16 @@ export default function InformationReview({
     setFormData({ PaintServiceInfo, customerInfo, dealerInfo, scheduleDate });
   }, [PaintServiceInfo, customerInfo, dealerInfo, scheduleDate]);
 
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000); // update every second
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
   return (
     <form className="sm:p-5 pb-3 bg-white shadow-sm rounded-lg h-full flex flex-col justify-between">
       <div className="">
@@ -46,6 +56,14 @@ export default function InformationReview({
               <h2 className="text-red-600 font-bold text-lg">
                 TOTAL COST REVIEW
               </h2>
+              <div className="mt-10 mb-12">
+                <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-6 mb-4">
+                    {/* Current Date and Time */}
+                    <div className="text-sm text-gray-600 italic mb-4">
+                     TRANSACTION DATE/TIME: {currentDateTime.toLocaleString()}
+                    </div>
+                </div>
+              </div>
             </div>
             <div className="flex justify-end mb-6">
               <Button
@@ -129,7 +147,7 @@ export default function InformationReview({
               <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">CBSA:</p>
-                  <p>{PaintServiceInfo?.crsa || "CA Dir San Ramon"}</p>
+                  <p>{PaintServiceInfo?.cbsa || "CA Dir San Ramon"}</p>
                 </div>
                 <div className="flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">Year:</p>

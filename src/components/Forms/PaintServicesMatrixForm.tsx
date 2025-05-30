@@ -2,6 +2,138 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import CustomSelect from "@/components/Dropdown";
+import { toast } from "sonner";
+
+const options = [
+  "-Select One-",
+  "Ice/Quartz White Pearl Tricoat",
+  "Century White",
+  "Monaco White",
+  "Powder White Pearl Tricoat",
+  "Casablanca White Pearl",
+  "Shimmering White",
+  "Dazzling White",
+  "Diamond White Pearl",
+  "Noble White",
+  "Ceramic White",
+  "Symphony Silver Metallic",
+  "Harbor Gray Metallic",
+  "Shale Gray Metallic",
+  "Mineral Gray Metallic",
+  "Ironman/Sleek Silver Metallic",
+  "Titanium Gray Metallic",
+  "Shimmering Silver Metallic",
+  "Galactic Gray",
+  "Coliseum Gray",
+  "Charming Gray Metallic",
+  "Parisian Gray Metallic",
+  "Triathlon Gray Metallic",
+  "Empire State Gray Metallic",
+  "Santiago Silver Metallic",
+  "Platinum Graphite Metallic",
+  "Platinum Sage Metallic",
+  "Electric/Marina Blue Metallic",
+  "Caribbean Blue",
+  "Marathon Blue Pearl",
+  "Pacific Blue Pearl",
+  "Nouveau Blue Metallic",
+  "Indigo Blue Pearl",
+  "Pacific Blue Metallic",
+  "Nightfall Blue",
+  "Deepwater Blue Pearl",
+  "Venetian Red Metallic",
+  "Boston Red Pearl",
+  "Scarlet Red Pearl",
+  "Venetian Red Pearl",
+  "Serrano Red Pearl",
+  "Ruby Wine Tricoat",
+  "Dark Cherry Red Pearl",
+  "Garnet Red Pearl",
+  "Tsukuba Red",
+  "Black",
+  "Silver",
+  "Green",
+  "Orange",
+  "Beige",
+  "Brown",
+];
+
+const CBSAOptions = [
+  "-Select One-",
+  "CA DIV SAN RAMON",
+  "AZ PHOENIX-MESA-SCOTTSDALE",
+  "AR LITTLE ROCK NORTH LITTLE RO",
+];
+
+const modelOptions = [
+  "i10",
+  "i20",
+  "Creta",
+  "Elantra",
+  "Ioniq 5",
+  "Ioniq 6",
+  "Kona",
+  "Kona Electric",
+  "Palisade",
+  "Santa Cruz",
+  "Santa Fe",
+  "Sonata",
+  "Tucson",
+  "Venue",
+  "Verna",
+];
+
+const yearOptions = [
+  "2010",
+  "2011",
+  "2012",
+  "2013",
+  "2014",
+  "2015",
+  "2016",
+  "2017",
+  "2018",
+  "2019",
+  "2020",
+  "2021",
+  "2022",
+  "2023",
+  "2024",
+  "2025",
+  "2026",
+];
+
+const bodyPanels = [
+  "Front Bumper",
+  "Left Fender",
+  "Right Fender",
+  "Hood",
+  "Left Front Door",
+  "Right Front Door",
+  "Left Rear Door",
+  "Right Rear Door",
+  "Roof",
+  "Left Quarter Panel",
+  "Right Quarter Panel",
+  "Deck Lid",
+  "Rear Bumper",
+  "Left Roof Rail",
+  "Right Roof Rail",
+  "Cover Car",
+  "Corrosion Protection",
+  "Hazardous Waste",
+  "Color/Sand/Buff",
+  "Color Tint",
+];
+
+const validationSchema = Yup.object({
+  vin: Yup.string().required("VIN is required"),
+  year: Yup.string().required("Year is required"),
+  make: Yup.string().required("Make is required"),
+  model: Yup.string().required("Model is required"),
+  cbsa: Yup.string().required("CBSA is required"),
+  paintMaterials: Yup.string().required("Paint Materials is required"),
+});
 
 export default function PaintServicesMatrix({
   setSelectedPanels,
@@ -12,6 +144,7 @@ export default function PaintServicesMatrix({
   const navigate = useNavigate();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
+  const key = localStorage.getItem("key");
 
   queryParams.set("page", "2");
   const prevPath = `${location.pathname}?${queryParams.toString()}`;
@@ -20,19 +153,12 @@ export default function PaintServicesMatrix({
     initialValues: {
       vin: "",
       year: "",
-      make: "Hyndai",
+      make: "Hyundai",
       model: "",
       cbsa: "",
       paintMaterials: "",
     },
-    validationSchema: Yup.object({
-      vin: Yup.string().required("VIN is required"),
-      year: Yup.string().required("Year is required"),
-      make: Yup.string().required("Make is required"),
-      model: Yup.string().required("Model is required"),
-      cbsa: Yup.string().required("CBSA is required"),
-      paintMaterials: Yup.string().required("Paint Materials is required"),
-    }),
+    validationSchema: validationSchema,
     onSubmit: (values) => {
       setPaintServiceInfo({ ...values, selectedPanels });
       queryParams.set("page", "4");
@@ -40,14 +166,20 @@ export default function PaintServicesMatrix({
     },
   });
 
-  const handlePanelSelection = (panel: string, service: string) => {
+  const handlePanelSelection = (panel: string, selectedService: string) => {
+    if (key === "In-Person Scheduling" && panel.includes("Bumper")) {
+      console.log("Hello World", panel);
+      return toast.error("SORRY. THIS SELECTION IS UNAVAILABLE");
+    }
+
     const current = selectedPanels[panel] || [];
 
-    let updated;
-    if (current.includes(service)) {
-      updated = current.filter((s: string) => s !== service);
+    let updated: string[] = [];
+
+    if (current.includes(selectedService)) {
+      updated = current.filter((s: string) => s !== selectedService);
     } else {
-      updated = [...current, service];
+      updated = [selectedService];
     }
 
     setSelectedPanels({
@@ -56,28 +188,18 @@ export default function PaintServicesMatrix({
     });
   };
 
-  const bodyPanels = [
-    "Front Bumper",
-    "Left Fender",
-    "Right Fender",
-    "Hood",
-    "Left Front Door",
-    "Right Front Door",
-    "Left Rear Door",
-    "Right Rear Door",
-    "Roof",
-    "Left Quarter Panel",
-    "Right Quarter Panel",
-    "Deck Lid",
-    "Rear Bumper",
-    "Left Roof Rail",
-    "Right Roof Rail",
-    "Cover Car",
-    "Corrosion Protection",
-    "Hazardous Waste",
-    "Color/Sand/Buff",
-    "Color Tint",
-  ];
+  const handleSelectPanelServices = (part: string) => {
+    const isSelected = !!selectedPanels[part];
+    setSelectedPanels((prev: any) => {
+      const updated = { ...prev };
+      if (isSelected) {
+        delete updated[part];
+      } else {
+        updated[part] = [];
+      }
+      return updated;
+    });
+  };
 
   return (
     <div className="bg-white base-sm:p-5 rounded-md shadow-sm">
@@ -166,25 +288,7 @@ export default function PaintServicesMatrix({
                 onChange={(value: any) => {
                   formik.setFieldValue("year", value);
                 }}
-                options={[
-                  "2010",
-                  "2011",
-                  "2012",
-                  "2013",
-                  "2014",
-                  "2015",
-                  "2016",
-                  "2017",
-                  "2018",
-                  "2019",
-                  "2020",
-                  "2021",
-                  "2022",
-                  "2023",
-                  "2024",
-                  "2025",
-                  "2026",
-                ]}
+                options={yearOptions}
                 placeholder="e.g. 2017"
                 className="focus-visible:ring-[0px] bg-[#F5F6F9] w-[129px] rounded p-2 py-5 mb-1 text-[#E51C22]"
                 label="Year : "
@@ -210,23 +314,7 @@ export default function PaintServicesMatrix({
                 onChange={(value: any) => {
                   formik.setFieldValue("model", value);
                 }}
-                options={[
-                  "i10",
-                  "i20",
-                  "Creta",
-                  "Elantra",
-                  "Ioniq 5",
-                  "Ioniq 6",
-                  "Kona",
-                  "Kona Electric",
-                  "Palisade",
-                  "Santa Cruz",
-                  "Santa Fe",
-                  "Sonata",
-                  "Tucson",
-                  "Venue",
-                  "Verna",
-                ]}
+                options={modelOptions}
                 placeholder="e.g. Sonata"
                 className="focus-visible:ring-[0px] bg-[#F5F6F9] border w-full base-sm:w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
                 label="Model : "
@@ -243,14 +331,10 @@ export default function PaintServicesMatrix({
                   ["CBSA"]: ["Market Location"],
                 }));
               }}
-              options={[
-                "-Select One-",
-                "CA DIV SAN RAMON",
-                "AZ PHOENIX-MESA-SCOTTSDALE",
-                "AR LITTLE ROCK NORTH LITTLE RO",
-              ]}
+              isDisabled={true}
+              options={CBSAOptions}
               placeholder="e.g. CA DIV SAN RAMON"
-              className="p-2 bg-[#F5F6F9] border py-5 w-full sm:w-[345px] lg:w-[520px] text-[#E51C22] mb-1"
+              className="p-2 bg-[#C5C5C573] border py-5 w-full sm:w-[345px] lg:w-[520px] text-[#E51C22] mb-1"
               label="CBSA : "
             />
 
@@ -260,15 +344,16 @@ export default function PaintServicesMatrix({
                 value={formik.values.paintMaterials}
                 onChange={(value: any) => {
                   formik.setFieldValue("paintMaterials", value);
+
                   setSelectedPanels((prev: any) => ({
                     ...prev,
-                    ["Three Stage"]: ["Paint Material-Clear Coat"],
+                    [value]: ["Three Stage"],
                   }));
                 }}
-                options={["-Select One-", "Clear Coat", "Three Stage"]}
-                placeholder="e.g. Clear Coat"
+                options={options}
+                placeholder="e.g. Monaco White"
                 className="focus-visible:ring-[0px] bg-[#F5F6F9] w-full base-sm:w-[345px] rounded p-2 py-5 mb-1 text-[#E51C22]"
-                label="Clear Coat/Three Stage : "
+                label="Paint Material : "
               />
             </div>
 
@@ -277,7 +362,7 @@ export default function PaintServicesMatrix({
 
             {/* BODY STYLES Section */}
             <div className="mb-6">
-              <h2 className="text-red-600 font-bold mb-3">BODY STYLES</h2>
+              <h2 className="text-red-600 font-bold mb-3">PANEL STYLES</h2>
               <div className="mb-2">
                 <p className="text-sm font-bold">
                   Panel Types:{" "}
@@ -297,14 +382,8 @@ export default function PaintServicesMatrix({
                           type="checkbox"
                           id={part.replace(/\s+/g, "")}
                           className="mr-2"
-                          onChange={() =>
-                            handlePanelSelection(part, "Refinish")
-                          }
-                          checked={
-                            Array.isArray(selectedPanels[part]) &&
-                            (selectedPanels[part].includes("Refinish") ||
-                              selectedPanels[part].includes("Blend"))
-                          }
+                          onChange={() => handleSelectPanelServices(part)}
+                          checked={selectedPanels.hasOwnProperty(part)}
                         />
                         <label
                           htmlFor={part.replace(/\s+/g, "")}
@@ -330,14 +409,13 @@ export default function PaintServicesMatrix({
                           <input
                             type="checkbox"
                             id={`refinish-${part.replace(/\s+/g, "")}`}
-                            name={`finish-${part}`}
                             className="mr-2"
                             onChange={() =>
                               handlePanelSelection(part, "Refinish")
                             }
                             checked={
                               Array.isArray(selectedPanels[part]) &&
-                              selectedPanels[part]?.includes("Refinish")
+                              selectedPanels[part].includes("Refinish")
                             }
                           />
                           <label
@@ -357,9 +435,8 @@ export default function PaintServicesMatrix({
                         >
                           <input
                             type="checkbox"
-                            className="mr-2"
                             id={`blend-${part.replace(/\s+/g, "")}`}
-                            name={`finish-${part}`}
+                            className="mr-2"
                             onChange={() => handlePanelSelection(part, "Blend")}
                             checked={
                               Array.isArray(selectedPanels[part]) &&

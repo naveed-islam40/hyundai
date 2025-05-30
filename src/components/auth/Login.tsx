@@ -1,8 +1,10 @@
 import type React from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
+import users from "../../users.json";
+import { toast } from "sonner";
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
@@ -11,11 +13,18 @@ export default function LoginForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
-    console.log("Login attempt with:", { email, password });
     navigate("/experience");
   };
 
+  const isCredentialsValid = users.some((user) => {
+    return user.dealerCode === user.zipCode;
+  });
+
+  useEffect(() => {
+    if (!isCredentialsValid) {
+      toast.error("Sorry. This selection is unavailable.");
+    }
+  }, [isCredentialsValid]);
   return (
     <div className="md:w-full 2xl:w-[80%] mx-auto min-h-screen flex items-center bg-[url('/img/login.png')] bg-cover bg-center px-4 md:px-20">
       <div className="w-full max-w-4xl p-6 md:px-10 bg-black/50 text-white rounded-md">
@@ -39,7 +48,7 @@ export default function LoginForm() {
             <div className="w-full base-sm:w-auto">
               <Input
                 type="email"
-                placeholder="admin"
+                placeholder="Dealer Code"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="bg-white text-black h-10 w-full md:w-[250px] lg:w-[310px] rounded-sm border-0 focus-visible:ring-0 italic"
@@ -48,7 +57,7 @@ export default function LoginForm() {
             <div className="w-full base-sm:w-auto">
               <Input
                 type="password"
-                placeholder="password"
+                placeholder="Zip Code"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="bg-white text-black h-10 w-full md:w-[250px] lg:w-[310px] rounded-sm border-0 focus-visible:ring-0 italic"

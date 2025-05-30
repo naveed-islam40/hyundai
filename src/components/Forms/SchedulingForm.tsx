@@ -25,6 +25,16 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
     setSubTotal(Number(price));
   }, []);
 
+  const [currentDateTime, setCurrentDateTime] = useState(new Date());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentDateTime(new Date());
+    }, 1000); // update every second
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
   return (
     <div className="sm:p-5 pb-3 bg-white shadow-sm rounded-lg h-full flex flex-col justify-between">
       <div className="">
@@ -49,6 +59,15 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
                     Customer:
                   </span>{" "}
                   {name}
+                </div>
+              </div>
+
+              <div className="mb-12">
+                <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-6 mb-4">
+                    {/* Current Date and Time */}
+                    <div className="text-sm text-gray-600 italic mb-4">
+                     TIME/DATE of ENTRY: {currentDateTime.toLocaleString()}
+                    </div>
                 </div>
               </div>
 
@@ -147,34 +166,6 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
               </div>
           </form>
         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
       </div>
     </div>

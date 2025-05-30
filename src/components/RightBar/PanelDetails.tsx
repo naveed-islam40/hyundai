@@ -11,8 +11,6 @@ const PanelDetails = ({
     {}
   );
 
-  console.log("selectedPanels", selectedPanels);
-
   const calculateTotal = () => {
     let total = 0;
     selectedPanels != null &&
@@ -106,6 +104,9 @@ const PanelDetails = ({
                     panelDetails[panel]
                   ) {
                     const isExpanded = expandedPanels[panel] === true;
+                    console.log(panel);
+                    console.log(selectedServices);
+                    console.log(panelDetails[panel]);
 
                     return (
                       <div
@@ -200,7 +201,7 @@ const PanelDetails = ({
         </div>
         {isqShow && (
           <div className="flex items-center mt-3 gap-3">
-            <img src="/img/qrcg-sample 2.svg" alt="" className="w-15 h-15" />
+            <img src="/img/hyundai-qrcode.jpg" alt="" className="w-15 h-15" />
             <p className="text-xs">
               *Understanding your vehicle Finish and Blend
             </p>
