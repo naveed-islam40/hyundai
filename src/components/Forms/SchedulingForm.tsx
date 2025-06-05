@@ -142,7 +142,8 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
               <div className="flex justify-end flex-col items-end gap-4 mt-16">
                 <div className="mr-6">
                   <div className="text-sm text-right">
-                    Sub-Total: <span className="font-bold">${subTotal}</span>
+                    Sub-Total:{" "}
+                    <span className="font-bold">${Math.round(subTotal)}</span>
                   </div>
                 </div>
                 <div className="flex justify-end base-sm:mt-8 mt-4 gap-4">
