@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { Toaster } from "sonner";
+import { PaintServiceProvider } from "./context/PaintMatrixContext.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -11,6 +12,8 @@ createRoot(document.getElementById("root")!).render(
       richColors
       style={{ backgroundColor: "white" }}
     />
-    <App />
+    <PaintServiceProvider>
+      <App />
+    </PaintServiceProvider>
   </StrictMode>
 );

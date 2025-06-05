@@ -43,7 +43,11 @@ export default function CustomSelect({
           style={!value ? { color: "#E48096" } : {}}
           onBlur={handleBlur}
         >
-          <SelectValue placeholder={placeholder} />
+          {isDisabled && value ? (
+            <span className="text-[#E7000B]">{value}</span>
+          ) : (
+            <SelectValue placeholder={placeholder} />
+          )}
         </SelectTrigger>
         <SelectContent>
           {options.map((option) => (
@@ -54,7 +58,7 @@ export default function CustomSelect({
         </SelectContent>
       </Select>
       {touched && !value && (
-        <div className="text-xs text-gray-600 italic mt-1">*Required field</div>
+        <div className="text-xs text-gray-600 italic mt-0"></div>
       )}
     </div>
   );

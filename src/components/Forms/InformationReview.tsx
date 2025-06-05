@@ -2,9 +2,9 @@ import PanelInfo from "@/components/InformationReview/PanelInfo";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import { usePaintServiceContext } from "@/context/PaintMatrixContext";
 
 export default function InformationReview({
-  PaintServiceInfo,
   customerInfo,
   scheduleDate,
   selectedPanels,
@@ -12,10 +12,11 @@ export default function InformationReview({
 }: any) {
   const location = useLocation();
   const navigate = useNavigate();
+  const { paintServiceInfo } = usePaintServiceContext();
   const queryParams = new URLSearchParams(location.search);
   queryParams.set("page", "3");
   const prevPath = queryParams?.toString();
-  const [, setFormData] = useState<any>({}); // this will send to backend on submit
+  const [, setFormData] = useState<any>({});
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -23,8 +24,8 @@ export default function InformationReview({
   };
 
   useEffect(() => {
-    setFormData({ PaintServiceInfo, customerInfo, dealerInfo, scheduleDate });
-  }, [PaintServiceInfo, customerInfo, dealerInfo, scheduleDate]);
+    setFormData({ paintServiceInfo, customerInfo, dealerInfo, scheduleDate });
+  }, [paintServiceInfo, customerInfo, dealerInfo, scheduleDate]);
 
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
 
@@ -54,14 +55,14 @@ export default function InformationReview({
           <div className="flex flex-col md:flex-row justify-between mb-6">
             <div>
               <h2 className="text-red-600 font-bold text-lg">
-                TOTAL COST REVIEW
+                TOTAL COST REVIEW by DEALER xxxxx
               </h2>
               <div className="mt-10 mb-12">
                 <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-6 mb-4">
-                    {/* Current Date and Time */}
-                    <div className="text-sm text-gray-600 italic mb-4">
-                     TRANSACTION DATE/TIME: {currentDateTime.toLocaleString()}
-                    </div>
+                  {/* Current Date and Time */}
+                  <div className="text-sm text-gray-600 italic mb-4">
+                    TRANSACTION DATE/TIME: {currentDateTime.toLocaleString()}
+                  </div>
                 </div>
               </div>
             </div>
@@ -147,23 +148,23 @@ export default function InformationReview({
               <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-4">
                 <div className="flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">CBSA:</p>
-                  <p>{PaintServiceInfo?.cbsa || "CA Dir San Ramon"}</p>
+                  <p>{paintServiceInfo?.cbsa || "CA Dir San Ramon"}</p>
                 </div>
                 <div className="flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">Year:</p>
-                  <p>{PaintServiceInfo?.year || 2017}</p>
+                  <p>{paintServiceInfo?.year || 2017}</p>
                 </div>
                 <div className="flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">Make:</p>
-                  <p>{PaintServiceInfo?.make || "Hyundai"}</p>
+                  <p>{paintServiceInfo?.make || "Hyundai"}</p>
                 </div>
                 <div className="flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">Model:</p>
-                  <p>{PaintServiceInfo?.model || "Sonata"}</p>
+                  <p>{paintServiceInfo?.model || "Sonata"}</p>
                 </div>
                 <div className="base-lg:col-span-2 flex items-center gap-2 font-bold">
                   <p className="text-sm font-bold">VIN:</p>
-                  <p>{PaintServiceInfo?.vin || "5NPE34ZJXNH140004"}</p>
+                  <p>{paintServiceInfo?.vin || "5NPE34ZJXNH140004"}</p>
                 </div>
               </div>
             </div>

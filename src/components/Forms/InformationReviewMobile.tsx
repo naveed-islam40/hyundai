@@ -1,13 +1,14 @@
 import PanelInfo from "@/components/InformationReview/PanelInfo";
+import { usePaintServiceContext } from "@/context/PaintMatrixContext";
 import { Link } from "react-router-dom";
 
 export default function InformationReviewMobile({
-  PaintServiceInfo,
   customerInfo,
   scheduleDate,
   selectedPanels,
   dealerInfo,
 }: any) {
+  const { paintServiceInfo } = usePaintServiceContext();
   return (
     <div className="min-h-screen bg-white flex flex-col">
       {/* Total Cost Review Header */}
@@ -110,19 +111,19 @@ export default function InformationReviewMobile({
         <div className="flex justify-between mb-1">
           <p className="text-sm  font-bold">Year:</p>
           <p className="text-sm font-bold">
-            {PaintServiceInfo?.year || "2022"}
+            {paintServiceInfo?.year || "2022"}
           </p>
         </div>
         <div className="flex justify-between mb-1">
           <p className="text-sm  font-bold">Make & Model:</p>
           <p className="text-sm font-bold">{`${
-            PaintServiceInfo?.make || "Hyundai"
-          } ${PaintServiceInfo?.model || "Sonata"}`}</p>
+            paintServiceInfo?.make || "Hyundai"
+          } ${paintServiceInfo?.model || "Sonata"}`}</p>
         </div>
         <div className="flex justify-between mb-1">
           <p className="text-sm  font-bold">VIN:</p>
           <p className="text-sm font-bold">
-            {PaintServiceInfo?.vin || "5NPE34ZJXNH140004"}
+            {paintServiceInfo?.vin || "5NPE34ZJXNH140004"}
           </p>
         </div>
       </div>

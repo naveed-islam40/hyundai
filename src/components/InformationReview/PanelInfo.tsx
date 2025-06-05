@@ -1,6 +1,7 @@
-import { panelDetails } from "@/static/PanelPrices";
 import { useEffect, useRef, useState } from "react";
 import RecalculatingLoader from "../Loaders/RecalculatingLoader";
+import { usePaintServiceContext } from "@/context/PaintMatrixContext";
+import { getBodyPanelOptions } from "@/helper/getBodyPanelOptions";
 
 interface PanelInfoProps {
   selectedPanels: Record<string, string[]> | null;
@@ -10,6 +11,10 @@ const PanelInfo = ({ selectedPanels }: PanelInfoProps) => {
   const [total, setTotal] = useState(0);
   const [loading, setLoading] = useState(false);
   const timeoutRef = useRef<number>(0);
+  const { year, model } = usePaintServiceContext();
+
+  const { matchingEntry } = getBodyPanelOptions(year, model);
+  const panelDetails = matchingEntry ? matchingEntry[1] : {};
 
   useEffect(() => {
     const storedTotal = localStorage.getItem("totalCost");

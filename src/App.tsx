@@ -6,9 +6,18 @@ import { Routes } from "react-router-dom";
 import OverviewDetails from "./components/Experience/OverviewDetails";
 import ExperienceAlternative from "./components/Experience/ExperienceAlternative";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
+
 const App = () => {
   return (
     <div className="h-screen">
+       <>
+      <ToastContainer />
+      {/* your routes/components */}
+      </>
       <BrowserRouter>
         <Header />
         {/* Routes  */}
@@ -22,5 +31,6 @@ const App = () => {
     </div>
   );
 };
+
 
 export default App;

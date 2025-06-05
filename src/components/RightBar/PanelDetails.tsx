@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { panelDetails } from "@/static/PanelPrices";
+import { usePaintServiceContext } from "@/context/PaintMatrixContext";
+import { getBodyPanelOptions } from "@/helper/getBodyPanelOptions";
+import { calculateTotal } from "@/helper/calculateTotal";
 
 const PanelDetails = ({
   selectedPanels,
@@ -10,21 +12,10 @@ const PanelDetails = ({
   const [expandedPanels, setExpandedPanels] = useState<Record<string, boolean>>(
     {}
   );
+  const { model, year } = usePaintServiceContext();
+  const { matchingEntry } = getBodyPanelOptions(year, model);
 
-  const calculateTotal = () => {
-    let total = 0;
-    selectedPanels != null &&
-      Object.entries(selectedPanels).forEach(([panel, selectedServices]) => {
-        Array.isArray(selectedServices) &&
-          selectedServices?.forEach((service: any) => {
-            total +=
-              panelDetails[panel].services.find(
-                (s: any) => s.name.toLowerCase() === service.toLowerCase()
-              )?.cost ?? 0;
-          });
-      });
-    return total;
-  };
+  const panelDetails = matchingEntry?.[1] || {};
 
   const togglePanelExpand = (panel: string) => {
     setExpandedPanels((prev) => ({
@@ -49,7 +40,7 @@ const PanelDetails = ({
               <div className="bg-white text-black p-4 text-center text-2xl font-bold mb-2 rounded w-full">
                 <div>
                   <div className="text-center text-2xl font-bold">
-                    ${calculateTotal().toFixed(0)}
+                    ${calculateTotal(selectedPanels, panelDetails).toFixed(0)}
                   </div>
                 </div>
               </div>
@@ -59,38 +50,6 @@ const PanelDetails = ({
               <div className="font-bold">ITEMS</div>
               <div className="font-bold">EST. COST</div>
             </div>
-
-            {/* itemized cost of repairs */}
-            {/*{Object.entries(selectedPanels).map(([panel, selectedServices]) => {
-              if (
-                Array.isArray(selectedServices) &&
-                selectedServices.length > 0 &&
-                panelDetails[panel]
-              ) {
-                return (
-                  <div key={panel} className="flex justify-between mb-1">
-                    <div>
-                      {panel}
-                      <div className="text-xs text-gray-500">
-                        {selectedServices.join(", ")}
-                      </div>
-                    </div>
-                    $
-                    {selectedServices
-                      .reduce((sum: number, svc: string) => {
-                        const cost =
-                          panelDetails[panel].services.find(
-                            (s: any) =>
-                              s.name.toLowerCase() === svc.toLowerCase()
-                          )?.cost || 0;
-                        return sum + cost;
-                      }, 0)
-                      .toFixed(2)}
-                  </div>
-                );
-              }
-              return null;
-            })}*/}
 
             <div className="bg-gray-300 text-black p-2 text-center mt-4 mb-2 font-bold">
               Painted Item Detail
@@ -104,9 +63,6 @@ const PanelDetails = ({
                     panelDetails[panel]
                   ) {
                     const isExpanded = expandedPanels[panel] === true;
-                    console.log(panel);
-                    console.log(selectedServices);
-                    console.log(panelDetails[panel]);
 
                     return (
                       <div
@@ -185,16 +141,7 @@ const PanelDetails = ({
             </div>
           </div>
         )}
-      {/* moved calculations to top */}
-      {/*<div className="flex justify-center mt-6 mb-4">
-        <div className="bg-white text-black p-4 text-center text-2xl font-bold mb-2 rounded w-full">
-          <div>
-            <div className="text-2xl font-bold">
-              ${calculateTotal().toFixed(0)}
-            </div>
-          </div>
-        </div>
-      </div>*/}
+
       <div className="relative bottom-0 pt-7">
         <div className="text-xs text-center bottom">
           *Amount Shown Above is an ESTIMATE of Repair Total

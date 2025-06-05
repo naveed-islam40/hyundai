@@ -17,7 +17,6 @@ export default function OverviewDetails() {
   const [selectedPanels, setSelectedPanels] = useState<Record<string, string>>(
     {}
   );
-  const [PaintServiceInfo, setPaintServiceInfo] = useState<any>({});
   const [scheduleDate, setScheduleDate] = useState<any>({});
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
@@ -40,7 +39,7 @@ export default function OverviewDetails() {
           const panelSum = selectedServices.reduce(
             (sum: number, svc: string) => {
               const cost =
-                panelDetails[panel].services.find(
+                panelDetails[panel]?.services?.find(
                   (s: any) => s.name.toLowerCase() === svc.toLowerCase()
                 )?.cost ?? 0;
               return sum + cost;
@@ -81,8 +80,6 @@ export default function OverviewDetails() {
             name={`${cutomerInfo.firstName || "SMITH_JANE"} ${
               cutomerInfo.lastName || ""
             }`}
-            setPaintServiceInfo={setPaintServiceInfo}
-            paintServiceInfo={PaintServiceInfo}
           />
         );
 
@@ -91,7 +88,6 @@ export default function OverviewDetails() {
           <div>
             <div className="hidden sm:block">
               <InformationReview
-                PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 selectedPanels={selectedPanels}
@@ -100,7 +96,6 @@ export default function OverviewDetails() {
             </div>
             <div className="block sm:hidden">
               <InformationReviewMobile
-                PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 dealerInfo={dealerInfo}
@@ -122,7 +117,6 @@ export default function OverviewDetails() {
           <div>
             <div className="hidden sm:block">
               <InformationReview
-                PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 selectedPanels={selectedPanels}
@@ -131,7 +125,6 @@ export default function OverviewDetails() {
             </div>
             <div className="block sm:hidden">
               <InformationReviewMobile
-                PaintServiceInfo={PaintServiceInfo}
                 customerInfo={cutomerInfo}
                 scheduleDate={scheduleDate}
                 selectedPanels={selectedPanels}
