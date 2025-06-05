@@ -7,9 +7,10 @@ import ConfirmationPage from "../Forms/Confirmation";
 import PaintServicesMatrixForm from "../Forms/PaintServicesMatrixForm";
 import { useEffect, useState } from "react";
 import DealerForm from "../Forms/DealerForm";
-import { panelDetails } from "@/static/PanelPrices";
 import RepairEstimate from "../RepairEstimate";
 import InformationReviewMobile from "../Forms/InformationReviewMobile";
+import { usePaintServiceContext } from "@/context/PaintMatrixContext";
+import { getBodyPanelOptions } from "@/helper/getBodyPanelOptions";
 
 export default function OverviewDetails() {
   const [cutomerInfo, setCustomerInfo] = useState<any>({});
@@ -20,6 +21,11 @@ export default function OverviewDetails() {
   const [scheduleDate, setScheduleDate] = useState<any>({});
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
+
+  const { year, model } = usePaintServiceContext();
+
+  const { matchingEntry } = getBodyPanelOptions(year, model);
+  const panelDetails = matchingEntry ? matchingEntry[1] : {};
 
   const page = queryParams.get("page");
   const skip = queryParams.get("skip");

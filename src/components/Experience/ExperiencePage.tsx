@@ -23,7 +23,7 @@ export default function Experience1() {
             <Button
               className="bg-[#E51C22] hover:bg-[#E51C22] cursor-pointer hover:text-white text-white px-6 py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold"
               onClick={() =>
-                handleNavigate("/cutomer-details?page=1&form=dealer")
+                handleNavigate("/customer-details?page=1&form=dealer")
               }
             >
               <span className="text-xs capitalize">for</span>
@@ -54,7 +54,7 @@ export default function Experience1() {
             <Button
               variant="outline"
               className="bg-white text-[#E51C22] hover:bg-white cursor-pointer hover:text-[#E51C22] px-6 py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold"
-              onClick={() => handleNavigate("/cutomer-details?page=1")}
+              onClick={() => handleNavigate("/customer-details?page=1")}
             >
               <span className="capitalize text-xs">for</span>
               Customer Drop-Off

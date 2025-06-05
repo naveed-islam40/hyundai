@@ -34,7 +34,10 @@ export default function ExperienceAlternative() {
             <button
               className="bg-[#E51C22] hover:bg-[#E51C22] hover:text-white text-white py-2 h-auto w-full md:w-[100%] mb-4 uppercase flex flex-col text-base font-bold cursor-pointer rounded-xs"
               onClick={() =>
-                handleNavigate("/cutomer-details?page=1", "In-Person Scheduling")
+                handleNavigate(
+                  "/customer-details?page=1",
+                  "In-Person Scheduling"
+                )
               }
             >
               <span className="text-xs capitalize">for</span>
@@ -76,7 +79,10 @@ export default function ExperienceAlternative() {
             <button
               className="bg-white text-[#E51C22] py-2 h-auto w-full mb-4 uppercase flex flex-col text-base font-bold cursor-pointer rounded-xs"
               onClick={() =>
-                handleNavigate("/cutomer-details?page=1&skip=schedule", " Customer Drop-Off")
+                handleNavigate(
+                  "/customer-details?page=1&skip=schedule",
+                  " Customer Drop-Off"
+                )
               }
             >
               <span className="capitalize text-xs">for</span>
@@ -119,7 +125,6 @@ export default function ExperienceAlternative() {
           </div>
 
           {/* Paint Repairs */}
-
         </div>
       </div>
     </div>

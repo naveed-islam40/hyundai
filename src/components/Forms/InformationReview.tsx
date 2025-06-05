@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 import { usePaintServiceContext } from "@/context/PaintMatrixContext";
+import { filterByDealerInfo } from "@/helper/filterByDealerInfo";
 
 export default function InformationReview({
   customerInfo,
@@ -17,11 +18,17 @@ export default function InformationReview({
   queryParams.set("page", "3");
   const prevPath = queryParams?.toString();
   const [, setFormData] = useState<any>({});
+  const { getDealerInfo } = usePaintServiceContext();
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
     navigate(`?page=6&skip=schedule`);
   };
+
+  const matchingEntry = filterByDealerInfo(
+    getDealerInfo().dealerCode,
+    getDealerInfo().zipCode
+  );
 
   useEffect(() => {
     setFormData({ paintServiceInfo, customerInfo, dealerInfo, scheduleDate });
@@ -32,9 +39,9 @@ export default function InformationReview({
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentDateTime(new Date());
-    }, 1000); // update every second
+    }, 1000);
 
-    return () => clearInterval(interval); // cleanup on unmount
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -55,7 +62,7 @@ export default function InformationReview({
           <div className="flex flex-col md:flex-row justify-between mb-6">
             <div>
               <h2 className="text-red-600 font-bold text-lg">
-                TOTAL COST REVIEW by DEALER xxxxx
+                TOTAL COST REVIEW by {matchingEntry?.dealerInfo?.dealerName}
               </h2>
               <div className="mt-10 mb-12">
                 <div className="grid grid-cols-1 base-lg:grid-cols-2 gap-6 mb-4">
@@ -211,6 +218,11 @@ export default function InformationReview({
               SAVE &amp; SUBMIT
             </button>
           </div>
+          <Link to={"/"} className="flex justify-end pt-4">
+            <button className="bg-black cursor-pointer text-white px-6 py-2 rounded hover:bg-gray-800 transition-colors">
+              Close session
+            </button>
+          </Link>
         </div>
       </div>
     </form>
