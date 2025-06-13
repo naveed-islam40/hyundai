@@ -121,7 +121,7 @@ export default function PaintServicesMatrix({
       if (Array.isArray(updated[part]) && updated[part].length > 0) {
         delete updated[part];
       } else {
-        updated[part] = ["Repair"];
+        updated[part] = [];
       }
       return updated;
     });
