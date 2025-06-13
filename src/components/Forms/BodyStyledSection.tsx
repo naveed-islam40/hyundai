@@ -9,11 +9,6 @@ const BodyStyledSection = ({
   handleSelectPanelServices: any;
   handlePanelSelection: any;
 }) => {
-  const isPanelSelected = (panel: string) => {
-    const services = selectedPanels[panel];
-    return Array.isArray(services) && services.length > 0;
-  };
-
   return (
     <div className="mb-6">
       <h2 className="text-red-600 font-bold mb-3">PANEL STYLES</h2>
@@ -40,7 +35,7 @@ const BodyStyledSection = ({
                     id={part.replace(/\s+/g, "")}
                     className="mr-2"
                     onChange={() => handleSelectPanelServices(part)}
-                    checked={isPanelSelected(part)}
+                    checked={selectedPanels[part]}
                   />
                   <label htmlFor={part.replace(/\s+/g, "")} className="text-sm">
                     {part}

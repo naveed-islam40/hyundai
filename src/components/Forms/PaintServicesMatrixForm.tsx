@@ -133,6 +133,7 @@ export default function PaintServicesMatrix({
     );
   };
 
+  console.log(selectedPanels);
   return (
     <div className="bg-white base-sm:p-5 rounded-md shadow-sm">
       <div className="mx-auto">
