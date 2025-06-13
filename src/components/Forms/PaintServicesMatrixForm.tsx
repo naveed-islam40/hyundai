@@ -128,8 +128,8 @@ export default function PaintServicesMatrix({
   };
 
   const isNextDisabled = () => {
-    return Object.values(selectedPanels).some(
-      (services: any) => services.length === 0
+    return !Object.values(selectedPanels).some((services: any) =>
+      services.includes("Repair")
     );
   };
 

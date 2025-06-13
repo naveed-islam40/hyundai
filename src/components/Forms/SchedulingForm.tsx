@@ -43,6 +43,7 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
     if (!rental1 || !rental2 || !agreed) {
       return toast.error("YOU MUST AGREE BEFORE PROCEEDING");
     }
+    if (!date) return toast.error("YOU MUST SELECT A DATE");
     localStorage.setItem("rental1", rental1);
     localStorage.setItem("rental2", rental2);
     localStorage.setItem("agreed", String(agreed));
