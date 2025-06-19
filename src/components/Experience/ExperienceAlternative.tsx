@@ -24,22 +24,31 @@ export default function ExperienceAlternative() {
       <div className="absolute inset-0 bg-black/60 z-0 h-[100%]" />
       <div className="w-full p-16 text-white text-center relative z-10">
         <div className="mb-8">
-          <h1 className="text-3xl font-bold mb-2">Discover Your Hyundai Experience</h1>
+          <h1 className="text-3xl font-bold mb-2">
+            Discover Your Hyundai Experience
+          </h1>
           {/*<p className="text-lg">Please Select Your Direction for Screening</p>*/}
         </div>
 
         <div className="mb-20">
           <h3>Download a Scope Sheet for estimating requests</h3>
-          <br/>
-          <button
-                type="submit"
-                className="bg-[#E51C22] text-white px-6 py-2 rounded-[3px] hover:bg-[#E51C22] hover:text-white transition-colors cursor-pointer"
-              >
-                DOWNLOAD SCOPE SHEET
-          </button>
+          <br />
+          <a
+            href="https://www.crashchampions.com/sites/default/files/Hyundai/Hyundai-paint_2_(1)_1.pdf"
+            target="_blank"
+          >
+            <button
+              type="submit"
+              className="bg-[#E51C22] text-white px-6 py-2 rounded-[3px] hover:bg-[#E51C22] hover:text-white transition-colors cursor-pointer"
+            >
+              DOWNLOAD SCOPE SHEET
+            </button>
+          </a>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between gap-40"> {/* remove hidden when launching site*/}
+        <div className="flex flex-col md:flex-row justify-between gap-40">
+          {" "}
+          {/* remove hidden when launching site*/}
           {/* In-Person Scheduling */}
           <div className="w-full md:w-1/2 flex flex-col items-start">
             <button
@@ -84,7 +93,6 @@ export default function ExperienceAlternative() {
               </li>
             </ul>
           </div>
-
           {/* Customer Drop-Off */}
           <div className="w-full md:w-1/2 flex flex-col items-start">
             <button
@@ -134,7 +142,6 @@ export default function ExperienceAlternative() {
               </li>
             </ul>
           </div>
-
           {/* Paint Repairs */}
         </div>
       </div>

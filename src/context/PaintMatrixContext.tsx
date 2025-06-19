@@ -14,6 +14,8 @@ interface PaintContextType {
   pct: any;
   setSelectedPanels: any;
   selectedPanels: any;
+  formState: any;
+  setFormState: any;
 }
 
 const PaintServiceContext = createContext<PaintContextType | undefined>(
@@ -28,6 +30,12 @@ export const PaintServiceProvider = ({ children }: { children: any }) => {
   const [year, setYear] = useState<string>("");
   const [model, setModel] = useState<string>("");
   const [pct, setPct] = useState<any>([]);
+  const [formState, setFormState] = useState({
+    rental1: "",
+    rental2: "",
+    rentalCompany: "",
+    agreed: false,
+  });
 
   const saveDealderInfo = (dealerCode: string, zipCode: string) => {
     localStorage.setItem("dealerCode", dealerCode);
@@ -61,6 +69,8 @@ export const PaintServiceProvider = ({ children }: { children: any }) => {
         pct,
         selectedPanels,
         setSelectedPanels,
+        formState,
+        setFormState,
       }}
     >
       {children}

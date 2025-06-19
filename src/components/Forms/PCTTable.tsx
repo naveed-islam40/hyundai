@@ -18,7 +18,7 @@ const PCTTable = () => {
   const { pct } = usePaintServiceContext();
 
   return (
-    <div className="w-full overflow-x-auto">
+    <div className="w-full">
       {pct?.map((item: any, index: number) => (
         <div key={index} className="space-y-2 mb-6 overflow-x-auto">
           <h1 className="text-lg font-bold">{item?.category}</h1>
@@ -61,13 +61,13 @@ const PCTTable = () => {
                   <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">
                     {row.part}
                   </td>
-                  <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`$ ${
+                  <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`${
                     row.body_labor ?? "0.00"
                   }`}</td>
-                  <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`$ ${
+                  <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`${
                     row.refinish_labor ?? "0.00"
                   }`}</td>
-                  <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`$ ${
+                  <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`${
                     row.cost ?? "0.00"
                   }`}</td>
                   <td className="border border-gray-300 px-3 py-2 text-gray-900 whitespace-nowrap">{`$ ${

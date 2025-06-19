@@ -66,13 +66,13 @@ export default function PrintableTable() {
                     {row.part}
                   </td>
                   <td className="border border-gray-300 px-2 py-1 text-sm text-gray-900">
-                    {row.body_labor ? `$ ${row.body_labor}` : "$0.00"}
+                    {row.body_labor ? `${row.body_labor}` : "0.00"}
                   </td>
                   <td className="border border-gray-300 px-2 py-1 text-sm text-gray-900">
-                    {row.refinish_labor ? `$ ${row.refinish_labor}` : "$0.00"}
+                    {row.refinish_labor ? `${row.refinish_labor}` : "0.00"}
                   </td>
                   <td className="border border-gray-300 px-2 py-1 text-sm text-gray-900">
-                    {row.cost ? `$ ${row.cost}` : "$0.00"}
+                    {row.cost ? `${row.cost}` : "0.00"}
                   </td>
                   <td className="border border-gray-300 px-2 py-1 text-sm text-gray-900">
                     {row.ccc_cost ? `$ ${row.ccc_cost}` : "$0.00"}

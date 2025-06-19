@@ -14,7 +14,7 @@ export const getBodyPanelOptions = (year: string, model: string, cbsa: string | 
     const yearMatch = isYearInRange(yearPart, Number(year));
     const modelMatch =
       modelName.trim().toLowerCase() ===
-      model.trim().toLowerCase();
+      model?.trim().toLowerCase();
 
     return yearMatch && modelMatch;
   }) : undefined;

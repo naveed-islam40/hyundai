@@ -1,3 +1,4 @@
+import { usePaintServiceContext } from "@/context/PaintMatrixContext";
 import { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -5,14 +6,23 @@ import { Link, useNavigate } from "react-router-dom";
 import TimezoneSelect, { type ITimezone } from "react-timezone-select";
 import { toast } from "sonner";
 
-export default function SchedulingForm({ setScheduleDate, name }: any) {
+export default function SchedulingForm({
+  setScheduleDate,
+  name,
+  scheduleDate,
+}: any) {
   const [date, setDate] = useState<Date | null>(null);
   const [currentDateTime, setCurrentDateTime] = useState(new Date());
   const [selectedTimezone, setSelectedTimezone] = useState<ITimezone>(
     Intl.DateTimeFormat().resolvedOptions().timeZone
   );
+  const { formState, setFormState } = usePaintServiceContext();
 
   const price: any = localStorage.getItem("totalCost");
+
+  useEffect(() => {
+    setDate(scheduleDate?.date);
+  }, [scheduleDate?.date]);
 
   const isWeekday = (date: Date) => {
     const day = date.getDay();
@@ -20,59 +30,53 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
   };
 
   const navigate = useNavigate();
-  const [formState, setFormState] = useState({
-    rental1: "",
-    rental2: "",
-    rentalCompany: "", // <-- new
-    agreed: false,
-  });
 
   const handleRentalCompanyChange = (company: string) => {
-  setFormState((prev) => ({
-    ...prev,
-    rentalCompany: prev.rentalCompany === company ? "" : company, // toggle
-  }));
-};
+    setFormState((prev: any) => ({
+      ...prev,
+      rentalCompany: prev.rentalCompany === company ? "" : company, // toggle
+    }));
+  };
 
   const handleRentalChange = (
     question: "rental1" | "rental2",
     value: "yes" | "no"
   ) => {
-    setFormState((prev) => ({ ...prev, [question]: value }));
+    setFormState((prev: any) => ({ ...prev, [question]: value }));
   };
 
   const handleAgreeChange = () => {
-    setFormState((prev) => ({ ...prev, agreed: !prev.agreed }));
+    setFormState((prev: any) => ({ ...prev, agreed: !prev.agreed }));
   };
 
   const handleNext = (e: React.FormEvent) => {
-  e.preventDefault();
-  const { rental1, rental2, rentalCompany, agreed } = formState;
+    e.preventDefault();
+    const { rental1, rental2, rentalCompany, agreed } = formState;
 
-  if (!rental1 || !rental2 || !agreed) {
-    return toast.error("YOU MUST AGREE BEFORE PROCEEDING");
-  }
+    if (!rental1 || !rental2 || !agreed) {
+      return toast.error("YOU MUST AGREE BEFORE PROCEEDING");
+    }
 
-  if (!date) return toast.error("YOU MUST SELECT A DATE");
+    if (!date) return toast.error("YOU MUST SELECT A DATE");
 
-  // Enforce rental company selection if rental1 is yes
-  if (rental1 === "yes" && rentalCompany === "") {
-    return toast.error("YOU MUST SELECT A RENTAL COMPANY");
-  }
+    // Enforce rental company selection if rental1 is yes
+    if (rental1 === "yes" && rentalCompany === "") {
+      return toast.error("YOU MUST SELECT A RENTAL COMPANY");
+    }
 
-  localStorage.setItem("rental1", rental1);
-  localStorage.setItem("rental2", rental2);
-  localStorage.setItem("rentalCompany", rentalCompany);
-  localStorage.setItem("agreed", String(agreed));
-  setScheduleDate({
-    date: date,
-    timezone: selectedTimezone,
-  });
+    localStorage.setItem("rental1", rental1);
+    localStorage.setItem("rental2", rental2);
+    localStorage.setItem("rentalCompany", rentalCompany);
+    localStorage.setItem("agreed", String(agreed));
+    setScheduleDate({
+      date: date,
+      timezone: selectedTimezone,
+    });
 
-  setTimeout(() => {
-    navigate("/customer-details?page=5");
-  }, 100);
-};
+    setTimeout(() => {
+      navigate("/customer-details?page=5");
+    }, 100);
+  };
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -198,7 +202,8 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
                 {/* Question 1 with inline checkboxes */}
                 <div className="flex items-center flex-wrap gap-4 text-sm font-medium mb-3">
                   <p className="mb-0">
-                    Will you be providing your customer, {name}, a courtesy vehicle during Warranty Repairs?
+                    Will you be providing your customer, {name}, a courtesy
+                    vehicle during Warranty Repairs?
                   </p>
                   <label className="flex items-center">
                     <input
@@ -220,36 +225,44 @@ export default function SchedulingForm({ setScheduleDate, name }: any) {
                     />
                     <span className="ml-[7px]">NO</span>
                   </label>
-                    
+
                   {/*Rental Companies*/}
                   <div className="flex flex-wrap gap-6 mt-4 mb-5">
                     {formState.rental1 === "yes" && (
                       <>
                         <p>Select rental company below:</p>
                         <div className="flex flex-wrap gap-6 mt-0 mb-3">
-                          {["Enterprise", "Hertz", "Valet Service", "None"].map((company) => (
-                            <label key={company} className="flex items-center gap-2 cursor-pointer">
-                              <input
-                                type="checkbox"
-                                name="rentalCompany"
-                                checked={formState.rentalCompany === company}
-                                onChange={() => handleRentalCompanyChange(company)}
-                                className="accent-red-600"
-                              />
-                              <span>{company}</span>
-                            </label>
-                          ))}
+                          {["Enterprise", "Hertz", "Valet Service", "None"].map(
+                            (company) => (
+                              <label
+                                key={company}
+                                className="flex items-center gap-2 cursor-pointer"
+                              >
+                                <input
+                                  type="checkbox"
+                                  name="rentalCompany"
+                                  checked={formState.rentalCompany === company}
+                                  onChange={() =>
+                                    handleRentalCompanyChange(company)
+                                  }
+                                  className="accent-red-600"
+                                />
+                                <span>{company}</span>
+                              </label>
+                            )
+                          )}
                         </div>
                       </>
                     )}
                   </div>
-
                 </div>
 
                 {/* Question 2 with inline checkboxes */}
                 <div className="flex items-center flex-wrap gap-4 text-sm font-medium mb-3">
                   <p className="mb-0">
-                    If NO, Would the customer, {name}, like assistance with coordinating an Enterprise rental vehicle during Repairs (*<strong>At the customers Expense</strong>)?
+                    If NO, Would the customer, {name}, like assistance with
+                    coordinating an Enterprise rental vehicle during Repairs (*
+                    <strong>At the customers Expense</strong>)?
                   </p>
                   <label className="flex items-center">
                     <input

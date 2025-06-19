@@ -27,6 +27,7 @@ export default function PaintServicesMatrix({ name }: any) {
     setSelectedPanels,
     selectedPanels,
     setPct,
+    paintServiceInfo,
   } = usePaintServiceContext();
 
   queryParams.set("page", "2");
@@ -39,12 +40,12 @@ export default function PaintServicesMatrix({ name }: any) {
 
   const formik = useFormik({
     initialValues: {
-      vin: "",
-      year: "",
+      vin: paintServiceInfo?.vin || "",
+      year: paintServiceInfo?.year || "",
       make: "Hyundai",
-      model: "",
+      model: paintServiceInfo?.model || "",
       cbsa: matchingEntry?.dealerInfo?.dealerName || "",
-      paintMaterials: "",
+      paintMaterials: paintServiceInfo?.paintMaterials || "",
     },
     validationSchema: validationSchema,
     onSubmit: (values) => {
@@ -58,6 +59,7 @@ export default function PaintServicesMatrix({ name }: any) {
       queryParams.set("page", "4");
       navigate(`?${queryParams.toString()}`);
     },
+    enableReinitialize: true,
   });
 
   const color = getDefaultColor(formik.values.year, formik.values.model);
@@ -136,6 +138,8 @@ export default function PaintServicesMatrix({ name }: any) {
     );
   };
 
+  console.log("forkim", formik.values);
+
   return (
     <div className="bg-white rounded-md shadow-sm">
       <div className="mx-auto max-w-6xl w-full base-sm:p-5">
@@ -209,7 +213,7 @@ export default function PaintServicesMatrix({ name }: any) {
                 </div>
                 {formik.touched.vin && formik.errors.vin && (
                   <div className="text-gray-600 text-xs mt-1">
-                    {formik.errors.vin}
+                    {formik.errors.vin as string}
                   </div>
                 )}
               </div>
@@ -226,6 +230,7 @@ export default function PaintServicesMatrix({ name }: any) {
               <CustomSelect
                 value={formik.values.year}
                 onChange={(value: any) => {
+                  console.log("value", value);
                   formik.setFieldValue("year", value);
                   setYear(value);
                   formik.setFieldValue("model", "");
@@ -242,6 +247,7 @@ export default function PaintServicesMatrix({ name }: any) {
               <CustomSelect
                 value={formik.values.model}
                 onChange={(value: any) => {
+                  console.log("model", value);
                   formik.setFieldValue("model", value);
                   setModel(value);
                 }}
