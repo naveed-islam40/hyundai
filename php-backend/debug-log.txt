@@ -1,0 +1,38 @@
+Array
+(
+    [DOCUMENT_ROOT] => C:\Users\Darrian.Kendall\OneDrive - Crash Champions\Desktop\Hyundai-v2\ATE.HyundaiRepository\ATE.Hyundai\php-backend
+    [REMOTE_ADDR] => ::1
+    [REMOTE_PORT] => 60896
+    [SERVER_SOFTWARE] => PHP/8.3.0 (Development Server)
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [SERVER_NAME] => localhost
+    [SERVER_PORT] => 8000
+    [REQUEST_URI] => /send-mail.php
+    [REQUEST_METHOD] => POST
+    [SCRIPT_NAME] => /send-mail.php
+    [SCRIPT_FILENAME] => C:\Users\Darrian.Kendall\OneDrive - Crash Champions\Desktop\Hyundai-v2\ATE.HyundaiRepository\ATE.Hyundai\php-backend\send-mail.php
+    [PHP_SELF] => /send-mail.php
+    [HTTP_HOST] => localhost:8000
+    [HTTP_CONNECTION] => keep-alive
+    [CONTENT_LENGTH] => 3556
+    [HTTP_CONTENT_LENGTH] => 3556
+    [HTTP_SEC_CH_UA_PLATFORM] => "Windows"
+    [HTTP_USER_AGENT] => Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36
+    [HTTP_ACCEPT] => application/json, text/plain, */*
+    [HTTP_SEC_CH_UA] => "Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"
+    [CONTENT_TYPE] => application/json
+    [HTTP_CONTENT_TYPE] => application/json
+    [HTTP_SEC_CH_UA_MOBILE] => ?0
+    [HTTP_ORIGIN] => http://localhost:5173
+    [HTTP_SEC_FETCH_SITE] => same-site
+    [HTTP_SEC_FETCH_MODE] => cors
+    [HTTP_SEC_FETCH_DEST] => empty
+    [HTTP_REFERER] => http://localhost:5173/
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate, br, zstd
+    [HTTP_ACCEPT_LANGUAGE] => en-US,en;q=0.9
+    [REQUEST_TIME_FLOAT] => 1750536123.6064
+    [REQUEST_TIME] => 1750536123
+)
+
+
+{"dealerInfo":{"poNumber":"2452452","serviceAdvisorFirstName":"Darrian","serviceAdvisorLastName":"Kendall","telephone2":"9725219942","emailAddress2":"DARRIAN.R.KENDALL@GMAIL.COM","extension":"202"},"customerInfo":{"type":"Mobile","zipCode":"75189","firstName":"Darrian","lastName":"Kendall","email":"DARRIAN.R.KENDALL@GMAIL.COM","telephone":"9034871807"},"scheduleDate":{"date":"2025-06-10T05:00:00.000Z","timezone":"America/Chicago"},"selectedPanels":{"Fender":["Repair"]},"paintServiceInfo":{"vin":"13841934183491234","year":"2017","make":"Hyundai","model":"Elantra","cbsa":"CRAIN HYUNDAI OF FAYETTEVILLE","paintMaterials":"Quartz White Pearl Tricoat","selectedPanels":{"Fender":["Repair"]}},"totalCost":760,"panelDetails":[],"pct":[{"category":"Fender","items":[{"id":129,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"R&I","part":"R&I bumper cover","body_labor":"1.00","refinish_labor":null,"cost":null,"ccc_cost":"76.00","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":130,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"R&I","part":"R&I headlamp assy","body_labor":"0.30","refinish_labor":null,"cost":null,"ccc_cost":"22.80","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":131,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"Replace","part":"Aim headlamps","body_labor":"0.50","refinish_labor":null,"cost":null,"ccc_cost":"38.00","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":132,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"Repair","part":"RT Fender","body_labor":"0.50","refinish_labor":"2.20","cost":null,"ccc_cost":"315.20","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":133,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"Refinish","part":"Add for Three Stage","body_labor":null,"refinish_labor":"1.50","cost":null,"ccc_cost":"189.00","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":134,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"R&I","part":"RT Fender liner  sedan","body_labor":"0.40","refinish_labor":null,"cost":null,"ccc_cost":"30.40","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":135,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"R&I","part":"RT Pillar molding sedan w/o chrome","body_labor":"0.20","refinish_labor":null,"cost":null,"ccc_cost":"15.20","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":136,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"R&I","part":"RT Mud guard","body_labor":"0.40","refinish_labor":null,"cost":null,"ccc_cost":"30.40","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"},{"id":137,"vehicle":"2017-18 Elantra","year":"2017 - 2018","repair_blend":"Repair","category":"Fender","operation":"Hardware","part":"Hardware","body_labor":null,"refinish_labor":null,"cost":null,"ccc_cost":"25.00","created_at":"2025-06-12T15:53:42.000000Z","updated_at":"2025-06-12T15:53:42.000000Z"}]}]}
