@@ -17,7 +17,6 @@ const PanelDetails = ({
     {}
   );
 
-  console.log("selectedPanels", selectedPanels);
   // [getting dealer info from context]
   const { model, year, getDealerInfo } = usePaintServiceContext();
   const dealerInfo = filterByDealerInfo(
@@ -49,10 +48,8 @@ const PanelDetails = ({
     setSelectedPanels(updatedPanels);
   };
 
-  const noOfPanels = Object.keys(selectedPanels).length;
-
   // [calculate total]
-  const { discountedTotal, discounted } = calculateTotal(
+  const { discountedTotal } = calculateTotal(
     selectedPanels,
     panelDetails,
     body_rate,
@@ -69,7 +66,7 @@ const PanelDetails = ({
               <div className="bg-white text-black p-4 text-center text-2xl font-bold mb-2 rounded w-full">
                 <div>
                   <div className="text-center text-2xl font-bold">
-                    ${(discountedTotal)?.toFixed(2)}
+                    ${discountedTotal?.toFixed(2)}
                   </div>
                 </div>
               </div>
@@ -166,12 +163,8 @@ const PanelDetails = ({
                   }
                 }
               )}
-              <Miscellaneous
-                body_rate={body_rate}
-                noOfPanels={noOfPanels}
-                refinish_rate={refinish_rate}
-              />
-              <Diaganostics discounted={discounted} />
+              <Miscellaneous />
+              <Diaganostics />
             </div>
           </div>
         )}

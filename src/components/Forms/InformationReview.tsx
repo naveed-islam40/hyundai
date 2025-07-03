@@ -1,5 +1,12 @@
 import PanelInfo from "@/components/InformationReview/PanelInfo";
+import { apiConfig, buildUrl } from "@/config/apiConfig";
 import { usePaintServiceContext } from "@/context/PaintMatrixContext";
+import { filterByDealerInfo } from "@/helper/filterByDealerInfo";
+import { getRatesByCBSA } from "@/helper/getRatesByCBSA";
+import { transformToHyperDrive } from "@/helper/transformToHyperDrive";
+import { usePrint } from "@/hook/usePrint";
+import { hyperdriveService } from "@/services/hyperdriveApi";
+import axios from "axios";
 import { useEffect, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import CustomerInfo from "../InformationReview/CustomerInfo";
@@ -7,15 +14,7 @@ import DealerInfo from "../InformationReview/DealerInfo";
 import ShopInformation from "../InformationReview/ShopInformation";
 import VehicleInfo from "../InformationReview/VehicleInfo";
 import { Button } from "../ui/button";
-import { filterByDealerInfo } from "@/helper/filterByDealerInfo";
-import axios from "axios";
 import PCTTable from "./PCTTable";
-import PrintableTable from "./PCTPrint";
-import { usePrint } from "@/hook/usePrint";
-import { hyperdriveService } from "@/services/hyperdriveApi";
-import { buildUrl, apiConfig } from "@/config/apiConfig";
-import { transformToHyperDrive } from "@/helper/transformToHyperDrive";
-import { getRatesByCBSA } from "@/helper/getRatesByCBSA";
 
 interface CustomerInfoType {
   firstName?: string;
