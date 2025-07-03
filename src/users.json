@@ -1,0 +1,4266 @@
+[
+
+  { "dealerCode": "KEN76", "zipCode": "75189","": "" },
+  { "dealerCode": "DIA20", "zipCode": "75032","": "" },
+
+    {
+        "dealerCode": "WI042",
+        "zipCode": "53177",
+        "": ""
+    },
+    {
+        "dealerCode": "MI062",
+        "zipCode": "49423",
+        "": ""
+    },
+    {
+        "dealerCode": "IL093",
+        "zipCode": "60712",
+        "": ""
+    },
+    {
+        "dealerCode": "IL094",
+        "zipCode": "60074",
+        "": ""
+    },
+    {
+        "dealerCode": "TX077",
+        "zipCode": "78233",
+        "": ""
+    },
+    {
+        "dealerCode": "TX087",
+        "zipCode": "78224",
+        "": ""
+    },
+    {
+        "dealerCode": "TN030",
+        "zipCode": "38128",
+        "": ""
+    },
+    {
+        "dealerCode": "TN031",
+        "zipCode": "38115",
+        "": ""
+    },
+    {
+        "dealerCode": "NY149",
+        "zipCode": "14580",
+        "": ""
+    },
+    {
+        "dealerCode": "NY150",
+        "zipCode": "14623",
+        "": ""
+    },
+    {
+        "dealerCode": "NY151",
+        "zipCode": "14424",
+        "": ""
+    },
+    {
+        "dealerCode": "VA056",
+        "zipCode": "24019",
+        "": ""
+    },
+    {
+        "dealerCode": "VA063",
+        "zipCode": "23608",
+        "": ""
+    },
+    {
+        "dealerCode": "VA064",
+        "zipCode": "23321",
+        "": ""
+    },
+    {
+        "dealerCode": "GA096",
+        "zipCode": "30122",
+        "": ""
+    },
+    {
+        "dealerCode": "GA098",
+        "zipCode": "30606",
+        "": ""
+    },
+    {
+        "dealerCode": "NC073",
+        "zipCode": "28358",
+        "": ""
+    },
+    {
+        "dealerCode": "SC048",
+        "zipCode": "29501",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ053",
+        "zipCode": "85382",
+        "": ""
+    },
+    {
+        "dealerCode": "CO053",
+        "zipCode": "80112",
+        "": ""
+    },
+    {
+        "dealerCode": "CO054",
+        "zipCode": "80504",
+        "": ""
+    },
+    {
+        "dealerCode": "FL081",
+        "zipCode": "33614",
+        "": ""
+    },
+    {
+        "dealerCode": "FL138",
+        "zipCode": "32720",
+        "": ""
+    },
+    {
+        "dealerCode": "GA070",
+        "zipCode": "30038",
+        "": ""
+    },
+    {
+        "dealerCode": "NM024",
+        "zipCode": "87112",
+        "": ""
+    },
+    {
+        "dealerCode": "NM025",
+        "zipCode": "87114",
+        "": ""
+    },
+    {
+        "dealerCode": "VA066",
+        "zipCode": "22191",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ046",
+        "zipCode": "85284",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01R",
+        "zipCode": "91355",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01T",
+        "zipCode": "92008",
+        "": ""
+    },
+    {
+        "dealerCode": "GA065",
+        "zipCode": "30519",
+        "": ""
+    },
+    {
+        "dealerCode": "GA075",
+        "zipCode": "31909",
+        "": ""
+    },
+    {
+        "dealerCode": "GA090",
+        "zipCode": "31406",
+        "": ""
+    },
+    {
+        "dealerCode": "IL085",
+        "zipCode": "60018",
+        "": ""
+    },
+    {
+        "dealerCode": "SC049",
+        "zipCode": "29210",
+        "": ""
+    },
+    {
+        "dealerCode": "SC050",
+        "zipCode": "29927",
+        "": ""
+    },
+    {
+        "dealerCode": "TX081",
+        "zipCode": "78412",
+        "": ""
+    },
+    {
+        "dealerCode": "TX181",
+        "zipCode": "76180",
+        "": ""
+    },
+    {
+        "dealerCode": "TX180",
+        "zipCode": "77845",
+        "": ""
+    },
+    {
+        "dealerCode": "TX195",
+        "zipCode": "77065",
+        "": ""
+    },
+    {
+        "dealerCode": "TX196",
+        "zipCode": "77094",
+        "": ""
+    },
+    {
+        "dealerCode": "TX197",
+        "zipCode": "76543",
+        "": ""
+    },
+    {
+        "dealerCode": "TX206",
+        "zipCode": "76712",
+        "": ""
+    },
+    {
+        "dealerCode": "TX209",
+        "zipCode": "77375",
+        "": ""
+    },
+    {
+        "dealerCode": "NC029",
+        "zipCode": "28690",
+        "": ""
+    },
+    {
+        "dealerCode": "NC043",
+        "zipCode": "28602",
+        "": ""
+    },
+    {
+        "dealerCode": "WI032",
+        "zipCode": "54913",
+        "": ""
+    },
+    {
+        "dealerCode": "WI043",
+        "zipCode": "54304",
+        "": ""
+    },
+    {
+        "dealerCode": "MO042",
+        "zipCode": "65802",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ047",
+        "zipCode": "85014",
+        "": ""
+    },
+    {
+        "dealerCode": "TX173",
+        "zipCode": "76017",
+        "": ""
+    },
+    {
+        "dealerCode": "TX174",
+        "zipCode": "75006",
+        "": ""
+    },
+    {
+        "dealerCode": "PA095",
+        "zipCode": "16602",
+        "": ""
+    },
+    {
+        "dealerCode": "PA077",
+        "zipCode": "16801",
+        "": ""
+    },
+    {
+        "dealerCode": "CA366",
+        "zipCode": "92591",
+        "": ""
+    },
+    {
+        "dealerCode": "CA375",
+        "zipCode": "92844",
+        "": ""
+    },
+    {
+        "dealerCode": "CA376",
+        "zipCode": "92647",
+        "": ""
+    },
+    {
+        "dealerCode": "CA377",
+        "zipCode": "92806",
+        "": ""
+    },
+    {
+        "dealerCode": "MN028",
+        "zipCode": "56387",
+        "": ""
+    },
+    {
+        "dealerCode": "MN026",
+        "zipCode": "56001",
+        "": ""
+    },
+    {
+        "dealerCode": "HI021",
+        "zipCode": "96744",
+        "": ""
+    },
+    {
+        "dealerCode": "HI022",
+        "zipCode": "96819",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01E",
+        "zipCode": "90807",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01O",
+        "zipCode": "90037",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01P",
+        "zipCode": "90810",
+        "": ""
+    },
+    {
+        "dealerCode": "WA051",
+        "zipCode": "98002",
+        "": ""
+    },
+    {
+        "dealerCode": "WA058",
+        "zipCode": "98632",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01N",
+        "zipCode": "94066",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01B",
+        "zipCode": "91740",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01M",
+        "zipCode": "91731",
+        "": ""
+    },
+    {
+        "dealerCode": "CA300",
+        "zipCode": "92882",
+        "": ""
+    },
+    {
+        "dealerCode": "NC047",
+        "zipCode": "27523",
+        "": ""
+    },
+    {
+        "dealerCode": "NC072",
+        "zipCode": "27587",
+        "": ""
+    },
+    {
+        "dealerCode": "GA057",
+        "zipCode": "31088",
+        "": ""
+    },
+    {
+        "dealerCode": "GA081",
+        "zipCode": "31705",
+        "": ""
+    },
+    {
+        "dealerCode": "GA029",
+        "zipCode": "31210",
+        "": ""
+    },
+    {
+        "dealerCode": "MN016",
+        "zipCode": "55306",
+        "": ""
+    },
+    {
+        "dealerCode": "MN021",
+        "zipCode": "55437",
+        "": ""
+    },
+    {
+        "dealerCode": "WI023",
+        "zipCode": "54937",
+        "": ""
+    },
+    {
+        "dealerCode": "WI021",
+        "zipCode": "53081",
+        "": ""
+    },
+    {
+        "dealerCode": "MA064",
+        "zipCode": "02062",
+        "": ""
+    },
+    {
+        "dealerCode": "RI013",
+        "zipCode": "02852",
+        "": ""
+    },
+    {
+        "dealerCode": "TX183",
+        "zipCode": "75087",
+        "": ""
+    },
+    {
+        "dealerCode": "TX202",
+        "zipCode": "75232",
+        "": ""
+    },
+    {
+        "dealerCode": "TX204",
+        "zipCode": "75160",
+        "": ""
+    },
+    {
+        "dealerCode": "TX189",
+        "zipCode": "75150",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ054",
+        "zipCode": "86301",
+        "": ""
+    },
+    {
+        "dealerCode": "UT011",
+        "zipCode": "84780",
+        "": ""
+    },
+    {
+        "dealerCode": "AR035",
+        "zipCode": "72712",
+        "": ""
+    },
+    {
+        "dealerCode": "AR036",
+        "zipCode": "72908",
+        "": ""
+    },
+    {
+        "dealerCode": "AR028",
+        "zipCode": "72210",
+        "": ""
+    },
+    {
+        "dealerCode": "AR029",
+        "zipCode": "72116",
+        "": ""
+    },
+    {
+        "dealerCode": "AR034",
+        "zipCode": "72704",
+        "": ""
+    },
+    {
+        "dealerCode": "AR038",
+        "zipCode": "72032",
+        "": ""
+    },
+    {
+        "dealerCode": "VA055",
+        "zipCode": "23666",
+        "": ""
+    },
+    {
+        "dealerCode": "NC067",
+        "zipCode": "28659",
+        "": ""
+    },
+    {
+        "dealerCode": "TX179",
+        "zipCode": "76903",
+        "": ""
+    },
+    {
+        "dealerCode": "TX152",
+        "zipCode": "79103",
+        "": ""
+    },
+    {
+        "dealerCode": "MI058",
+        "zipCode": "48103",
+        "": ""
+    },
+    {
+        "dealerCode": "MI031",
+        "zipCode": "49512",
+        "": ""
+    },
+    {
+        "dealerCode": "IA015",
+        "zipCode": "52246",
+        "": ""
+    },
+    {
+        "dealerCode": "SD001",
+        "zipCode": "57106",
+        "": ""
+    },
+    {
+        "dealerCode": "CT042",
+        "zipCode": "06374",
+        "": ""
+    },
+    {
+        "dealerCode": "ME010",
+        "zipCode": "04072",
+        "": ""
+    },
+    {
+        "dealerCode": "NH019",
+        "zipCode": "03878",
+        "": ""
+    },
+    {
+        "dealerCode": "CT043",
+        "zipCode": "06320",
+        "": ""
+    },
+    {
+        "dealerCode": "OH085",
+        "zipCode": "44646",
+        "": ""
+    },
+    {
+        "dealerCode": "PA091",
+        "zipCode": "16146",
+        "": ""
+    },
+    {
+        "dealerCode": "CT034",
+        "zipCode": "06902",
+        "": ""
+    },
+    {
+        "dealerCode": "FL049",
+        "zipCode": "32901",
+        "": ""
+    },
+    {
+        "dealerCode": "CT022",
+        "zipCode": "06810",
+        "": ""
+    },
+    {
+        "dealerCode": "FL098",
+        "zipCode": "32926",
+        "": ""
+    },
+    {
+        "dealerCode": "FL127",
+        "zipCode": "32084",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ046",
+        "zipCode": "07304",
+        "": ""
+    },
+    {
+        "dealerCode": "AR014",
+        "zipCode": "72404",
+        "": ""
+    },
+    {
+        "dealerCode": "AR026",
+        "zipCode": "71913",
+        "": ""
+    },
+    {
+        "dealerCode": "NC071",
+        "zipCode": "28625",
+        "": ""
+    },
+    {
+        "dealerCode": "VA065",
+        "zipCode": "22911",
+        "": ""
+    },
+    {
+        "dealerCode": "FL089",
+        "zipCode": "34474",
+        "": ""
+    },
+    {
+        "dealerCode": "FL120",
+        "zipCode": "34788",
+        "": ""
+    },
+    {
+        "dealerCode": "FL144",
+        "zipCode": "32225",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ035",
+        "zipCode": "85297",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ042",
+        "zipCode": "85323",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ043",
+        "zipCode": "85260",
+        "": ""
+    },
+    {
+        "dealerCode": "KY034",
+        "zipCode": "42503",
+        "": ""
+    },
+    {
+        "dealerCode": "KY031",
+        "zipCode": "40509",
+        "": ""
+    },
+    {
+        "dealerCode": "FL123",
+        "zipCode": "33403",
+        "": ""
+    },
+    {
+        "dealerCode": "IL071",
+        "zipCode": "60409",
+        "": ""
+    },
+    {
+        "dealerCode": "FL121",
+        "zipCode": "33409",
+        "": ""
+    },
+    {
+        "dealerCode": "IL088",
+        "zipCode": "61801",
+        "": ""
+    },
+    {
+        "dealerCode": "MO046",
+        "zipCode": "63042",
+        "": ""
+    },
+    {
+        "dealerCode": "IL082",
+        "zipCode": "60504",
+        "": ""
+    },
+    {
+        "dealerCode": "IN048",
+        "zipCode": "46240",
+        "": ""
+    },
+    {
+        "dealerCode": "VA036",
+        "zipCode": "23834",
+        "": ""
+    },
+    {
+        "dealerCode": "VA057",
+        "zipCode": "22601",
+        "": ""
+    },
+    {
+        "dealerCode": "VA058",
+        "zipCode": "24501",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01X",
+        "zipCode": "95340",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01Q",
+        "zipCode": "93230",
+        "": ""
+    },
+    {
+        "dealerCode": "PA076",
+        "zipCode": "17111",
+        "": ""
+    },
+    {
+        "dealerCode": "PA079",
+        "zipCode": "19116",
+        "": ""
+    },
+    {
+        "dealerCode": "WI014",
+        "zipCode": "53186",
+        "": ""
+    },
+    {
+        "dealerCode": "WI035",
+        "zipCode": "53545",
+        "": ""
+    },
+    {
+        "dealerCode": "PA039",
+        "zipCode": "18902",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ060",
+        "zipCode": "08822",
+        "": ""
+    },
+    {
+        "dealerCode": "PA002",
+        "zipCode": "19047",
+        "": ""
+    },
+    {
+        "dealerCode": "PA100",
+        "zipCode": "19090",
+        "": ""
+    },
+    {
+        "dealerCode": "PA101",
+        "zipCode": "17050",
+        "": ""
+    },
+    {
+        "dealerCode": "WV022",
+        "zipCode": "24740",
+        "": ""
+    },
+    {
+        "dealerCode": "TN032",
+        "zipCode": "37620",
+        "": ""
+    },
+    {
+        "dealerCode": "TN035",
+        "zipCode": "37601",
+        "": ""
+    },
+    {
+        "dealerCode": "WV023",
+        "zipCode": "25801",
+        "": ""
+    },
+    {
+        "dealerCode": "OH083",
+        "zipCode": "44129",
+        "": ""
+    },
+    {
+        "dealerCode": "OH076",
+        "zipCode": "44857",
+        "": ""
+    },
+    {
+        "dealerCode": "OH084",
+        "zipCode": "44070",
+        "": ""
+    },
+    {
+        "dealerCode": "PA073",
+        "zipCode": "15010",
+        "": ""
+    },
+    {
+        "dealerCode": "PA044",
+        "zipCode": "15236",
+        "": ""
+    },
+    {
+        "dealerCode": "FL150",
+        "zipCode": "32401",
+        "": ""
+    },
+    {
+        "dealerCode": "MS042",
+        "zipCode": "39232",
+        "": ""
+    },
+    {
+        "dealerCode": "MS043",
+        "zipCode": "39157",
+        "": ""
+    },
+    {
+        "dealerCode": "TN055",
+        "zipCode": "37075",
+        "": ""
+    },
+    {
+        "dealerCode": "AL037",
+        "zipCode": "35203",
+        "": ""
+    },
+    {
+        "dealerCode": "TX016",
+        "zipCode": "78229",
+        "": ""
+    },
+    {
+        "dealerCode": "TX127",
+        "zipCode": "78249",
+        "": ""
+    },
+    {
+        "dealerCode": "MD006",
+        "zipCode": "20743",
+        "": ""
+    },
+    {
+        "dealerCode": "VA014",
+        "zipCode": "22408",
+        "": ""
+    },
+    {
+        "dealerCode": "AL036",
+        "zipCode": "36116",
+        "": ""
+    },
+    {
+        "dealerCode": "FL141",
+        "zipCode": "34711",
+        "": ""
+    },
+    {
+        "dealerCode": "ID007",
+        "zipCode": "83704",
+        "": ""
+    },
+    {
+        "dealerCode": "ID016",
+        "zipCode": "83687",
+        "": ""
+    },
+    {
+        "dealerCode": "FL124",
+        "zipCode": "32808",
+        "": ""
+    },
+    {
+        "dealerCode": "AL022",
+        "zipCode": "35906",
+        "": ""
+    },
+    {
+        "dealerCode": "AL031",
+        "zipCode": "35603",
+        "": ""
+    },
+    {
+        "dealerCode": "WA059",
+        "zipCode": "98902",
+        "": ""
+    },
+    {
+        "dealerCode": "WA055",
+        "zipCode": "99212",
+        "": ""
+    },
+    {
+        "dealerCode": "PA070",
+        "zipCode": "18951",
+        "": ""
+    },
+    {
+        "dealerCode": "PA088",
+        "zipCode": "17756",
+        "": ""
+    },
+    {
+        "dealerCode": "IL092",
+        "zipCode": "62301",
+        "": ""
+    },
+    {
+        "dealerCode": "IL096",
+        "zipCode": "60178",
+        "": ""
+    },
+    {
+        "dealerCode": "PA090",
+        "zipCode": "19526",
+        "": ""
+    },
+    {
+        "dealerCode": "PA098",
+        "zipCode": "18360",
+        "": ""
+    },
+    {
+        "dealerCode": "GA091",
+        "zipCode": "30161",
+        "": ""
+    },
+    {
+        "dealerCode": "GA088",
+        "zipCode": "30114",
+        "": ""
+    },
+    {
+        "dealerCode": "TX191",
+        "zipCode": "76049",
+        "": ""
+    },
+    {
+        "dealerCode": "MD044",
+        "zipCode": "20740",
+        "": ""
+    },
+    {
+        "dealerCode": "OK030",
+        "zipCode": "73139",
+        "": ""
+    },
+    {
+        "dealerCode": "TX090",
+        "zipCode": "79407",
+        "": ""
+    },
+    {
+        "dealerCode": "TX145",
+        "zipCode": "77074",
+        "": ""
+    },
+    {
+        "dealerCode": "GA015",
+        "zipCode": "30274",
+        "": ""
+    },
+    {
+        "dealerCode": "GA035",
+        "zipCode": "30265",
+        "": ""
+    },
+    {
+        "dealerCode": "AL035",
+        "zipCode": "36830",
+        "": ""
+    },
+    {
+        "dealerCode": "FL080",
+        "zipCode": "32505",
+        "": ""
+    },
+    {
+        "dealerCode": "TX175",
+        "zipCode": "76028",
+        "": ""
+    },
+    {
+        "dealerCode": "TX184",
+        "zipCode": "76108",
+        "": ""
+    },
+    {
+        "dealerCode": "TN051",
+        "zipCode": "37130",
+        "": ""
+    },
+    {
+        "dealerCode": "TN056",
+        "zipCode": "37040",
+        "": ""
+    },
+    {
+        "dealerCode": "UT013",
+        "zipCode": "84042",
+        "": ""
+    },
+    {
+        "dealerCode": "UT014",
+        "zipCode": "84341",
+        "": ""
+    },
+    {
+        "dealerCode": "UT015",
+        "zipCode": "84107",
+        "": ""
+    },
+    {
+        "dealerCode": "FL118",
+        "zipCode": "32244",
+        "": ""
+    },
+    {
+        "dealerCode": "FL135",
+        "zipCode": "32210",
+        "": ""
+    },
+    {
+        "dealerCode": "MD028",
+        "zipCode": "21228",
+        "": ""
+    },
+    {
+        "dealerCode": "MD032",
+        "zipCode": "21029",
+        "": ""
+    },
+    {
+        "dealerCode": "CT037",
+        "zipCode": "06824",
+        "": ""
+    },
+    {
+        "dealerCode": "MA058",
+        "zipCode": "02601",
+        "": ""
+    },
+    {
+        "dealerCode": "MA053",
+        "zipCode": "01105",
+        "": ""
+    },
+    {
+        "dealerCode": "FL091",
+        "zipCode": "34239",
+        "": ""
+    },
+    {
+        "dealerCode": "FL136",
+        "zipCode": "34208",
+        "": ""
+    },
+    {
+        "dealerCode": "FL139",
+        "zipCode": "33950",
+        "": ""
+    },
+    {
+        "dealerCode": "VA052",
+        "zipCode": "22150",
+        "": ""
+    },
+    {
+        "dealerCode": "VA059",
+        "zipCode": "20110",
+        "": ""
+    },
+    {
+        "dealerCode": "VA060",
+        "zipCode": "20176",
+        "": ""
+    },
+    {
+        "dealerCode": "VA061",
+        "zipCode": "22030",
+        "": ""
+    },
+    {
+        "dealerCode": "MN030",
+        "zipCode": "55901",
+        "": ""
+    },
+    {
+        "dealerCode": "IL095",
+        "zipCode": "60048",
+        "": ""
+    },
+    {
+        "dealerCode": "CT029",
+        "zipCode": "06066",
+        "": ""
+    },
+    {
+        "dealerCode": "CT033",
+        "zipCode": "06460",
+        "": ""
+    },
+    {
+        "dealerCode": "OH048",
+        "zipCode": "45504",
+        "": ""
+    },
+    {
+        "dealerCode": "OH079",
+        "zipCode": "45434",
+        "": ""
+    },
+    {
+        "dealerCode": "OH080",
+        "zipCode": "45014",
+        "": ""
+    },
+    {
+        "dealerCode": "OH081",
+        "zipCode": "45232",
+        "": ""
+    },
+    {
+        "dealerCode": "OH089",
+        "zipCode": "45103",
+        "": ""
+    },
+    {
+        "dealerCode": "FL062",
+        "zipCode": "33761",
+        "": ""
+    },
+    {
+        "dealerCode": "MD020",
+        "zipCode": "20879",
+        "": ""
+    },
+    {
+        "dealerCode": "MD034",
+        "zipCode": "20852",
+        "": ""
+    },
+    {
+        "dealerCode": "WI022",
+        "zipCode": "53051",
+        "": ""
+    },
+    {
+        "dealerCode": "WI041",
+        "zipCode": "53217",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ032",
+        "zipCode": "85023",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ036",
+        "zipCode": "85251",
+        "": ""
+    },
+    {
+        "dealerCode": "PA067",
+        "zipCode": "15701",
+        "": ""
+    },
+    {
+        "dealerCode": "PA097",
+        "zipCode": "15801",
+        "": ""
+    },
+    {
+        "dealerCode": "WY005",
+        "zipCode": "82001",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ052",
+        "zipCode": "85388",
+        "": ""
+    },
+    {
+        "dealerCode": "IA016",
+        "zipCode": "50325",
+        "": ""
+    },
+    {
+        "dealerCode": "TX192",
+        "zipCode": "77546",
+        "": ""
+    },
+    {
+        "dealerCode": "UT002",
+        "zipCode": "84101",
+        "": ""
+    },
+    {
+        "dealerCode": "UT016",
+        "zipCode": "84070",
+        "": ""
+    },
+    {
+        "dealerCode": "PA048",
+        "zipCode": "17402",
+        "": ""
+    },
+    {
+        "dealerCode": "PA089",
+        "zipCode": "17331",
+        "": ""
+    },
+    {
+        "dealerCode": "CA389",
+        "zipCode": "92021",
+        "": ""
+    },
+    {
+        "dealerCode": "OR036",
+        "zipCode": "97701",
+        "": ""
+    },
+    {
+        "dealerCode": "OR041",
+        "zipCode": "97504",
+        "": ""
+    },
+    {
+        "dealerCode": "KS010",
+        "zipCode": "66061",
+        "": ""
+    },
+    {
+        "dealerCode": "MO029",
+        "zipCode": "64015",
+        "": ""
+    },
+    {
+        "dealerCode": "NY075",
+        "zipCode": "11795",
+        "": ""
+    },
+    {
+        "dealerCode": "NY126",
+        "zipCode": "11550",
+        "": ""
+    },
+    {
+        "dealerCode": "NY127",
+        "zipCode": "11581",
+        "": ""
+    },
+    {
+        "dealerCode": "NY140",
+        "zipCode": "11735",
+        "": ""
+    },
+    {
+        "dealerCode": "NY110",
+        "zipCode": "11801",
+        "": ""
+    },
+    {
+        "dealerCode": "IL101",
+        "zipCode": "60453",
+        "": ""
+    },
+    {
+        "dealerCode": "IL098",
+        "zipCode": "60515",
+        "": ""
+    },
+    {
+        "dealerCode": "OH060",
+        "zipCode": "44241",
+        "": ""
+    },
+    {
+        "dealerCode": "OH088",
+        "zipCode": "43235",
+        "": ""
+    },
+    {
+        "dealerCode": "OH087",
+        "zipCode": "43231",
+        "": ""
+    },
+    {
+        "dealerCode": "AL038",
+        "zipCode": "35674",
+        "": ""
+    },
+    {
+        "dealerCode": "MS046",
+        "zipCode": "38606",
+        "": ""
+    },
+    {
+        "dealerCode": "IN055",
+        "zipCode": "47715",
+        "": ""
+    },
+    {
+        "dealerCode": "MS038",
+        "zipCode": "38804",
+        "": ""
+    },
+    {
+        "dealerCode": "TN052",
+        "zipCode": "38401",
+        "": ""
+    },
+    {
+        "dealerCode": "NY133",
+        "zipCode": "10305",
+        "": ""
+    },
+    {
+        "dealerCode": "NY129",
+        "zipCode": "10994",
+        "": ""
+    },
+    {
+        "dealerCode": "NC060",
+        "zipCode": "28805",
+        "": ""
+    },
+    {
+        "dealerCode": "SC042",
+        "zipCode": "29625",
+        "": ""
+    },
+    {
+        "dealerCode": "NC038",
+        "zipCode": "28105",
+        "": ""
+    },
+    {
+        "dealerCode": "TX118",
+        "zipCode": "75503",
+        "": ""
+    },
+    {
+        "dealerCode": "AR037",
+        "zipCode": "72802",
+        "": ""
+    },
+    {
+        "dealerCode": "NE011",
+        "zipCode": "68138",
+        "": ""
+    },
+    {
+        "dealerCode": "NE013",
+        "zipCode": "68022",
+        "": ""
+    },
+    {
+        "dealerCode": "IL100",
+        "zipCode": "61615",
+        "": ""
+    },
+    {
+        "dealerCode": "MN025",
+        "zipCode": "55426",
+        "": ""
+    },
+    {
+        "dealerCode": "FL153",
+        "zipCode": "33172",
+        "": ""
+    },
+    {
+        "dealerCode": "AK003",
+        "zipCode": "99518",
+        "": ""
+    },
+    {
+        "dealerCode": "CA172",
+        "zipCode": "93710",
+        "": ""
+    },
+    {
+        "dealerCode": "CA393",
+        "zipCode": "91401",
+        "": ""
+    },
+    {
+        "dealerCode": "CA400",
+        "zipCode": "91345",
+        "": ""
+    },
+    {
+        "dealerCode": "FL148",
+        "zipCode": "34652",
+        "": ""
+    },
+    {
+        "dealerCode": "FL149",
+        "zipCode": "33544",
+        "": ""
+    },
+    {
+        "dealerCode": "FL154",
+        "zipCode": "33169",
+        "": ""
+    },
+    {
+        "dealerCode": "MI060",
+        "zipCode": "48084",
+        "": ""
+    },
+    {
+        "dealerCode": "NV014",
+        "zipCode": "89502",
+        "": ""
+    },
+    {
+        "dealerCode": "NV030",
+        "zipCode": "89149",
+        "": ""
+    },
+    {
+        "dealerCode": "NV031",
+        "zipCode": "89118",
+        "": ""
+    },
+    {
+        "dealerCode": "NV032",
+        "zipCode": "89117",
+        "": ""
+    },
+    {
+        "dealerCode": "NV033",
+        "zipCode": "89015",
+        "": ""
+    },
+    {
+        "dealerCode": "TX105",
+        "zipCode": "79762",
+        "": ""
+    },
+    {
+        "dealerCode": "VA062",
+        "zipCode": "23320",
+        "": ""
+    },
+    {
+        "dealerCode": "NY041",
+        "zipCode": "12804",
+        "": ""
+    },
+    {
+        "dealerCode": "NY096",
+        "zipCode": "12901",
+        "": ""
+    },
+    {
+        "dealerCode": "CT041",
+        "zipCode": "06475",
+        "": ""
+    },
+    {
+        "dealerCode": "MA063",
+        "zipCode": "02301",
+        "": ""
+    },
+    {
+        "dealerCode": "MA067",
+        "zipCode": "01453",
+        "": ""
+    },
+    {
+        "dealerCode": "MA069",
+        "zipCode": "01887",
+        "": ""
+    },
+    {
+        "dealerCode": "MA071",
+        "zipCode": "01757",
+        "": ""
+    },
+    {
+        "dealerCode": "LA041",
+        "zipCode": "70003",
+        "": ""
+    },
+    {
+        "dealerCode": "LA040",
+        "zipCode": "70461",
+        "": ""
+    },
+    {
+        "dealerCode": "MS041",
+        "zipCode": "39503",
+        "": ""
+    },
+    {
+        "dealerCode": "IA018",
+        "zipCode": "52002",
+        "": ""
+    },
+    {
+        "dealerCode": "IA019",
+        "zipCode": "52233",
+        "": ""
+    },
+    {
+        "dealerCode": "NY146",
+        "zipCode": "10801",
+        "": ""
+    },
+    {
+        "dealerCode": "NY147",
+        "zipCode": "11432",
+        "": ""
+    },
+    {
+        "dealerCode": "IN021",
+        "zipCode": "46545",
+        "": ""
+    },
+    {
+        "dealerCode": "IA013",
+        "zipCode": "52806",
+        "": ""
+    },
+    {
+        "dealerCode": "PA018",
+        "zipCode": "18702",
+        "": ""
+    },
+    {
+        "dealerCode": "MD042",
+        "zipCode": "21204",
+        "": ""
+    },
+    {
+        "dealerCode": "NC062",
+        "zipCode": "27909",
+        "": ""
+    },
+    {
+        "dealerCode": "FL143",
+        "zipCode": "33619",
+        "": ""
+    },
+    {
+        "dealerCode": "FL147",
+        "zipCode": "33966",
+        "": ""
+    },
+    {
+        "dealerCode": "FL155",
+        "zipCode": "33157",
+        "": ""
+    },
+    {
+        "dealerCode": "KY013",
+        "zipCode": "41042",
+        "": ""
+    },
+    {
+        "dealerCode": "KY012",
+        "zipCode": "41001",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01J",
+        "zipCode": "93292",
+        "": ""
+    },
+    {
+        "dealerCode": "CA391",
+        "zipCode": "93313",
+        "": ""
+    },
+    {
+        "dealerCode": "CO048",
+        "zipCode": "80538",
+        "": ""
+    },
+    {
+        "dealerCode": "KS021",
+        "zipCode": "66203",
+        "": ""
+    },
+    {
+        "dealerCode": "IN053",
+        "zipCode": "46060",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ040",
+        "zipCode": "08012",
+        "": ""
+    },
+    {
+        "dealerCode": "TX095",
+        "zipCode": "78664",
+        "": ""
+    },
+    {
+        "dealerCode": "TX167",
+        "zipCode": "78577",
+        "": ""
+    },
+    {
+        "dealerCode": "TX211",
+        "zipCode": "78641",
+        "": ""
+    },
+    {
+        "dealerCode": "CO025",
+        "zipCode": "80920",
+        "": ""
+    },
+    {
+        "dealerCode": "CO038",
+        "zipCode": "80905",
+        "": ""
+    },
+    {
+        "dealerCode": "PA083",
+        "zipCode": "19382",
+        "": ""
+    },
+    {
+        "dealerCode": "PA071",
+        "zipCode": "19468",
+        "": ""
+    },
+    {
+        "dealerCode": "FL008",
+        "zipCode": "33014",
+        "": ""
+    },
+    {
+        "dealerCode": "CA232",
+        "zipCode": "95661",
+        "": ""
+    },
+    {
+        "dealerCode": "CA315",
+        "zipCode": "95757",
+        "": ""
+    },
+    {
+        "dealerCode": "CA339",
+        "zipCode": "95630",
+        "": ""
+    },
+    {
+        "dealerCode": "GA084",
+        "zipCode": "30047",
+        "": ""
+    },
+    {
+        "dealerCode": "PA034",
+        "zipCode": "19064",
+        "": ""
+    },
+    {
+        "dealerCode": "TX100",
+        "zipCode": "79925",
+        "": ""
+    },
+    {
+        "dealerCode": "TX104",
+        "zipCode": "77373",
+        "": ""
+    },
+    {
+        "dealerCode": "TX111",
+        "zipCode": "77338",
+        "": ""
+    },
+    {
+        "dealerCode": "TX169",
+        "zipCode": "77521",
+        "": ""
+    },
+    {
+        "dealerCode": "DE009",
+        "zipCode": "19966",
+        "": ""
+    },
+    {
+        "dealerCode": "MD035",
+        "zipCode": "21643",
+        "": ""
+    },
+    {
+        "dealerCode": "CA362",
+        "zipCode": "95687",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01I",
+        "zipCode": "94590",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ062",
+        "zipCode": "08234",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ064",
+        "zipCode": "08016",
+        "": ""
+    },
+    {
+        "dealerCode": "PA093",
+        "zipCode": "19335",
+        "": ""
+    },
+    {
+        "dealerCode": "TX040",
+        "zipCode": "75075",
+        "": ""
+    },
+    {
+        "dealerCode": "TX132",
+        "zipCode": "75070",
+        "": ""
+    },
+    {
+        "dealerCode": "TX187",
+        "zipCode": "75901",
+        "": ""
+    },
+    {
+        "dealerCode": "TX108",
+        "zipCode": "75964",
+        "": ""
+    },
+    {
+        "dealerCode": "FL005",
+        "zipCode": "33317",
+        "": ""
+    },
+    {
+        "dealerCode": "FL114",
+        "zipCode": "33331",
+        "": ""
+    },
+    {
+        "dealerCode": "GA002",
+        "zipCode": "30096",
+        "": ""
+    },
+    {
+        "dealerCode": "GA041",
+        "zipCode": "30076",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ034",
+        "zipCode": "86326",
+        "": ""
+    },
+    {
+        "dealerCode": "ID009",
+        "zipCode": "83301",
+        "": ""
+    },
+    {
+        "dealerCode": "PA043",
+        "zipCode": "15146",
+        "": ""
+    },
+    {
+        "dealerCode": "PA063",
+        "zipCode": "15216",
+        "": ""
+    },
+    {
+        "dealerCode": "IN051",
+        "zipCode": "46360",
+        "": ""
+    },
+    {
+        "dealerCode": "IN054",
+        "zipCode": "46526",
+        "": ""
+    },
+    {
+        "dealerCode": "IL068",
+        "zipCode": "60103",
+        "": ""
+    },
+    {
+        "dealerCode": "NY141",
+        "zipCode": "13224",
+        "": ""
+    },
+    {
+        "dealerCode": "NY142",
+        "zipCode": "14626",
+        "": ""
+    },
+    {
+        "dealerCode": "NY148",
+        "zipCode": "12304",
+        "": ""
+    },
+    {
+        "dealerCode": "NH020",
+        "zipCode": "03766",
+        "": ""
+    },
+    {
+        "dealerCode": "VT008",
+        "zipCode": "05641",
+        "": ""
+    },
+    {
+        "dealerCode": "MD038",
+        "zipCode": "20724",
+        "": ""
+    },
+    {
+        "dealerCode": "MD043",
+        "zipCode": "20716",
+        "": ""
+    },
+    {
+        "dealerCode": "IL063",
+        "zipCode": "60477",
+        "": ""
+    },
+    {
+        "dealerCode": "IL072",
+        "zipCode": "60443",
+        "": ""
+    },
+    {
+        "dealerCode": "OH071",
+        "zipCode": "45377",
+        "": ""
+    },
+    {
+        "dealerCode": "OH018",
+        "zipCode": "45249",
+        "": ""
+    },
+    {
+        "dealerCode": "OH011",
+        "zipCode": "44221",
+        "": ""
+    },
+    {
+        "dealerCode": "OH053",
+        "zipCode": "44312",
+        "": ""
+    },
+    {
+        "dealerCode": "OR038",
+        "zipCode": "97030",
+        "": ""
+    },
+    {
+        "dealerCode": "OR039",
+        "zipCode": "97027",
+        "": ""
+    },
+    {
+        "dealerCode": "WA056",
+        "zipCode": "98034",
+        "": ""
+    },
+    {
+        "dealerCode": "MI027",
+        "zipCode": "48124",
+        "": ""
+    },
+    {
+        "dealerCode": "MI061",
+        "zipCode": "48150",
+        "": ""
+    },
+    {
+        "dealerCode": "IN007",
+        "zipCode": "47905",
+        "": ""
+    },
+    {
+        "dealerCode": "IN018",
+        "zipCode": "46219",
+        "": ""
+    },
+    {
+        "dealerCode": "IL054",
+        "zipCode": "60031",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01A",
+        "zipCode": "92677",
+        "": ""
+    },
+    {
+        "dealerCode": "CA321",
+        "zipCode": "91748",
+        "": ""
+    },
+    {
+        "dealerCode": "CA335",
+        "zipCode": "90503",
+        "": ""
+    },
+    {
+        "dealerCode": "KS003",
+        "zipCode": "67206",
+        "": ""
+    },
+    {
+        "dealerCode": "KS013",
+        "zipCode": "67212",
+        "": ""
+    },
+    {
+        "dealerCode": "WI038",
+        "zipCode": "53142",
+        "": ""
+    },
+    {
+        "dealerCode": "IL087",
+        "zipCode": "60102",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01G",
+        "zipCode": "95051",
+        "": ""
+    },
+    {
+        "dealerCode": "CA304",
+        "zipCode": "95136",
+        "": ""
+    },
+    {
+        "dealerCode": "IL099",
+        "zipCode": "61832",
+        "": ""
+    },
+    {
+        "dealerCode": "IL102",
+        "zipCode": "60914",
+        "": ""
+    },
+    {
+        "dealerCode": "MO049",
+        "zipCode": "65109",
+        "": ""
+    },
+    {
+        "dealerCode": "TX103",
+        "zipCode": "77627",
+        "": ""
+    },
+    {
+        "dealerCode": "TX198",
+        "zipCode": "75090",
+        "": ""
+    },
+    {
+        "dealerCode": "TX199",
+        "zipCode": "75402",
+        "": ""
+    },
+    {
+        "dealerCode": "TX200",
+        "zipCode": "78640",
+        "": ""
+    },
+    {
+        "dealerCode": "TX201",
+        "zipCode": "78130",
+        "": ""
+    },
+    {
+        "dealerCode": "TX203",
+        "zipCode": "77054",
+        "": ""
+    },
+    {
+        "dealerCode": "OH086",
+        "zipCode": "43615",
+        "": ""
+    },
+    {
+        "dealerCode": "OH066",
+        "zipCode": "43551",
+        "": ""
+    },
+    {
+        "dealerCode": "OH072",
+        "zipCode": "45840",
+        "": ""
+    },
+    {
+        "dealerCode": "KS011",
+        "zipCode": "66046",
+        "": ""
+    },
+    {
+        "dealerCode": "KS009",
+        "zipCode": "66611",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ068",
+        "zipCode": "07840",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ005",
+        "zipCode": "07834",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ031",
+        "zipCode": "85614",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ003",
+        "zipCode": "85705",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ018",
+        "zipCode": "85710",
+        "": ""
+    },
+    {
+        "dealerCode": "CA317",
+        "zipCode": "92618",
+        "": ""
+    },
+    {
+        "dealerCode": "OK025",
+        "zipCode": "74074",
+        "": ""
+    },
+    {
+        "dealerCode": "OK018",
+        "zipCode": "73013",
+        "": ""
+    },
+    {
+        "dealerCode": "OK031",
+        "zipCode": "74133",
+        "": ""
+    },
+    {
+        "dealerCode": "MA070",
+        "zipCode": "01702",
+        "": ""
+    },
+    {
+        "dealerCode": "NH018",
+        "zipCode": "03103",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ065",
+        "zipCode": "08852",
+        "": ""
+    },
+    {
+        "dealerCode": "CO055",
+        "zipCode": "80234",
+        "": ""
+    },
+    {
+        "dealerCode": "GA092",
+        "zipCode": "30253",
+        "": ""
+    },
+    {
+        "dealerCode": "NC044",
+        "zipCode": "28031",
+        "": ""
+    },
+    {
+        "dealerCode": "NC064",
+        "zipCode": "28134",
+        "": ""
+    },
+    {
+        "dealerCode": "SC030",
+        "zipCode": "29708",
+        "": ""
+    },
+    {
+        "dealerCode": "TN047",
+        "zipCode": "38501",
+        "": ""
+    },
+    {
+        "dealerCode": "TX210",
+        "zipCode": "76177",
+        "": ""
+    },
+    {
+        "dealerCode": "TN046",
+        "zipCode": "37067",
+        "": ""
+    },
+    {
+        "dealerCode": "TX208",
+        "zipCode": "75062",
+        "": ""
+    },
+    {
+        "dealerCode": "CA323",
+        "zipCode": "90703",
+        "": ""
+    },
+    {
+        "dealerCode": "PA102",
+        "zipCode": "18202",
+        "": ""
+    },
+    {
+        "dealerCode": "PA096",
+        "zipCode": "17202",
+        "": ""
+    },
+    {
+        "dealerCode": "WI016",
+        "zipCode": "53713",
+        "": ""
+    },
+    {
+        "dealerCode": "WI026",
+        "zipCode": "53718",
+        "": ""
+    },
+    {
+        "dealerCode": "NC066",
+        "zipCode": "27405",
+        "": ""
+    },
+    {
+        "dealerCode": "NC069",
+        "zipCode": "28546",
+        "": ""
+    },
+    {
+        "dealerCode": "IL018",
+        "zipCode": "62704",
+        "": ""
+    },
+    {
+        "dealerCode": "IL083",
+        "zipCode": "61265",
+        "": ""
+    },
+    {
+        "dealerCode": "KS020",
+        "zipCode": "66111",
+        "": ""
+    },
+    {
+        "dealerCode": "LA039",
+        "zipCode": "70058",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01U",
+        "zipCode": "92555",
+        "": ""
+    },
+    {
+        "dealerCode": "CA387",
+        "zipCode": "93955",
+        "": ""
+    },
+    {
+        "dealerCode": "GA097",
+        "zipCode": "30458",
+        "": ""
+    },
+    {
+        "dealerCode": "GA095",
+        "zipCode": "31525",
+        "": ""
+    },
+    {
+        "dealerCode": "SC044",
+        "zipCode": "29406",
+        "": ""
+    },
+    {
+        "dealerCode": "SC052",
+        "zipCode": "29414",
+        "": ""
+    },
+    {
+        "dealerCode": "FL146",
+        "zipCode": "34292",
+        "": ""
+    },
+    {
+        "dealerCode": "GA038",
+        "zipCode": "30144",
+        "": ""
+    },
+    {
+        "dealerCode": "GA087",
+        "zipCode": "30041",
+        "": ""
+    },
+    {
+        "dealerCode": "GA094",
+        "zipCode": "30504",
+        "": ""
+    },
+    {
+        "dealerCode": "VA068",
+        "zipCode": "20151",
+        "": ""
+    },
+    {
+        "dealerCode": "MD041",
+        "zipCode": "20601",
+        "": ""
+    },
+    {
+        "dealerCode": "IN028",
+        "zipCode": "46143",
+        "": ""
+    },
+    {
+        "dealerCode": "IN036",
+        "zipCode": "46254",
+        "": ""
+    },
+    {
+        "dealerCode": "IN047",
+        "zipCode": "46123",
+        "": ""
+    },
+    {
+        "dealerCode": "ME004",
+        "zipCode": "04210",
+        "": ""
+    },
+    {
+        "dealerCode": "ME005",
+        "zipCode": "04092",
+        "": ""
+    },
+    {
+        "dealerCode": "MN020",
+        "zipCode": "55445",
+        "": ""
+    },
+    {
+        "dealerCode": "MN029",
+        "zipCode": "55448",
+        "": ""
+    },
+    {
+        "dealerCode": "IN038",
+        "zipCode": "46322",
+        "": ""
+    },
+    {
+        "dealerCode": "IN045",
+        "zipCode": "46410",
+        "": ""
+    },
+    {
+        "dealerCode": "CT028",
+        "zipCode": "06082",
+        "": ""
+    },
+    {
+        "dealerCode": "CT020",
+        "zipCode": "06120",
+        "": ""
+    },
+    {
+        "dealerCode": "NY078",
+        "zipCode": "12205",
+        "": ""
+    },
+    {
+        "dealerCode": "FL112",
+        "zipCode": "34997",
+        "": ""
+    },
+    {
+        "dealerCode": "FL152",
+        "zipCode": "34982",
+        "": ""
+    },
+    {
+        "dealerCode": "FL087",
+        "zipCode": "32548",
+        "": ""
+    },
+    {
+        "dealerCode": "FL142",
+        "zipCode": "33030",
+        "": ""
+    },
+    {
+        "dealerCode": "HI010",
+        "zipCode": "96766",
+        "": ""
+    },
+    {
+        "dealerCode": "IA010",
+        "zipCode": "50702",
+        "": ""
+    },
+    {
+        "dealerCode": "IN052",
+        "zipCode": "47201",
+        "": ""
+    },
+    {
+        "dealerCode": "KY020",
+        "zipCode": "42001",
+        "": ""
+    },
+    {
+        "dealerCode": "KY029",
+        "zipCode": "41501",
+        "": ""
+    },
+    {
+        "dealerCode": "MD026",
+        "zipCode": "21117",
+        "": ""
+    },
+    {
+        "dealerCode": "MO011",
+        "zipCode": "63011",
+        "": ""
+    },
+    {
+        "dealerCode": "MT013",
+        "zipCode": "59801",
+        "": ""
+    },
+    {
+        "dealerCode": "NC057",
+        "zipCode": "28560",
+        "": ""
+    },
+    {
+        "dealerCode": "ND002",
+        "zipCode": "58702",
+        "": ""
+    },
+    {
+        "dealerCode": "ND006",
+        "zipCode": "58103",
+        "": ""
+    },
+    {
+        "dealerCode": "NM006",
+        "zipCode": "87402",
+        "": ""
+    },
+    {
+        "dealerCode": "NY120",
+        "zipCode": "11361",
+        "": ""
+    },
+    {
+        "dealerCode": "TN048",
+        "zipCode": "37211",
+        "": ""
+    },
+    {
+        "dealerCode": "TX063",
+        "zipCode": "76210",
+        "": ""
+    },
+    {
+        "dealerCode": "TX148",
+        "zipCode": "78552",
+        "": ""
+    },
+    {
+        "dealerCode": "TX151",
+        "zipCode": "75605",
+        "": ""
+    },
+    {
+        "dealerCode": "WV018",
+        "zipCode": "26330",
+        "": ""
+    },
+    {
+        "dealerCode": "AL020",
+        "zipCode": "35816",
+        "": ""
+    },
+    {
+        "dealerCode": "AL027",
+        "zipCode": "36526",
+        "": ""
+    },
+    {
+        "dealerCode": "CA102",
+        "zipCode": "95501",
+        "": ""
+    },
+    {
+        "dealerCode": "CA134",
+        "zipCode": "92545",
+        "": ""
+    },
+    {
+        "dealerCode": "CA173",
+        "zipCode": "93662",
+        "": ""
+    },
+    {
+        "dealerCode": "CA253",
+        "zipCode": "92392",
+        "": ""
+    },
+    {
+        "dealerCode": "CA307",
+        "zipCode": "95356",
+        "": ""
+    },
+    {
+        "dealerCode": "CA311",
+        "zipCode": "92253",
+        "": ""
+    },
+    {
+        "dealerCode": "CA320",
+        "zipCode": "94568",
+        "": ""
+    },
+    {
+        "dealerCode": "CA341",
+        "zipCode": "94806",
+        "": ""
+    },
+    {
+        "dealerCode": "CA384",
+        "zipCode": "91362",
+        "": ""
+    },
+    {
+        "dealerCode": "CO032",
+        "zipCode": "80401",
+        "": ""
+    },
+    {
+        "dealerCode": "CT018",
+        "zipCode": "06450",
+        "": ""
+    },
+    {
+        "dealerCode": "FL057",
+        "zipCode": "33441",
+        "": ""
+    },
+    {
+        "dealerCode": "FL074",
+        "zipCode": "32117",
+        "": ""
+    },
+    {
+        "dealerCode": "FL076",
+        "zipCode": "33714",
+        "": ""
+    },
+    {
+        "dealerCode": "FL103",
+        "zipCode": "32837",
+        "": ""
+    },
+    {
+        "dealerCode": "FL125",
+        "zipCode": "32789",
+        "": ""
+    },
+    {
+        "dealerCode": "FL130",
+        "zipCode": "34109",
+        "": ""
+    },
+    {
+        "dealerCode": "FL137",
+        "zipCode": "32771",
+        "": ""
+    },
+    {
+        "dealerCode": "FL151",
+        "zipCode": "33483",
+        "": ""
+    },
+    {
+        "dealerCode": "GA026",
+        "zipCode": "30907",
+        "": ""
+    },
+    {
+        "dealerCode": "GA063",
+        "zipCode": "30120",
+        "": ""
+    },
+    {
+        "dealerCode": "HI012",
+        "zipCode": "96797",
+        "": ""
+    },
+    {
+        "dealerCode": "HI015",
+        "zipCode": "96740",
+        "": ""
+    },
+    {
+        "dealerCode": "IL003",
+        "zipCode": "60025",
+        "": ""
+    },
+    {
+        "dealerCode": "IL036",
+        "zipCode": "61938",
+        "": ""
+    },
+    {
+        "dealerCode": "IL050",
+        "zipCode": "62521",
+        "": ""
+    },
+    {
+        "dealerCode": "IL097",
+        "zipCode": "60616",
+        "": ""
+    },
+    {
+        "dealerCode": "KY018",
+        "zipCode": "40222",
+        "": ""
+    },
+    {
+        "dealerCode": "LA024",
+        "zipCode": "70433",
+        "": ""
+    },
+    {
+        "dealerCode": "MA021",
+        "zipCode": "01501",
+        "": ""
+    },
+    {
+        "dealerCode": "MA024",
+        "zipCode": "02476",
+        "": ""
+    },
+    {
+        "dealerCode": "MA057",
+        "zipCode": "01060",
+        "": ""
+    },
+    {
+        "dealerCode": "MI007",
+        "zipCode": "48034",
+        "": ""
+    },
+    {
+        "dealerCode": "MI023",
+        "zipCode": "49009",
+        "": ""
+    },
+    {
+        "dealerCode": "MI033",
+        "zipCode": "48604",
+        "": ""
+    },
+    {
+        "dealerCode": "MI048",
+        "zipCode": "48165",
+        "": ""
+    },
+    {
+        "dealerCode": "MI056",
+        "zipCode": "48044",
+        "": ""
+    },
+    {
+        "dealerCode": "MO030",
+        "zipCode": "63123",
+        "": ""
+    },
+    {
+        "dealerCode": "MO047",
+        "zipCode": "64503",
+        "": ""
+    },
+    {
+        "dealerCode": "MS032",
+        "zipCode": "38654",
+        "": ""
+    },
+    {
+        "dealerCode": "MT007",
+        "zipCode": "59106",
+        "": ""
+    },
+    {
+        "dealerCode": "NC008",
+        "zipCode": "28314",
+        "": ""
+    },
+    {
+        "dealerCode": "NC021",
+        "zipCode": "28732",
+        "": ""
+    },
+    {
+        "dealerCode": "NH012",
+        "zipCode": "03060",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ011",
+        "zipCode": "07728",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ048",
+        "zipCode": "07470",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ066",
+        "zipCode": "07060",
+        "": ""
+    },
+    {
+        "dealerCode": "NV029",
+        "zipCode": "89701",
+        "": ""
+    },
+    {
+        "dealerCode": "NY005",
+        "zipCode": "11743",
+        "": ""
+    },
+    {
+        "dealerCode": "NY013",
+        "zipCode": "14226",
+        "": ""
+    },
+    {
+        "dealerCode": "NY143",
+        "zipCode": "11209",
+        "": ""
+    },
+    {
+        "dealerCode": "OH058",
+        "zipCode": "44212",
+        "": ""
+    },
+    {
+        "dealerCode": "OH073",
+        "zipCode": "44146",
+        "": ""
+    },
+    {
+        "dealerCode": "OK032",
+        "zipCode": "74006",
+        "": ""
+    },
+    {
+        "dealerCode": "OR033",
+        "zipCode": "97233",
+        "": ""
+    },
+    {
+        "dealerCode": "PA037",
+        "zipCode": "15090",
+        "": ""
+    },
+    {
+        "dealerCode": "PA065",
+        "zipCode": "19428",
+        "": ""
+    },
+    {
+        "dealerCode": "PA075",
+        "zipCode": "17801",
+        "": ""
+    },
+    {
+        "dealerCode": "TN008",
+        "zipCode": "37421",
+        "": ""
+    },
+    {
+        "dealerCode": "TN029",
+        "zipCode": "37701",
+        "": ""
+    },
+    {
+        "dealerCode": "TN033",
+        "zipCode": "37923",
+        "": ""
+    },
+    {
+        "dealerCode": "TN049",
+        "zipCode": "38133",
+        "": ""
+    },
+    {
+        "dealerCode": "TX171",
+        "zipCode": "78745",
+        "": ""
+    },
+    {
+        "dealerCode": "TX212",
+        "zipCode": "76301",
+        "": ""
+    },
+    {
+        "dealerCode": "UT017",
+        "zipCode": "84401",
+        "": ""
+    },
+    {
+        "dealerCode": "WA052",
+        "zipCode": "98312",
+        "": ""
+    },
+    {
+        "dealerCode": "WI025",
+        "zipCode": "54601",
+        "": ""
+    },
+    {
+        "dealerCode": "AL039",
+        "zipCode": "36201",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ044",
+        "zipCode": "86001",
+        "": ""
+    },
+    {
+        "dealerCode": "DE007",
+        "zipCode": "19720",
+        "": ""
+    },
+    {
+        "dealerCode": "GA066",
+        "zipCode": "31602",
+        "": ""
+    },
+    {
+        "dealerCode": "GA099",
+        "zipCode": "31061",
+        "": ""
+    },
+    {
+        "dealerCode": "ID015",
+        "zipCode": "83401",
+        "": ""
+    },
+    {
+        "dealerCode": "ID020",
+        "zipCode": "83201",
+        "": ""
+    },
+    {
+        "dealerCode": "KS019",
+        "zipCode": "67801",
+        "": ""
+    },
+    {
+        "dealerCode": "KY033",
+        "zipCode": "40356",
+        "": ""
+    },
+    {
+        "dealerCode": "LA027",
+        "zipCode": "70360",
+        "": ""
+    },
+    {
+        "dealerCode": "LA034",
+        "zipCode": "71292",
+        "": ""
+    },
+    {
+        "dealerCode": "MA056",
+        "zipCode": "02760",
+        "": ""
+    },
+    {
+        "dealerCode": "MI043",
+        "zipCode": "49783",
+        "": ""
+    },
+    {
+        "dealerCode": "MI053",
+        "zipCode": "49441",
+        "": ""
+    },
+    {
+        "dealerCode": "MO044",
+        "zipCode": "63701",
+        "": ""
+    },
+    {
+        "dealerCode": "MS045",
+        "zipCode": "39301",
+        "": ""
+    },
+    {
+        "dealerCode": "NC041",
+        "zipCode": "28098",
+        "": ""
+    },
+    {
+        "dealerCode": "NH013",
+        "zipCode": "03431",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ051",
+        "zipCode": "07003",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ063",
+        "zipCode": "08638",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ067",
+        "zipCode": "08332",
+        "": ""
+    },
+    {
+        "dealerCode": "NM014",
+        "zipCode": "88201",
+        "": ""
+    },
+    {
+        "dealerCode": "NY109",
+        "zipCode": "10469",
+        "": ""
+    },
+    {
+        "dealerCode": "OH078",
+        "zipCode": "44119",
+        "": ""
+    },
+    {
+        "dealerCode": "OK026",
+        "zipCode": "74401",
+        "": ""
+    },
+    {
+        "dealerCode": "OK034",
+        "zipCode": "73110",
+        "": ""
+    },
+    {
+        "dealerCode": "PA053",
+        "zipCode": "15904",
+        "": ""
+    },
+    {
+        "dealerCode": "PA055",
+        "zipCode": "18508",
+        "": ""
+    },
+    {
+        "dealerCode": "PA058",
+        "zipCode": "15401",
+        "": ""
+    },
+    {
+        "dealerCode": "SC043",
+        "zipCode": "29301",
+        "": ""
+    },
+    {
+        "dealerCode": "TN034",
+        "zipCode": "37311",
+        "": ""
+    },
+    {
+        "dealerCode": "TN054",
+        "zipCode": "37814",
+        "": ""
+    },
+    {
+        "dealerCode": "TX117",
+        "zipCode": "77904",
+        "": ""
+    },
+    {
+        "dealerCode": "VA023",
+        "zipCode": "22801",
+        "": ""
+    },
+    {
+        "dealerCode": "WI010",
+        "zipCode": "54701",
+        "": ""
+    },
+    {
+        "dealerCode": "WV024",
+        "zipCode": "26101",
+        "": ""
+    },
+    {
+        "dealerCode": "AL008",
+        "zipCode": "36301",
+        "": ""
+    },
+    {
+        "dealerCode": "AL009",
+        "zipCode": "35405",
+        "": ""
+    },
+    {
+        "dealerCode": "AL025",
+        "zipCode": "36330",
+        "": ""
+    },
+    {
+        "dealerCode": "AL029",
+        "zipCode": "36608",
+        "": ""
+    },
+    {
+        "dealerCode": "AL030",
+        "zipCode": "35216",
+        "": ""
+    },
+    {
+        "dealerCode": "AL032",
+        "zipCode": "35501",
+        "": ""
+    },
+    {
+        "dealerCode": "AL034",
+        "zipCode": "35235",
+        "": ""
+    },
+    {
+        "dealerCode": "AR031",
+        "zipCode": "71602",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ020",
+        "zipCode": "86401",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ028",
+        "zipCode": "85119",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ048",
+        "zipCode": "85365",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01C",
+        "zipCode": "92064",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01D",
+        "zipCode": "92336",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01H",
+        "zipCode": "93551",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01S",
+        "zipCode": "90401",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01V",
+        "zipCode": "91950",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01W",
+        "zipCode": "93458",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01Y",
+        "zipCode": "95020",
+        "": ""
+    },
+    {
+        "dealerCode": "CA01Z",
+        "zipCode": "94538",
+        "": ""
+    },
+    {
+        "dealerCode": "CA033",
+        "zipCode": "95407",
+        "": ""
+    },
+    {
+        "dealerCode": "CA121",
+        "zipCode": "91761",
+        "": ""
+    },
+    {
+        "dealerCode": "CA129",
+        "zipCode": "95973",
+        "": ""
+    },
+    {
+        "dealerCode": "CA197",
+        "zipCode": "92504",
+        "": ""
+    },
+    {
+        "dealerCode": "CA282",
+        "zipCode": "92111",
+        "": ""
+    },
+    {
+        "dealerCode": "CA296",
+        "zipCode": "90241",
+        "": ""
+    },
+    {
+        "dealerCode": "CA308",
+        "zipCode": "94520",
+        "": ""
+    },
+    {
+        "dealerCode": "CA309",
+        "zipCode": "92354",
+        "": ""
+    },
+    {
+        "dealerCode": "CA325",
+        "zipCode": "92782",
+        "": ""
+    },
+    {
+        "dealerCode": "CA331",
+        "zipCode": "94565",
+        "": ""
+    },
+    {
+        "dealerCode": "CA340",
+        "zipCode": "92264",
+        "": ""
+    },
+    {
+        "dealerCode": "CA350",
+        "zipCode": "95212",
+        "": ""
+    },
+    {
+        "dealerCode": "CA359",
+        "zipCode": "93036",
+        "": ""
+    },
+    {
+        "dealerCode": "CA379",
+        "zipCode": "92026",
+        "": ""
+    },
+    {
+        "dealerCode": "CA383",
+        "zipCode": "94577",
+        "": ""
+    },
+    {
+        "dealerCode": "CA386",
+        "zipCode": "95304",
+        "": ""
+    },
+    {
+        "dealerCode": "CA388",
+        "zipCode": "93405",
+        "": ""
+    },
+    {
+        "dealerCode": "CO030",
+        "zipCode": "80129",
+        "": ""
+    },
+    {
+        "dealerCode": "CO040",
+        "zipCode": "80634",
+        "": ""
+    },
+    {
+        "dealerCode": "CO049",
+        "zipCode": "81505",
+        "": ""
+    },
+    {
+        "dealerCode": "CO050",
+        "zipCode": "80010",
+        "": ""
+    },
+    {
+        "dealerCode": "CT012",
+        "zipCode": "06790",
+        "": ""
+    },
+    {
+        "dealerCode": "CT038",
+        "zipCode": "06513",
+        "": ""
+    },
+    {
+        "dealerCode": "CT039",
+        "zipCode": "06795",
+        "": ""
+    },
+    {
+        "dealerCode": "CT040",
+        "zipCode": "06237",
+        "": ""
+    },
+    {
+        "dealerCode": "DE004",
+        "zipCode": "19711",
+        "": ""
+    },
+    {
+        "dealerCode": "DE008",
+        "zipCode": "19901",
+        "": ""
+    },
+    {
+        "dealerCode": "FL073",
+        "zipCode": "33815",
+        "": ""
+    },
+    {
+        "dealerCode": "FL101",
+        "zipCode": "32966",
+        "": ""
+    },
+    {
+        "dealerCode": "FL109",
+        "zipCode": "32609",
+        "": ""
+    },
+    {
+        "dealerCode": "FL122",
+        "zipCode": "33073",
+        "": ""
+    },
+    {
+        "dealerCode": "FL126",
+        "zipCode": "33884",
+        "": ""
+    },
+    {
+        "dealerCode": "FL128",
+        "zipCode": "32304",
+        "": ""
+    },
+    {
+        "dealerCode": "FL133",
+        "zipCode": "33137",
+        "": ""
+    },
+    {
+        "dealerCode": "FL140",
+        "zipCode": "32216",
+        "": ""
+    },
+    {
+        "dealerCode": "GA003",
+        "zipCode": "30080",
+        "": ""
+    },
+    {
+        "dealerCode": "GA037",
+        "zipCode": "30341",
+        "": ""
+    },
+    {
+        "dealerCode": "GA082",
+        "zipCode": "30736",
+        "": ""
+    },
+    {
+        "dealerCode": "IA009",
+        "zipCode": "51501",
+        "": ""
+    },
+    {
+        "dealerCode": "IA020",
+        "zipCode": "51106",
+        "": ""
+    },
+    {
+        "dealerCode": "ID019",
+        "zipCode": "83854",
+        "": ""
+    },
+    {
+        "dealerCode": "IL014",
+        "zipCode": "62269",
+        "": ""
+    },
+    {
+        "dealerCode": "IL044",
+        "zipCode": "60035",
+        "": ""
+    },
+    {
+        "dealerCode": "IL059",
+        "zipCode": "60435",
+        "": ""
+    },
+    {
+        "dealerCode": "IL062",
+        "zipCode": "61107",
+        "": ""
+    },
+    {
+        "dealerCode": "IL066",
+        "zipCode": "60525",
+        "": ""
+    },
+    {
+        "dealerCode": "IL069",
+        "zipCode": "60173",
+        "": ""
+    },
+    {
+        "dealerCode": "IL073",
+        "zipCode": "60707",
+        "": ""
+    },
+    {
+        "dealerCode": "IL076",
+        "zipCode": "60126",
+        "": ""
+    },
+    {
+        "dealerCode": "IL080",
+        "zipCode": "60542",
+        "": ""
+    },
+    {
+        "dealerCode": "IN013",
+        "zipCode": "46825",
+        "": ""
+    },
+    {
+        "dealerCode": "IN042",
+        "zipCode": "47802",
+        "": ""
+    },
+    {
+        "dealerCode": "IN044",
+        "zipCode": "47403",
+        "": ""
+    },
+    {
+        "dealerCode": "KS018",
+        "zipCode": "66502",
+        "": ""
+    },
+    {
+        "dealerCode": "KY006",
+        "zipCode": "42701",
+        "": ""
+    },
+    {
+        "dealerCode": "KY009",
+        "zipCode": "42104",
+        "": ""
+    },
+    {
+        "dealerCode": "KY017",
+        "zipCode": "40475",
+        "": ""
+    },
+    {
+        "dealerCode": "KY021",
+        "zipCode": "42303",
+        "": ""
+    },
+    {
+        "dealerCode": "KY028",
+        "zipCode": "40258",
+        "": ""
+    },
+    {
+        "dealerCode": "LA026",
+        "zipCode": "70817",
+        "": ""
+    },
+    {
+        "dealerCode": "LA028",
+        "zipCode": "70401",
+        "": ""
+    },
+    {
+        "dealerCode": "LA029",
+        "zipCode": "70737",
+        "": ""
+    },
+    {
+        "dealerCode": "LA032",
+        "zipCode": "71105",
+        "": ""
+    },
+    {
+        "dealerCode": "LA037",
+        "zipCode": "71301",
+        "": ""
+    },
+    {
+        "dealerCode": "MA029",
+        "zipCode": "02771",
+        "": ""
+    },
+    {
+        "dealerCode": "MA031",
+        "zipCode": "01201",
+        "": ""
+    },
+    {
+        "dealerCode": "MA034",
+        "zipCode": "01040",
+        "": ""
+    },
+    {
+        "dealerCode": "MA040",
+        "zipCode": "01905",
+        "": ""
+    },
+    {
+        "dealerCode": "MA044",
+        "zipCode": "02721",
+        "": ""
+    },
+    {
+        "dealerCode": "MA046",
+        "zipCode": "02767",
+        "": ""
+    },
+    {
+        "dealerCode": "MA066",
+        "zipCode": "02360",
+        "": ""
+    },
+    {
+        "dealerCode": "MA068",
+        "zipCode": "02184",
+        "": ""
+    },
+    {
+        "dealerCode": "MD010",
+        "zipCode": "21740",
+        "": ""
+    },
+    {
+        "dealerCode": "MD013",
+        "zipCode": "21701",
+        "": ""
+    },
+    {
+        "dealerCode": "MD021",
+        "zipCode": "21014",
+        "": ""
+    },
+    {
+        "dealerCode": "MD022",
+        "zipCode": "21061",
+        "": ""
+    },
+    {
+        "dealerCode": "MD025",
+        "zipCode": "21801",
+        "": ""
+    },
+    {
+        "dealerCode": "MD030",
+        "zipCode": "20653",
+        "": ""
+    },
+    {
+        "dealerCode": "MD040",
+        "zipCode": "21037",
+        "": ""
+    },
+    {
+        "dealerCode": "MD045",
+        "zipCode": "21222",
+        "": ""
+    },
+    {
+        "dealerCode": "ME008",
+        "zipCode": "04011",
+        "": ""
+    },
+    {
+        "dealerCode": "ME009",
+        "zipCode": "04330",
+        "": ""
+    },
+    {
+        "dealerCode": "MI039",
+        "zipCode": "48507",
+        "": ""
+    },
+    {
+        "dealerCode": "MI059",
+        "zipCode": "48912",
+        "": ""
+    },
+    {
+        "dealerCode": "MI063",
+        "zipCode": "49686",
+        "": ""
+    },
+    {
+        "dealerCode": "MN017",
+        "zipCode": "55110",
+        "": ""
+    },
+    {
+        "dealerCode": "MN027",
+        "zipCode": "55077",
+        "": ""
+    },
+    {
+        "dealerCode": "MO036",
+        "zipCode": "64804",
+        "": ""
+    },
+    {
+        "dealerCode": "MO045",
+        "zipCode": "65202",
+        "": ""
+    },
+    {
+        "dealerCode": "MO048",
+        "zipCode": "63385",
+        "": ""
+    },
+    {
+        "dealerCode": "MS026",
+        "zipCode": "39702",
+        "": ""
+    },
+    {
+        "dealerCode": "MS029",
+        "zipCode": "39553",
+        "": ""
+    },
+    {
+        "dealerCode": "MT014",
+        "zipCode": "59901",
+        "": ""
+    },
+    {
+        "dealerCode": "NC018",
+        "zipCode": "27858",
+        "": ""
+    },
+    {
+        "dealerCode": "NC027",
+        "zipCode": "27804",
+        "": ""
+    },
+    {
+        "dealerCode": "NC028",
+        "zipCode": "27609",
+        "": ""
+    },
+    {
+        "dealerCode": "NC030",
+        "zipCode": "27707",
+        "": ""
+    },
+    {
+        "dealerCode": "NC040",
+        "zipCode": "27262",
+        "": ""
+    },
+    {
+        "dealerCode": "NC049",
+        "zipCode": "28405",
+        "": ""
+    },
+    {
+        "dealerCode": "NC053",
+        "zipCode": "27215",
+        "": ""
+    },
+    {
+        "dealerCode": "NC070",
+        "zipCode": "27534",
+        "": ""
+    },
+    {
+        "dealerCode": "NC074",
+        "zipCode": "28110",
+        "": ""
+    },
+    {
+        "dealerCode": "ND011",
+        "zipCode": "58554",
+        "": ""
+    },
+    {
+        "dealerCode": "NE005",
+        "zipCode": "68516",
+        "": ""
+    },
+    {
+        "dealerCode": "NE012",
+        "zipCode": "68005",
+        "": ""
+    },
+    {
+        "dealerCode": "NH006",
+        "zipCode": "03862",
+        "": ""
+    },
+    {
+        "dealerCode": "NH011",
+        "zipCode": "03304",
+        "": ""
+    },
+    {
+        "dealerCode": "NH014",
+        "zipCode": "03079",
+        "": ""
+    },
+    {
+        "dealerCode": "NH017",
+        "zipCode": "03246",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ015",
+        "zipCode": "07083",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ032",
+        "zipCode": "08753",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ033",
+        "zipCode": "07652",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ034",
+        "zipCode": "07001",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ039",
+        "zipCode": "08053",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ045",
+        "zipCode": "07430",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ049",
+        "zipCode": "07461",
+        "": ""
+    },
+    {
+        "dealerCode": "NM020",
+        "zipCode": "88101",
+        "": ""
+    },
+    {
+        "dealerCode": "NY024",
+        "zipCode": "13850",
+        "": ""
+    },
+    {
+        "dealerCode": "NY025",
+        "zipCode": "10924",
+        "": ""
+    },
+    {
+        "dealerCode": "NY050",
+        "zipCode": "11901",
+        "": ""
+    },
+    {
+        "dealerCode": "NY058",
+        "zipCode": "11210",
+        "": ""
+    },
+    {
+        "dealerCode": "NY060",
+        "zipCode": "12524",
+        "": ""
+    },
+    {
+        "dealerCode": "NY077",
+        "zipCode": "14127",
+        "": ""
+    },
+    {
+        "dealerCode": "NY102",
+        "zipCode": "14750",
+        "": ""
+    },
+    {
+        "dealerCode": "NY107",
+        "zipCode": "11763",
+        "": ""
+    },
+    {
+        "dealerCode": "NY136",
+        "zipCode": "11720",
+        "": ""
+    },
+    {
+        "dealerCode": "NY139",
+        "zipCode": "14031",
+        "": ""
+    },
+    {
+        "dealerCode": "NY144",
+        "zipCode": "11101",
+        "": ""
+    },
+    {
+        "dealerCode": "NY145",
+        "zipCode": "13495",
+        "": ""
+    },
+    {
+        "dealerCode": "NY153",
+        "zipCode": "13039",
+        "": ""
+    },
+    {
+        "dealerCode": "NY154",
+        "zipCode": "10530",
+        "": ""
+    },
+    {
+        "dealerCode": "NY155",
+        "zipCode": "14072",
+        "": ""
+    },
+    {
+        "dealerCode": "OH037",
+        "zipCode": "43125",
+        "": ""
+    },
+    {
+        "dealerCode": "OH045",
+        "zipCode": "45459",
+        "": ""
+    },
+    {
+        "dealerCode": "OH047",
+        "zipCode": "44512",
+        "": ""
+    },
+    {
+        "dealerCode": "OH050",
+        "zipCode": "43302",
+        "": ""
+    },
+    {
+        "dealerCode": "OH062",
+        "zipCode": "45701",
+        "": ""
+    },
+    {
+        "dealerCode": "OH063",
+        "zipCode": "45601",
+        "": ""
+    },
+    {
+        "dealerCode": "OH068",
+        "zipCode": "43056",
+        "": ""
+    },
+    {
+        "dealerCode": "OH074",
+        "zipCode": "44035",
+        "": ""
+    },
+    {
+        "dealerCode": "OH077",
+        "zipCode": "43228",
+        "": ""
+    },
+    {
+        "dealerCode": "OH082",
+        "zipCode": "44010",
+        "": ""
+    },
+    {
+        "dealerCode": "OK019",
+        "zipCode": "73505",
+        "": ""
+    },
+    {
+        "dealerCode": "OK027",
+        "zipCode": "73401",
+        "": ""
+    },
+    {
+        "dealerCode": "OK028",
+        "zipCode": "74012",
+        "": ""
+    },
+    {
+        "dealerCode": "OK033",
+        "zipCode": "73069",
+        "": ""
+    },
+    {
+        "dealerCode": "OR015",
+        "zipCode": "97302",
+        "": ""
+    },
+    {
+        "dealerCode": "OR025",
+        "zipCode": "97005",
+        "": ""
+    },
+    {
+        "dealerCode": "OR030",
+        "zipCode": "97408",
+        "": ""
+    },
+    {
+        "dealerCode": "OR035",
+        "zipCode": "97123",
+        "": ""
+    },
+    {
+        "dealerCode": "OR040",
+        "zipCode": "97322",
+        "": ""
+    },
+    {
+        "dealerCode": "PA003",
+        "zipCode": "19153",
+        "": ""
+    },
+    {
+        "dealerCode": "PA014",
+        "zipCode": "19607",
+        "": ""
+    },
+    {
+        "dealerCode": "PA019",
+        "zipCode": "16503",
+        "": ""
+    },
+    {
+        "dealerCode": "PA024",
+        "zipCode": "18049",
+        "": ""
+    },
+    {
+        "dealerCode": "PA057",
+        "zipCode": "16002",
+        "": ""
+    },
+    {
+        "dealerCode": "PA062",
+        "zipCode": "15301",
+        "": ""
+    },
+    {
+        "dealerCode": "PA068",
+        "zipCode": "17520",
+        "": ""
+    },
+    {
+        "dealerCode": "PA084",
+        "zipCode": "15601",
+        "": ""
+    },
+    {
+        "dealerCode": "PA085",
+        "zipCode": "18045",
+        "": ""
+    },
+    {
+        "dealerCode": "PA092",
+        "zipCode": "17042",
+        "": ""
+    },
+    {
+        "dealerCode": "RI011",
+        "zipCode": "02842",
+        "": ""
+    },
+    {
+        "dealerCode": "RI012",
+        "zipCode": "02919",
+        "": ""
+    },
+    {
+        "dealerCode": "SC018",
+        "zipCode": "29577",
+        "": ""
+    },
+    {
+        "dealerCode": "SC027",
+        "zipCode": "29607",
+        "": ""
+    },
+    {
+        "dealerCode": "SC045",
+        "zipCode": "29203",
+        "": ""
+    },
+    {
+        "dealerCode": "SC051",
+        "zipCode": "29841",
+        "": ""
+    },
+    {
+        "dealerCode": "SC053",
+        "zipCode": "29651",
+        "": ""
+    },
+    {
+        "dealerCode": "TN045",
+        "zipCode": "37087",
+        "": ""
+    },
+    {
+        "dealerCode": "TN053",
+        "zipCode": "38305",
+        "": ""
+    },
+    {
+        "dealerCode": "TN057",
+        "zipCode": "37918",
+        "": ""
+    },
+    {
+        "dealerCode": "TX086",
+        "zipCode": "77304",
+        "": ""
+    },
+    {
+        "dealerCode": "TX098",
+        "zipCode": "79605",
+        "": ""
+    },
+    {
+        "dealerCode": "TX125",
+        "zipCode": "78840",
+        "": ""
+    },
+    {
+        "dealerCode": "TX141",
+        "zipCode": "76234",
+        "": ""
+    },
+    {
+        "dealerCode": "TX150",
+        "zipCode": "77591",
+        "": ""
+    },
+    {
+        "dealerCode": "TX153",
+        "zipCode": "77833",
+        "": ""
+    },
+    {
+        "dealerCode": "TX155",
+        "zipCode": "77471",
+        "": ""
+    },
+    {
+        "dealerCode": "TX160",
+        "zipCode": "78526",
+        "": ""
+    },
+    {
+        "dealerCode": "TX185",
+        "zipCode": "75701",
+        "": ""
+    },
+    {
+        "dealerCode": "TX193",
+        "zipCode": "78041",
+        "": ""
+    },
+    {
+        "dealerCode": "TX205",
+        "zipCode": "77423",
+        "": ""
+    },
+    {
+        "dealerCode": "TX207",
+        "zipCode": "77656",
+        "": ""
+    },
+    {
+        "dealerCode": "VA003",
+        "zipCode": "23113",
+        "": ""
+    },
+    {
+        "dealerCode": "VA004",
+        "zipCode": "23452",
+        "": ""
+    },
+    {
+        "dealerCode": "VA024",
+        "zipCode": "23294",
+        "": ""
+    },
+    {
+        "dealerCode": "VA031",
+        "zipCode": "24540",
+        "": ""
+    },
+    {
+        "dealerCode": "VA047",
+        "zipCode": "23188",
+        "": ""
+    },
+    {
+        "dealerCode": "VA050",
+        "zipCode": "22980",
+        "": ""
+    },
+    {
+        "dealerCode": "VA067",
+        "zipCode": "24073",
+        "": ""
+    },
+    {
+        "dealerCode": "VT009",
+        "zipCode": "05401",
+        "": ""
+    },
+    {
+        "dealerCode": "WA019",
+        "zipCode": "98409",
+        "": ""
+    },
+    {
+        "dealerCode": "WA020",
+        "zipCode": "98026",
+        "": ""
+    },
+    {
+        "dealerCode": "WA025",
+        "zipCode": "98371",
+        "": ""
+    },
+    {
+        "dealerCode": "WA033",
+        "zipCode": "98502",
+        "": ""
+    },
+    {
+        "dealerCode": "WA035",
+        "zipCode": "99336",
+        "": ""
+    },
+    {
+        "dealerCode": "WA048",
+        "zipCode": "98233",
+        "": ""
+    },
+    {
+        "dealerCode": "WA050",
+        "zipCode": "98057",
+        "": ""
+    },
+    {
+        "dealerCode": "WA053",
+        "zipCode": "98133",
+        "": ""
+    },
+    {
+        "dealerCode": "WA054",
+        "zipCode": "98203",
+        "": ""
+    },
+    {
+        "dealerCode": "WA060",
+        "zipCode": "98661",
+        "": ""
+    },
+    {
+        "dealerCode": "WI036",
+        "zipCode": "53227",
+        "": ""
+    },
+    {
+        "dealerCode": "WI039",
+        "zipCode": "53221",
+        "": ""
+    },
+    {
+        "dealerCode": "WI040",
+        "zipCode": "54481",
+        "": ""
+    },
+    {
+        "dealerCode": "WV002",
+        "zipCode": "26059",
+        "": ""
+    },
+    {
+        "dealerCode": "WV006",
+        "zipCode": "25303",
+        "": ""
+    },
+    {
+        "dealerCode": "WV021",
+        "zipCode": "26501",
+        "": ""
+    },
+    {
+        "dealerCode": "AZ055",
+        "zipCode": "85635",
+        "": ""
+    },
+    {
+        "dealerCode": "IN049",
+        "zipCode": "47130",
+        "": ""
+    },
+    {
+        "dealerCode": "LA009",
+        "zipCode": "70607",
+        "": ""
+    },
+    {
+        "dealerCode": "MI057",
+        "zipCode": "49022",
+        "": ""
+    },
+    {
+        "dealerCode": "MN024",
+        "zipCode": "56425",
+        "": ""
+    },
+    {
+        "dealerCode": "NC046",
+        "zipCode": "28387",
+        "": ""
+    },
+    {
+        "dealerCode": "NY099",
+        "zipCode": "13820",
+        "": ""
+    },
+    {
+        "dealerCode": "NY123",
+        "zipCode": "14850",
+        "": ""
+    },
+    {
+        "dealerCode": "PA012",
+        "zipCode": "15108",
+        "": ""
+    },
+    {
+        "dealerCode": "SD005",
+        "zipCode": "57701",
+        "": ""
+    },
+    {
+        "dealerCode": "TX116",
+        "zipCode": "77566",
+        "": ""
+    },
+    {
+        "dealerCode": "WA045",
+        "zipCode": "98229",
+        "": ""
+    },
+    {
+        "dealerCode": "WV005",
+        "zipCode": "25704",
+        "": ""
+    },
+    {
+        "dealerCode": "CA372",
+        "zipCode": "92243",
+        "": ""
+    },
+    {
+        "dealerCode": "CO012",
+        "zipCode": "81006",
+        "": ""
+    },
+    {
+        "dealerCode": "HI018",
+        "zipCode": "96732",
+        "": ""
+    },
+    {
+        "dealerCode": "IL026",
+        "zipCode": "62959",
+        "": ""
+    },
+    {
+        "dealerCode": "IL060",
+        "zipCode": "61354",
+        "": ""
+    },
+    {
+        "dealerCode": "IL090",
+        "zipCode": "61761",
+        "": ""
+    },
+    {
+        "dealerCode": "IN050",
+        "zipCode": "47304",
+        "": ""
+    },
+    {
+        "dealerCode": "LA030",
+        "zipCode": "70503",
+        "": ""
+    },
+    {
+        "dealerCode": "MD036",
+        "zipCode": "21502",
+        "": ""
+    },
+    {
+        "dealerCode": "ME002",
+        "zipCode": "04401",
+        "": ""
+    },
+    {
+        "dealerCode": "MN014",
+        "zipCode": "55811",
+        "": ""
+    },
+    {
+        "dealerCode": "MO006",
+        "zipCode": "64118",
+        "": ""
+    },
+    {
+        "dealerCode": "MO016",
+        "zipCode": "63376",
+        "": ""
+    },
+    {
+        "dealerCode": "MS025",
+        "zipCode": "39402",
+        "": ""
+    },
+    {
+        "dealerCode": "NC032",
+        "zipCode": "27127",
+        "": ""
+    },
+    {
+        "dealerCode": "NC048",
+        "zipCode": "28027",
+        "": ""
+    },
+    {
+        "dealerCode": "NE009",
+        "zipCode": "68803",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ025",
+        "zipCode": "07702",
+        "": ""
+    },
+    {
+        "dealerCode": "NJ059",
+        "zipCode": "08050",
+        "": ""
+    },
+    {
+        "dealerCode": "NM023",
+        "zipCode": "87505",
+        "": ""
+    },
+    {
+        "dealerCode": "NM026",
+        "zipCode": "88005",
+        "": ""
+    },
+    {
+        "dealerCode": "NY036",
+        "zipCode": "12401",
+        "": ""
+    },
+    {
+        "dealerCode": "NY062",
+        "zipCode": "13601",
+        "": ""
+    },
+    {
+        "dealerCode": "NY106",
+        "zipCode": "10567",
+        "": ""
+    },
+    {
+        "dealerCode": "NY122",
+        "zipCode": "14903",
+        "": ""
+    },
+    {
+        "dealerCode": "OH022",
+        "zipCode": "45805",
+        "": ""
+    },
+    {
+        "dealerCode": "OH056",
+        "zipCode": "44906",
+        "": ""
+    },
+    {
+        "dealerCode": "OH061",
+        "zipCode": "44060",
+        "": ""
+    },
+    {
+        "dealerCode": "TX136",
+        "zipCode": "76087",
+        "": ""
+    },
+    {
+        "dealerCode": "TX190",
+        "zipCode": "78006",
+        "": ""
+    },
+    {
+        "dealerCode": "VA028",
+        "zipCode": "22301",
+        "": ""
+    },
+    {
+        "dealerCode": "WI031",
+        "zipCode": "54401",
+        "": ""
+    }
+]

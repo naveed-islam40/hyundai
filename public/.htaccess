@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews -Indexes
+    </IfModule>
+
+    RewriteEngine On
+
+    # Handle Laravel API routes
+    RewriteRule ^api/(.*)$ api/index.php [L]
+
+    # Handle React SPA routes - redirect to index.html if file doesn't exist
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_URI} !^/api/
+    RewriteRule ^.*$ /index.html [L]
+</IfModule>
