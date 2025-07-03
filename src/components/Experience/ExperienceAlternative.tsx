@@ -20,7 +20,7 @@ export default function ExperienceAlternative() {
   };
 
   return (
-    <div className="experience md:w-full 2xl:w-[80%] mx-auto bg-[url('img/login.png')] bg-cover bg-center h-screen flex justify-center items-center relative">
+    <div className="experience md:w-full 2xl:w-[80%] mx-auto bg-[url('/img/login.png')] bg-cover bg-center h-screen flex justify-center items-center relative">
       <div className="absolute inset-0 bg-black/60 z-0 h-[100%]" />
       <div className="w-full p-80 text-white text-center relative z-10">
         <div className="mb-8">
@@ -29,8 +29,6 @@ export default function ExperienceAlternative() {
           </h1>
           {/*<p className="text-lg">Please Select Your Direction for Screening</p>*/}
         </div>
-
-        
 
         {/* Experience start */}
         <div className="flex flex-col md:flex-row justify-between gap-40">

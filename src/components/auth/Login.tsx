@@ -17,63 +17,65 @@ export default function LoginForm() {
   const [customerVIN, setCustomerVIN] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const dealerCredsFilled = dealerCode.trim() && zipCode.trim();
-  const vinFilled = customerVIN.trim();
+    const dealerCredsFilled = dealerCode.trim() && zipCode.trim();
+    const vinFilled = customerVIN.trim();
 
-  // Prevent both fields from being used at once
-  if (dealerCredsFilled && vinFilled) {
-    toast.error("Please fill either Dealer Code & Zip OR VIN — not both.");
-    return;
-  }
-
-  // Require at least one method of login
-  if (!dealerCredsFilled && !vinFilled) {
-    toast.error("Please provide either Dealer Code & Zip OR VIN.");
-    return;
-  }
-
-  // Dealer Code + Zip login
-  if (dealerCredsFilled) {
-    const isCredentialsValid = users.some(
-      (user) =>
-        user.dealerCode.toLowerCase() === dealerCode.trim().toLowerCase() &&
-        user.zipCode === zipCode.trim()
-    );
-
-    if (isCredentialsValid) {
-      saveDealderInfo(dealerCode.trim().toUpperCase(), zipCode.trim());
-      navigate("/experience");
-    } else {
-      toast.error("Sorry. The Location You Selected is Not In Your Service Area.");
+    // Prevent both fields from being used at once
+    if (dealerCredsFilled && vinFilled) {
+      toast.error("Please fill either Dealer Code & Zip OR VIN — not both.");
+      return;
     }
-    return;
-  }
 
-  // VIN login
-if (vinFilled) {
-  const enteredVIN = customerVIN.trim();
+    // Require at least one method of login
+    if (!dealerCredsFilled && !vinFilled) {
+      toast.error("Please provide either Dealer Code & Zip OR VIN.");
+      return;
+    }
 
-  const isValidVINFormat = /^[A-HJ-NPR-Z0-9]{17}$/i.test(enteredVIN);
-  if (!isValidVINFormat) {
-    toast.error("VIN incorrect. Please enter a valid VIN.");
-    return;
-  }
+    // Dealer Code + Zip login
+    if (dealerCredsFilled) {
+      const isCredentialsValid = users.some(
+        (user) =>
+          user.dealerCode.toLowerCase() === dealerCode.trim().toLowerCase() &&
+          user.zipCode === zipCode.trim()
+      );
 
-  const validVIN = "53776763901300130"; // Replace with real VIN lookup logic later
+      if (isCredentialsValid) {
+        saveDealderInfo(dealerCode.trim().toUpperCase(), zipCode.trim());
+        navigate("/experience");
+      } else {
+        toast.error(
+          "Sorry. The Location You Selected is Not In Your Service Area."
+        );
+      }
+      return;
+    }
 
-  if (enteredVIN.toLowerCase() === validVIN.toLowerCase()) {
-    localStorage.setItem("vinSearch", enteredVIN);
-    navigate("/VINFetch");
-  } else {
-    toast.error("VIN is incorrect. Please verify and try again.");
-  }
-}
-};
+    // VIN login
+    if (vinFilled) {
+      const enteredVIN = customerVIN.trim();
+
+      const isValidVINFormat = /^[A-HJ-NPR-Z0-9]{17}$/i.test(enteredVIN);
+      if (!isValidVINFormat) {
+        toast.error("VIN incorrect. Please enter a valid VIN.");
+        return;
+      }
+
+      const validVIN = "53776763901300130"; // Replace with real VIN lookup logic later
+
+      if (enteredVIN.toLowerCase() === validVIN.toLowerCase()) {
+        localStorage.setItem("vinSearch", enteredVIN);
+        navigate("/VINFetch");
+      } else {
+        toast.error("VIN is incorrect. Please verify and try again.");
+      }
+    }
+  };
 
   return (
-    <div className="md:w-full 2xl:w-[80%] mx-auto min-h-screen flex items-center bg-[url('img/login.png')] bg-cover bg-center px-4 md:px-20">
+    <div className="md:w-full 2xl:w-[80%] mx-auto min-h-screen flex items-center bg-[url('/img/login.png')] bg-cover bg-center px-4 md:px-20">
       <div className="w-full max-w-4xl p-6 md:px-10 bg-black/50 text-white rounded-md">
         <div className="mb-6">
           <h1 className="text-2xl font-bold">Welcome.</h1>
@@ -122,12 +124,14 @@ if (vinFilled) {
         </form>
 
         <div className="mt-10 mb-6">
-          <hr/>
+          <hr />
         </div>
 
         <div className="mt-0 mb-6">
-            <h1 className="text-2xl font-bold">Search by VIN</h1>
-            <p className="text-sm text-[#FFFFFF]">Enter Customer's VIN on PRE-EXISTING ORDERS.</p>
+          <h1 className="text-2xl font-bold">Search by VIN</h1>
+          <p className="text-sm text-[#FFFFFF]">
+            Enter Customer's VIN on PRE-EXISTING ORDERS.
+          </p>
         </div>
         <form
           onSubmit={handleSubmit}
@@ -156,7 +160,6 @@ if (vinFilled) {
             </Button>
           </div>
         </form>
-
       </div>
     </div>
   );
